@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="/Public/Static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+<title>{$webname}</title>
+<style>
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #b5b5b5;
+font-size: 18px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #b5b5b5;
+font-size: 18px;
+}
+input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+a:hover,a:link,a:visited,a:active{color:#333;text-decoration:none;}
+.boxh{height: 90px}
+.smsbtn{width:35%;float:right;height:50px;line-height:50px;border-radius:5px;background: #F5F5F5;text-align: center;}
+</style>
+  </head>
+  <body>
+ 	<style>
+	body.pages-login-index {
+background-color: #d5d5d5;
+}
+uni-app, uni-page-head {
+display: block;
+box-sizing: border-box;
+}
+
+uni-app {
+width: 100%;
+height: 100%;
+}
+uni-page {
+display: block;
+width: 100%;
+height: 100%;
+}
+
+uni-app, uni-page-head {
+display: block;
+box-sizing: border-box;
+}
+uni-page-head .uni-page-head {
+position: fixed;
+left: var(--window-left);
+right: var(--window-right);
+height: 44px;
+height: calc(44px + constant(safe-area-inset-top));
+height: calc(44px + env(safe-area-inset-top));
+padding: 7px 3px;
+padding-top: calc(7px + constant(safe-area-inset-top));
+padding-top: calc(7px + env(safe-area-inset-top));
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+overflow: hidden;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+justify-content: space-between;
+box-sizing: border-box;
+z-index: 998;
+color: #fff;
+background-color: #000;
+-webkit-transition-property: all;
+transition-property: all;
+}
+uni-page-head .uni-page-head~.uni-placeholder {
+width: 100%;
+height: 44px;
+height: calc(44px + constant(safe-area-inset-top));
+height: calc(44px + env(safe-area-inset-top));
+}
+uni-page-head .uni-page-head-hd {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+align-items: center;
+font-size: 16px;
+}
+
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+.uni-page-head-btn {
+position: relative;
+width: auto;
+margin: 0 2px;
+word-break: keep-all;
+white-space: pre;
+cursor: pointer;
+}
+uni-page-head .uni-btn-icon {
+overflow: hidden;
+min-width: 1em;
+}
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+[class*=" uni-btn-icon"], [class^=uni-btn-icon] {
+display: inline-block;
+font: normal normal normal 14px/1 unibtn;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+}
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+
+.uni-page-head-btn {
+position: relative;
+width: auto;
+margin: 0 2px;
+word-break: keep-all;
+white-space: pre;
+cursor: pointer;
+}
+uni-page-head .uni-page-head-hd {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+align-items: center;
+font-size: 16px;
+}
+uni-page-head .uni-page-head-bd {
+position: absolute;
+left: 70px;
+right: 70px;
+min-width: 0;
+}
+uni-page-head .uni-page-head__title {
+font-weight: 700;
+font-size: 16px;
+line-height: 30px;
+text-align: center;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+uni-page-head[uni-page-head-type=default]~uni-page-wrapper {
+height: calc(100% - 44px);
+height: calc(100% - 44px - constant(safe-area-inset-top));
+height: calc(100% - 44px - env(safe-area-inset-top));
+}
+body.pages-login-index uni-page-body {
+background-color: #d5d5d5;
+}
+
+uni-page-body, uni-page-refresh {
+display: block;
+box-sizing: border-box;
+width: 100%;
+}
+.login-input-new {
+position: relative;
+}
+
+uni-view {
+line-height: normal;
+}
+
+uni-view {
+font-size: 12px;
+line-height: 1.8;
+}
+uni-view {
+display: block;
+}
+.content[data-v-ca466704] {
+display: flex;
+flex-direction: column;
+justify-content: center /* margin-top: 128upx; */;
+}
+.login-logo {
+width: 80px;
+margin: 50px auto 10px;
+}
+
+uni-image {
+width: 320px;
+height: 240px;
+display: inline-block;
+overflow: hidden;
+position: relative;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+uni-image>img {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+uni-resize-sensor {
+display: block;
+z-index: -1;
+visibility: hidden;
+-webkit-animation: once-show 1ms;
+animation: once-show 1ms;
+}
+
+uni-resize-sensor, uni-resize-sensor>div {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+.input_title {
+width: 100%;
+height: 5px;
+}
+.login-logo {
+width: 80px;
+margin: 50px auto 10px;
+}
+.lr-word {
+padding: 20px 0 20px 23px;
+}
+.login-con-new {
+ height: 220px;
+width: 100% /* margin: 66upx auto 0; */ /* overflow-x: hidden; */;
+}
+.login-all-list-new {
+width: 335px;
+padding: 0 20px;
+}
+
+.login-all-list-new {
+width: 100%;
+padding: 0 37px;
+display: inline-block;
+}
+.oBorder[data-v-2f28a320] {
+border: none;
+border-radius: 2.5rem;
+-webkit-box-shadow: 0 0 30px 0 rgb(43 86 112 / 10%);
+box-shadow: 0 0 30px 0 rgb(43 86 112 / 10%);
+}
+
+.main-list[data-v-2f28a320] {
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+height: 18px;
+color: #333;
+padding: 16px;
+margin-top: 12px;
+margin-bottom: 12px;
+}
+.login-input-new .oBorder {
+height: 50px;
+background-color: #fff;
+border-radius: 0px!important;
+box-shadow: unset!important;
+}
+.login-input-new .oBorder {
+border-radius: 10px!important;
+box-shadow: 0 0 10px 0 rgba(43,86,112,.17)!important;
+}
+.main-input[data-v-2f28a320] {
+flex: 1;
+text-align: left;
+font-size: 14px;
+padding-right: 5px;
+margin-left: 10px;
+}
+
+.main-input {
+font-size: 15px!important;
+}
+uni-input {
+display: block;
+font-size: 16px;
+line-height: 1.4em;
+height: 1.4em;
+min-height: 1.4em;
+overflow: hidden;
+}
+.uni-input-form, .uni-input-wrapper {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+position: relative;
+width: 100%;
+height: 100%;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+}
+.uni-input-form, .uni-input-input, .uni-input-placeholder, .uni-input-wrapper {
+outline: none;
+border: none;
+padding: 0;
+margin: 0;
+text-decoration: inherit;
+}
+.uni-input-placeholder {
+color: #ccc!important;
+}
+
+.uni-input-placeholder {
+position: absolute;
+top: auto!important;
+left: 0;
+color: grey;
+overflow: hidden;
+text-overflow: clip;
+white-space: pre;
+word-break: keep-all;
+pointer-events: none;
+line-height: inherit;
+}
+.uni-input-input {
+color: #000!important;
+}
+
+.uni-input-input {
+position: relative;
+display: block;
+height: 100%;
+background: none;
+color: inherit;
+opacity: 1;
+font: inherit;
+line-height: inherit;
+letter-spacing: inherit;
+text-align: inherit;
+text-indent: inherit;
+text-transform: inherit;
+text-shadow: inherit;
+}
+.main-input[data-v-2f28a320] {
+flex: 1;
+text-align: left;
+font-size: 14px;
+padding-right: 5px;
+margin-left: 10px;
+}
+
+.main-input {
+font-size: 15px!important;
+}
+uni-input {
+display: block;
+font-size: 16px;
+line-height: 1.4em;
+height: 1.4em;
+min-height: 1.4em;
+overflow: hidden;
+}
+.buttonBorder[data-v-05f4107d] {
+border: none;
+border-radius: 2.5rem;
+-webkit-box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+-webkit-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-moz-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-ms-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-o-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+transition: all .4s cubic-bezier(.57,.19,.51,.95);
+}
+<style>
+.dlbutton[data-v-05f4107d] {
+color: #fff;
+font-size: 15px;
+width: 300px;
+height: 50px;
+line-height: 50px!important;
+background: linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.6));
+box-shadow: 0px 0px 6px 0px rgb(164 217 228 / 40%);
+border-radius: 2.5rem;
+line-height: 50px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 48px;
+}
+
+.login-input-new .buttonBorder {
+border-radius: 0px!important;
+}
+
+.login-input-new .buttonBorder {
+border-radius: 10px!important;
+}
+
+.dlbutton {
+width: 335px!important;
+}
+
+uni-button, uni-button:after {
+border-radius: 0;
+}
+uni-button {
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-left: 14px;
+padding-right: 14px;
+box-sizing: border-box;
+font-size: 18px;
+text-align: center;
+text-decoration: none;
+line-height: 2.55555556;
+border-radius: 5px;
+-webkit-tap-highlight-color: transparent;
+overflow: hidden;
+color: #000;
+background-color: #f8f8f8;
+cursor: pointer;
+}
+.footer[data-v-ca466704] {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/*font-size: 14px;*/
+margin-top: 40px;
+color: #7ac86f;
+text-align: center;
+height: 20px;
+line-height: 20px;
+margin-bottom: 7px;
+height: 190px;
+}
+.content[data-v-ca466704] {
+display: flex;
+flex-direction: column;
+justify-content: center /* margin-top: 128upx; */;
+}
+.content {
+display: flex;
+flex-direction: column /* align-items: center; justify-content: center; */;
+}
+.reg-steps {
+text-align: center;
+padding: 0 0 10px 0;
+}
+.reg-steps-list-on {
+background-color: #7ac86f;
+}
+
+.reg-steps-list {
+position: relative;
+display: inline-block;
+background-color: #9c9897;
+width: 35px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+color: #fff;
+font-size: 12px;
+border-radius: 35px;
+margin: 20px 40px 20px 0;
+vertical-align: top;
+}
+.reg-steps-list-on .reg-steps-w {
+color: #7ac86f;
+}
+
+.reg-steps-w {
+position: absolute;
+width: 100px;
+left: 50%;
+margin-left: -50px;
+top: 40px;
+color: #9c9897;
+}
+.reg-steps-list-on:after {
+background-color: #7ac86f;
+}
+
+.reg-steps-list:after {
+content: "";
+position: absolute;
+top: 15px;
+right: -40px;
+width: 0px;
+height: 2px;
+background-color: #9c9897;
+}
+.reg-steps-list:last-child {
+margin-right: 0;
+}
+
+.reg-steps-list {
+position: relative;
+display: inline-block;
+background-color: #7ac86f;
+width: 35px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+color: #fff;
+font-size: 12px;
+border-radius: 35px;
+margin: 20px 40px 20px 0;
+vertical-align: top;
+}
+.reg-steps-w {
+position: absolute;
+width: 100px;
+left: 50%;
+margin-left: -50px;
+top: 40px;
+color: #9c9897;
+}
+.lr-word {
+padding: 20px 0 20px 23px;
+}
+.lr-list {
+max-width: 153px;
+text-align: center;
+}
+
+.lr-list {
+display: inline-block;
+margin-right: 10px;
+font-size: 16px;
+font-weight: 400;
+color: #9c9897;
+}
+.lr-list:last-child {
+margin-right: 0;
+}
+
+.lr-list {
+max-width: 153px;
+text-align: center;
+}
+
+.lr-list-on {
+color: #7ac86f;
+position: relative;
+}
+.shuomings{
+    margin: auto;
+    width: 95%;
+    /* border: 1px solid green; */
+    padding: 45px;
+    /*margin: -0.33333rem 0 0;*/
+    font-size: 10px;
+}
+.yonghufuwuxieyi{
+width: 100%;
+    height: 100%;
+    line-height: .96rem;
+    font-size: .32rem;
+    padding: 0px 1.4rem;
+    overflow: hidden;
+    background-color: #fff;
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* position: absolute; */
+    position: relative;
+    margin: -510px auto;
+}
+</style>
+<uni-view data-v-8140ff00="" class="reg-steps">
+<uni-view data-v-8140ff00="" class="reg-steps-list reg-steps-list-on">1<uni-view data-v-8140ff00="" class="reg-steps-w">{:L('注册')}</uni-view></uni-view>
+<uni-view data-v-8140ff00="" class="reg-steps-list">2<uni-view data-v-8140ff00="" class="reg-steps-w">
+    <a href="/Login/index.html">{:L('登录')}</uni-view></uni-view></uni-view></a>
+
+<uni-view data-v-8140ff00="" class="lr-word">
+<!--<uni-view data-v-8140ff00="" class="lr-list">快速註冊</uni-view>-->
+<uni-view data-v-8140ff00="" class="lr-list lr-list-on">{:L('邮箱')}{:L('注册')}</uni-view></uni-view>
+
+
+ <uni-view data-v-8140ff00="" class="login-all-list-new">
+<uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+<uni-input data-v-2f28a320="" class="main-input">
+    <div class="uni-input-wrapper">
+<div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('邮箱')}</div>
+
+<input name="email" id="email" maxlength="100" step="" enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div></uni-input></uni-view>
+
+<uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+  <uni-input data-v-2f28a320="" class="main-input">
+      <div class="uni-input-wrapper">
+ <div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('邮箱验证码')}</div>
+ <input maxlength="6" step="0.000000000000000001"  name="ecode" id="ecode" enterkeyhint="done" autocomplete="off" type="number" class="uni-input-input"></div></uni-input>
+ 
+ <uni-view data-v-2f28a320="" onclick="emailsend();" id="sendsms" class="vercode">{:L('获取验证码')}</uni-view></uni-view>
+ 
+ <!--增加！-->
+ <!--<uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">-->
+ <!-- <uni-input data-v-2f28a320="" class="main-input">-->
+ <!--     <div class="uni-input-wrapper">-->
+ <!--<div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('图形验证码')}</div>-->
+ <!--<input maxlength="6" step="0.000000000000000001" name="vcode" id="vcode"  enterkeyhint="done" autocomplete="off" type="number" class="uni-input-input">-->
+ <!--</div>-->
+ <!--</uni-input>-->
+ <!--<div style="width:35%;float:right;padding:0px;" >-->
+ <!--                       <img style="width:100%;height:28px;border-radius:5px;" src="{:U('Verify/code')}" onclick="this.src=this.src+'?t='+Math.random()" title="{:L('换一张')}" id="verifycode">-->
+ <!--                   </div></uni-view>-->
+ 
+ 
+<!--<div class="inputbox boxh">-->
+<!--                    <div class="input_title txtl">-->
+<!--                        <span class="fzmm fcc">{:L('图形验证码')}</span>-->
+<!--                    </div>-->
+<!--                    <div class="input_div" style="width:60%;float:left;" >-->
+<!--                        <input type="text" style="height:45px;" class="cinput" name="vcode" id="vcode" placeholder="{:L('请输入图形验证码')}" />-->
+<!--                    </div>-->
+<!--                    <div style="width:35%;float:right;padding:0px;" >-->
+<!--                        <img style="width:100%;height:50px;border-radius:5px;" src="{:U('Verify/code')}" onclick="this.src=this.src+'?t='+Math.random()" title="{:L('换一张')}" id="verifycode">-->
+<!--                    </div>-->
+<!--                </div>-->
+                
+                
+ <uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+<uni-input data-v-2f28a320="" class="main-input">
+    <div class="uni-input-wrapper">
+<div class="uni-input-placeholder input-placeholder"  data-v-2f28a320="" data-v-8140ff00="">{:L('请输入密码')}</div>
+<input maxlength="12" step=""  name="lpwd" id="lpwd" enterkeyhint="done" autocomplete="off" type="password" class="uni-input-input"></div></uni-input>
+ </uni-image></uni-view>
+ 
+<!-- <uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">-->
+<!--<uni-input data-v-2f28a320="" class="main-input">-->
+<!--<div class="uni-input-wrapper">-->
+<!--<div class="uni-input-placeholder input-placeholder"  data-v-2f28a320="" data-v-8140ff00="">{:L('邀请码')}</div>-->
+<!--<input maxlength="11" step="" value="{$qrcode}" id="invit" name="invit"  enterkeyhint="done" autocomplete="off" type="" class="uni-input-input"></div></uni-input>-->
+<!--</uni-view>-->
+</uni-view>
+
+<uni-view data-v-05f4107d="" data-v-ca466704="">
+<uni-button data-v-05f4107d="" class="buttonBorder dlbutton" style="background: linear-gradient(to right, rgb(122, 200, 111), rgb(122, 200, 111)); color: rgb(255, 255, 255);">
+<uni-view data-v-05f4107d="" class="">
+<uni-text data-v-05f4107d="" onclick="upreg();" style="line-height: 3.5 !important;"><span>{:L('注册')}</span>
+</uni-text>
+</uni-view>
+</uni-button></uni-view>
+
+<div class="shuomings" >
+    <span>{:L('注册即表示同意')}&nbsp;&nbsp;</span>
+    <a onclick="xieyi2()" style="color:#000680">《{:L('用户服务协议')}》</a>
+    <a onclick="xieyi1()" style="color:#000680" >《{:L('隐私条款')}》</a>
+    </div>
+
+<div id="xieyi" class="yonghufuwuxieyi" style="display:none">
+<span>
+    <br>
+    <h3>用户协议</h3>
+<br>
+<span style="color:#dc3545;">最后更新日期：2022年【5】月【31】日</span>
+<br>
+<br>
+GEDEX全球平台（以下简称“平台”或“我方”）允许其用户（以下简称“用户”或“您”）交易数字资产（定义见本协议）以及提供与数字资产相关的其他服务（简称“服务”）。为方便起见，您和我方特此统称为“双方”，单独称为“一方”。
+<br>
+您理解：本网站（定义见本协议）仅用作您使用服务的平台。您应自行谨慎评估相关数字资产和/或信息的真实性、合法性和有效性，并自行承担可能由此产生的责任和损失。
+<br>
+我方在本平台上展示的任何意见、信息、讨论、分析、价格和其他信息均不得解释为投资建议。对于因依赖上述信息而直接或间接产生的任何损失，包括但不限于任何利润损失，我方概不负责。
+<br>
+除非您在平台拥有账户（定义见本协议），否则，不得使用拟向拥有账户的用户提供的服务。
+<br>
+1.1         风险
+<br>
+通过使用该平台所提供的服务，您接受与此类服务相关的风险。我方强调：
+<br>
+(i)         平台上提供的数字资产可能并非由我方、金融机构或其他法律实体所发行的；
+<br>
+(ii)         数字资产市场是新的、不确定的且可能不会增长；
+<br>
+(iii)        数字资产本质上具有高度投机性，不像其他资产类别那样成熟；
+<br>
+(iv)        数字资产波动较大，交易持续，且价格波动没有限制；
+<br>
+(v)          数字资产交易可能导致您的资本部分或全部损失；
+<br>
+(vi)        做市商或政府等第三方的行为可能会对数字资产产生重大影响；
+<br>
+(vii)       数字资产交易不适合绝大多数人；
+<br>
+(viii)     尽管我方努力遵守所有适用的法律、规则和法规，但可能不会在我方开展经营活动的所有司法管辖区受到监管；及除上述风险外，还可能存在其他不可预测或衍生的风险。
+<br>
+在使用服务之前，请考虑您自己的财务状况，并在必要时寻求独立的法律、财务、税务、会计或其他建议。
+<br>
+1.2         受限司法管辖区
+<br>
+受限司法管辖区列表可能会根据我方的政策和我方向特定司法管辖区提供的服务的变化而发生变化和有所不同。如发生此类变更，我方可能不会通知您。您需要查看平台或本协议中的最新信息以了解此类变更。
+<br>
+2.            通用条款
+<br>
+不时更新的用户协议（以下简称“本协议”或“本条款和条件”）包括本用户协议、隐私政策、菲亚特规则、KYC（“了解你的客户”）和AML政策、用户协议或每项服务的条款和条件以及平台上不时发布的任何其他指南、规则、声明和说明。
+<br>
+在使用平台访问服务前，您应仔细阅读本协议，并在必要时寻求独立的法律意见。如果您不同意或不理解本协议，请立即注销您的账户并停止使用服务。通过点击“我同意”、创建账户、获取您的账户识别号和创建密码、登录您的账户或使用服务，您将被视为已理解、完全同意本协议并受本协议（包括不时对本协议进行的任何修改）约束。
+<br>
+本协议中的所有标题仅是为了措辞方便，无意扩大或限制本协议条款和条件的内容或范围。平台上的信息和本协议中的所有信息均按“原样”和“在可用基础上”提供，且我方不作进一步承诺。本协议中的标题仅为方便起见，不影响本协议任何条款的含义或解释。
+<br>
+3.            定义
+<br>
+“账户”指您在平台上创建的账户。
+<br>
+“本协议”指GEDEX平台用户协议。
+<br>
+“AML/CTF”是指反洗钱/反恐怖主义融资。
+<br>
+“营业日”是指除以下日子以外、银行开业进行业务交易的日子：星期六、星期日或宪报公布的公众假期。
+<br>
+“买入价”的含义见第7.1条。
+<br>
+“赔偿金”的含义见第15.1条。
+<br>
+“处理您的账户”的含义见第 4.4 条。
+<br>
+“数字资产”是指平台支持的可以数字化传输、存储和交易的以数字表示的价值。
+<br>
+“争议”的含义见第 17.11 条。
+<br>
+“汇率”的含义见第 7.1 条。
+<br>
+“ 分叉”的含义见第6.2条。
+<br>
+“国际商会国际仲裁法院”的含义见第17.11条。
+<br>
+“身份信息”的含义见第9.2条。
+<br>
+“知识产权”的含义见第 11 条。
+<br>
+“内部决议”的含义见第17.11条。
+<br>
+“登录详情”的含义见第 4.3 条。
+<br>
+“矿工费”的含义见第 6.1 条。
+<br>
+“一方”是指本协议的一方，即用户和平台。
+<br>
+“平台”是指GEDEX全球平台。
+<br>
+“关闭前期”的含义见第4.4条。
+<br>
+“注册数据”的含义见第4.1条。
+<br>
+“受制裁国家”的含义见第 17.8 条。
+<br>
+“受制裁人”的含义见第 17.8 条。
+<br>
+“卖出价”的含义见第 7.1 条。
+<br>
+“服务”是指通过平台向用户提供的产品和服务。
+<br>
+“交易费”的含义见第8条。
+<br>
+“交易”的含义见第4.2条。
+<br>
+“用户”是指GEDEX全球平台的用户。
+<br>
+“网站”是指用户可以访问平台以使用服务的网站或其他网关，例如移动应用程序。
+<br>
+4.            账户
+<br>
+4.1         账户创建
+<br>
+为获得创建账户的资格，您确认您是有权签订本协议并按照所有适用法律、规则和法规使用服务的自然人、法人或任何其他实体。您不得以违反任何适用法律、规则和法规和/或破坏平台上提供的服务为目的而创建账户。
+<br>
+如果您没有资格创建账户，则我方保留拒绝您注册账户的权利，如果您已经创建了账户，则我方有权暂停、终止和/或关闭您的账户，恕不另行发出通知，并可要求您对由此产生的任何不利后果负责。我方保留自行决定拒绝任何申请创建账户（包括但不限于与政治和/或公众人物相关的账户）的权利或遵守 AML/CTF 法律法规的权利。
+<br>
+要创建账户，您应在必要时提供：
+<br>
+(i)         有效的电子邮箱地址；
+<br>
+(ii)         手机号码；
+<br>
+(iii)        您的真实姓名；
+<br>
+(iv)        身份证明文件；及我方为创建和维护您的账户所需的任何其他信息；
+<br>
+以上统称“注册数据”。
+<br>
+如果您的手机号码需要使用您的真实姓名进行注册，则您应在向我方提供手机号码之前完成该注册程序。您应负责和承担因未进行此类注册而产生的任何直接或间接的损失以及任何不利后果。
+<br>
+您有责任更新注册数据，并确保其始终准确无误。您应对注册数据的真实性、完整性和准确性负责，并承担因您的注册资料不准确而产生的任何直接或间接损失和不利后果。
+<br>
+在我方验证并批准您所创建的账户后，您将会收到一个账户识别号和密码，您可以通过该识别号和密码来使用服务。您同意接收我方发送的与平台管理和运营有关的电子邮件和/或消息。
+<br>
+4.2         账户使用
+<br>
+您有权使用您的账户访问平台，从而使用服务，包括：
+<br>
+(i)           浏览本网站上数字资产产品的实时报价及交易信息；
+<br>
+(ii)         提交数字资产交易指令，无论是交易指令或是其他指令（简称“交易”）；
+<br>
+(iii)        完成交易；
+<br>
+(iv)        通过您的账户查看提供给用户的信息；
+<br>
+(v)        按照活动相关规则参加我方组织的活动；和/或
+<br>
+(vi)        我方可能不时向您提供的其他服务。
+<br>
+4.3         账户安全
+<br>
+您自行负责与您的账户相关的登录详情，包括您的用户名、密码、手机号码、交易密码及通过您的手机收到的验证码（简称“登录详情”）。如您的登录详情被盗用和/或您的账户被未经授权的第三方访问，您可立即通知我方要求暂停您的账户。收到此类请求后，我方将在合理期限内对您的请求采取行动。但是，在您的账户暂停之前，我方不对任何后果承担责任。
+<br>
+除非得到我方的同意，否则，您不得将您的账户转让给任何其他人，无论是通过捐赠、借出、租赁、转让或是其他方式。
+<br>
+如任何数字资产、密码或私钥丢失、被盗、发生故障、破坏或发生其他无法访问的情形，则我方没有义务发行任何替代数字资产。
+<br>
+4.4         暂停、终止或关闭
+<br>
+出现以下情况的，我方有权暂停向您的账户提供部分或所有服务、冻结您账户中的数字资产、终止您的账户、关闭您的账户和/或通知相关主管机关（“处理您的账户”）：
+<br>
+(i)           为保护我方声誉，我方合理地认为需要这样做；
+<br>
+(ii)         您使用账户时面临任何未决诉讼、调查或政府程序，和/或我方认为您的账户活动发生违法或违规的风险加大；
+<br>
+(iii)        您来自第1.2条所述的受限司法管辖区；
+<br>
+(iv)        根据第4.1条您没有资格创建账户；
+<br>
+(v)        您是代表法人实体创建账户，但您不是代表该法人实体行事的授权人；
+<br>
+(vi)        我方自行判断您不适合使用服务；
+<br>
+(vii)       您并非您的账户注册数据中描述的人；
+<br>
+(viii)     您连续1年时间未登录您的账户；
+<br>
+(ix)        您使用您的账户从事不法或非法活动，例如洗钱和贿赂；
+<br>
+(x)         您使用您的账户从事市场操纵活动、不当交易或其他非法交易活动，如洗钱、走私和商业贿赂；和/或
+<br>
+(xi)        您违反了本协议或任何其他适用的法律、规则和法规。
+<br>
+尽管有上述规定，我方有权提前7个工作日通知您关闭和终止您的账户。此后，您将有7个工作日的时间采取任何必要的行动，包括取消任何指令或平仓（“关闭前期”）。关闭前期结束后，我方有权取消您的指令、平仓并将您账户中的数字资产退还给您。无论本协议中有任何规定，如您的账户已根据本条款关闭，则所有剩余的账户余额（包括欠我方的费用和负债）应立即支付给我方。
+<br>
+对于与我方处理您的账户相关的任何不利后果和/或损失，我方概不负责。
+<br>
+如因欺诈调查、违法或违反本协议调查而暂停或关闭账户，我方将全权保管可能会移交给政府部门的数字资产、资金和用户信息/数据。
+<br>
+5.            存款、保管、取款和转账
+<br>
+服务仅针对我方支持的数字资产提供，且可能会不时更改。在任何情况下，您不应使用您的账户来以我方不支持的任何形式存储、发送、请求或接收数字资产。试图将您的账户用于我方不支持的数字资产的，我方不承担任何责任或义务。我方向您提供服务，不是作为买方或卖方进行任何数字资产的交易。服务不包括任何法定货币的存取或保管。
+<br>
+您账户中的所有数字资产均由我方以托管方式持有。这意味着：
+<br>
+(i)           数字资产的所有权应归您所有，不会转让给我方。由于您的账户拥有数字资产，您应承担数字资产的所有损失风险。我方不会声称或将账户中的资产视为属于我方；
+<br>
+(ii)         我方可能不会对您账户中持有的数字资产授予担保权益；
+<br>
+(iii)        除有关主管机关要求或本协议另有规定外，我方不会出售、转让、出借、抵押或以其他方式转让您账户中的资产，除非您指示或有管辖权的法院强制要求这样做；
+<br>
+(iv)        您控制账户中的数字资产。在任何时候，根据中断、故障停机时间及其他适用政策，您可通过将您的数字资产发送到由您或第三方控制的其他区块链地址来撤回您的数字资产；及
+<br>
+(v)          为了更安全地持有您账户中的资产，您的数字资产与我方自己的数字资产或资金是分开的，即对用户和我方账户使用不同的总账会计名目。尽管有上述规定，我方没有任何义务使用不同的区块链地址来存储您和其他客户或我方拥有的数字资产。
+<br>
+我方有权根据我方的内部考虑因素（包括相关数字资产网络的安全性和状态），设置和调整每日交易量和提款的限制。
+<br>
+6.            数字资产网络
+<br>
+6.1         数字资产交易
+<br>
+我方将根据您的指示处理交易。在向我方提交指示之前，您应核实所有交易信息。我方不保证任何用户、接收者、被请求者或其他第三方的身份，也无义务确保您提供的信息的准确性和完整性。交易一旦被传输到相关的数字资产网络，就无法撤销。
+<br>
+我方可能会收取网络费用（“矿工费”）以便为您处理交易。我方将自行计算矿工费，但我方会始终在您授权数字资产交易时（或之前）向您告知矿工费。当您或第三方从非平台托管的外部钱包向账户发送数字资产时，发起交易的人应自行负责正确执行交易，包括支付矿工费以促进成功完成交易。不支付矿工费可能会导致您的交易处于我方无法控制的未决状态，我方不对因交易启动错误而导致的延迟或损失负责，也没有义务协助补救此类交易。
+<br>
+一旦提交给数字资产网络，交易将在一段时间内处于待确认状态，等待数字资产网络对交易进行充分确认。处于等待状态的交易未完成。与处于等待状态的交易相关的数字资产将被相应地锁定，且不会纳入您的账户余额中，也不会在网络确认之前用于交易。
+<br>
+我方还可根据法律、法规或任何司法管辖区内对我方具有管辖权的任何法院或其他主管机关的要求，拒绝处理或取消任何未决交易，例如，在怀疑存在洗钱、恐怖主义融资、欺诈或任何其他金融犯罪时。
+<br>
+6.2         数字资产协议的操作
+<br>
+我方不拥有或控制对平台支持的数字资产的操作事宜进行管理的相关软件协议。通常，相关协议是“开源的”，任何人都可使用、复制、修改和传播.
+<br>
+我方对相关协议的运行不承担任何责任，也无法保证网络操作的功能或安全性。您承认并接受与您存储在您的账户中的任何数字资产相关的软件协议可能发生变化的风险。
+<br>
+特别是，相关协议可能会因操作规则的突然变更（简称“分叉”）而受到影响。任何此类重大操作变更都可能对您存储在账户中的数字资产的可用性、价值、功能和/或名称产生重大影响。我方不能控制这些重大操作变化的发生时间和特征。您有责任自行了解即将发生的操作变化，并且在决定是否继续使用您的账户交易受到影响的数字资产时，您必须仔细考虑公开可用的信息和我方可能提供的信息。如果发生任何此类操作变更，我方有权采取必要措施保护平台上资产的安全性，包括暂停相关数字资产的操作以及其他必要步骤。
+<br>
+我方将尽最大努力通知您我方对任何重大操作变更的响应措施。但是，此类更改不在我方的控制范围内，可能会在未通知我方的情况下发生。我方对任何重大操作变更的响应均由我方自行决定，包括决定不支持任何新的数字资产、分叉或其他行动。
+<br>
+您承认并接受数字资产协议操作变更的风险，并同意我方不对此类操作变更负责，也不对您因操作规则的变更而可能遭受的任何价值损失承担责任。您确认并接受我方有权自行决定对任何操作变更的作出响应，且我方没有责任帮助您处理不受支持的资产或协议。
+<br>
+7.            交易规则
+<br>
+您在平台交易数字资产时应遵守以下规则：
+<br>
+(i)           在执行交易之前，您应阅读、理解并完全接受平台信息，包括但不限于价格、费用以及是否购买或出售数字资产；
+<br>
+(ii)         当您执行交易并提交您的交易时，您授权平台作为相关交易的经纪人为您匹配相关交易对手，而无需另行通知您；
+<br>
+(iii)        您有权在交易执行前随时撤销或修改您的交易；及
+<br>
+(iv)        您可在平台管理中心查看您的交易详情和记录。
+<br>
+7.1         汇率
+<br>
+每次购买或出售数字资产时，均受具体交易的汇率约束。“汇率”是指平台上报出的、受支持的特定数字资产的法定货币价格。汇率以“买入价”或“卖出价”表示，这是您可以买入或卖出数字资产的价格。
+<br>
+您确认：在任何具体时间，买入价汇率可能与卖出价汇率不同，且我方可能会在所报出的汇率上增加保证金或“点差”。当您授权交易时，您同意接受汇率。我方不保证任何汇率的可用性。我方不保证您能够以任何特定价格或任何特定时间在公开市场上购买和/或出售您的数字资产。
+<br>
+8.            费用
+<br>
+您同意负责支付所有费用。每次购买或出售数字资产都需要支付费用（“交易费”）。交易费将在每次交易前在平台上向您显示，并在我方向您发送的每张收据中注明。我方可能随时调整我方的交易费。
+<br>
+9.            合规
+<br>
+我方的KYC政策和AML/CTF政策旨在遵守有关KYC和AML/CTF的国际法律和标准，包括您当地司法管辖区的法律。我方将遵守我方的 KYC 和AML/CTF 政策，并尽最大努力采取措施并利用相关技术，以安全可靠的方式为您提供服务，防止因洗钱而带来的任何损失。
+<br>
+您授权我方直接或通过第三方进行我方认为必要的查询，以验证您的身份或保护您和/或我方免遭欺诈或其他金融犯罪，并根据查询结果采取我方合理认为必要的行动。在我方进行这些查询时，您确认并同意：您的个人信息可能会披露给信用调查和欺诈预防或金融犯罪机构，且这些机构可能会全面回复我方的查询。这只是一种身份检查，应当不会对您的信用评级产生不利影响。此外，我方可能会要求您在交易完成后等待一段时间，然后才允许您使用更多服务和/或允许您进行超出特定交易量限制的交易。
+<br>
+如我方获悉您账户中的任何数字资产或资金被盗或不是您合法拥有的，我方可能会（但没有义务）对受到影响的资金和您的账户进行行政冻结。如我方对您的部分或全部资金或账户实施行政冻结，则我方可能会持续进行冻结，直至争议得到解决且我方以可接受的形式收到可接受的解决证据为止。我方不会参与任何此类争议或争议的解决。您同意，对于上述任何冻结或您在冻结期间无法提取数字资产或资金或执行交易的情形，我方不承担任何责任或义务。
+<br>
+10.         KYC及AML/CTF
+<br>
+关于KYC和AML/CTF，我方：
+<br>
+(i)           应颁布和更新我方的 KYC 和AML/CTF政策，以符合适用法律、规则和法规规定的标准；
+<br>
+(ii)         应颁布和更新与本平台运营相关的指南和规则，且我方的工作人员应根据这些指南和规则推动向您提供服务；
+<br>
+(iii)        应设计和执行交易监控程序，包括但不限于严格的身份验证程序，并维持专门的团队来处理反洗钱问题；
+<br>
+(iv)        采用基于风险的方法对我方的用户进行尽职调查和监督；
+<br>
+(v)          有权审查和检查在我方平台上进行的交易；
+<br>
+(vi)        有权向有关机关报告我方自行判断认为可疑的交易；及
+<br>
+(vii)       应将注册数据和身份信息（见本文的定义）至少保存6 年。
+<br>
+10.1身份信息
+<br>
+如果您是个人，则我方将向您收集某些信息，包括但不限于您的：
+<br>
+(i)               姓名；
+<br>
+(ii)             地址（及您的常住地址，如与上述地址不同的话）。您的地址（或常住地址）应按照我方规定的方式进行验证；
+<br>
+(iii)            有效的电子邮件地址；
+<br>
+(iv)            出生日期；
+<br>
+(v)              国籍；
+<br>
+(vi)            您持有身份证明文件所拍摄的照片；
+<br>
+(vii)           官方身份证明文件，包括护照、身份证（正面和背面）和有关主管机关签发的其他身份证明文件；及
+<br>
+(viii)         我方可能不时要求您提供的其他信息，
+<br>
+统称“个人身份信息”。
+<br>
+如果是个人以外的法人实体，则我方将向您收集某些信息，包括但不限于您的：
+<br>
+(i)               注册和成立文件；
+<br>
+(ii)             公司章程或备忘录；
+<br>
+(iii)            所有权结构和所有权结构的说明；
+<br>
+(iv)            董事会决议，其中指定负责您的账户的授权人；
+<br>
+(v)              董事、主要股东和授权人的身份证明文件。一般而言，需要明确持有主体10%或以上表决权的股东；
+<br>
+(vi)            您的地址；及
+<br>
+(vii)           我方可能不时要求您提供的其他信息，
+<br>
+统称“公司身份信息”，与个人身份信息一起称为“身份信息”。
+<br>
+我方要求您提供的身份信息可能因您所在的司法管辖区不同而有所不同，我方也可能要求您对您提供给我方的文件副本进行公证。如您的身份信息不是以英文或中文提供，则我方有权要求将您的身份信息翻译为英文并进行公证。
+<br>
+10.2      交易报告
+<br>
+我方将监控您账户的活动以发现可疑交易。如我方确定与您的账户有关的可疑交易，则我方可能会暂停、停止或终止交易、撤销交易和/或向有关机关报告交易，而不另行发出通知。我方针对可疑交易采取的任何行动均不会导致违反本协议。
+<br>
+11.         知识产权
+<br>
+与平台相关的所有知识产权，包括但不限于网站名称、商誉、商标、标识、数据库、网站设计、文本和图形、软件、照片、视频、音乐、声音和上述文件的任何组合，以及软件编译、相关源代码和软件（包括小型应用程序和脚本）的知识产权（“知识产权”）应归我方所有。您不得出于商业目的复制、修改、复制、传输或使用任何知识产权。您对服务的使用并不授予您对知识产权拥有任何权利。
+<br>
+一旦接受本协议，即视为您已将您在本网站上发布的任何形式的信息的全部版权完全免费转让给我方，包括但不限于版权、发行权、租赁权、展览权、表演权、放映权、广播权、信息网络传播权、拍摄权、改编权、翻译权、汇编权及著作权人享有的其他可转让权利，且我方有权就任何侵犯该等版权的行为提出起诉并获得全部赔偿。本协议适用于您在本网站上发布的任何受著作权法保护的内容，无论该内容是在本协议签署之前或之后产生。
+<br>
+您在使用服务时不得非法使用或处置我方或任何其他人的知识产权。您不得发布或授权其他网站或媒体以任何方式使用知识产权。
+<br>
+12.         权利和义务
+<br>
+不管本协议中有任何规定，我方有权自行决定：
+<br>
+(i)           在出现错误或更新的情况下，修改网站上显示的信息；
+<br>
+(ii)         随时修改、暂停或终止所提供的任何或所有服务，而不另行发出通知。如发生上述终止，则自本网站公告终止之日起生效；
+<br>
+(iii)        暂停或永久终止您对您的账户、平台的访问权或您对任何或所有服务的使用权；
+<br>
+(iv)        如我方怀疑或确定您提供给我方的信息是错误、不真实、无效和/或不完整的，则通知您更正或更新您提供给我方的信息，并在您不更正和更新相关信息的情况下，暂停或终止向您提供服务；
+<br>
+(v)          删除平台上任何不符合适用法律、规则或法规的内容或信息，而不另行发出通知；
+<br>
+(vi)        根据适用的法律、规则和法规，向您索取信息。您有义务协助我方处理这种请求；及
+<br>
+(vii)       在系统故障、网络故障或极端市场条件等妨碍平台提供服务的特殊情况下，为维护用户的利益，修改所提供的服务。将通过网站上的公告向您告知这些修改。
+<br>
+除非本协议另有规定，否则，我方应：
+<br>
+(i)           使用必要的技术手段和管理措施，确保平台正常运行，为您使用服务提供必要、可靠的环境；
+<br>
+(ii)         维持向您提供服务；
+<br>
+(iii)        通过加强我方的技术能力和加强我方的安全措施来确保您的数字资产的安全；及
+<br>
+(iv)        提前向您通知与您的账户相关的可预见的安全风险。
+<br>
+13.         陈述和保证
+<br>
+通过同意本协议，您声明、保证和/或承诺：
+<br>
+(i)               您之前没有被暂停或排除使用服务；
+<br>
+(ii)             您已达到法定年龄，有能力并有权按照所有适用法律、规则和法规的要求签订本协议并使用服务；
+<br>
+(iii)            您对服务的使用及您的账户活动符合所有适用的法律法规；
+<br>
+(iv)            您的所有数字资产均由您合法获得和拥有；
+<br>
+(v)              您对通过您的账户所采取的行动承担全部责任；
+<br>
+(vi)            您对因您的交易和使用您的账户而产生的所有利润、损失或责任负责；
+<br>
+(vii)           您提供给我方的所有信息都是真实、准确和完整的；
+<br>
+(viii)         您应出于税务目的向主管机关提交相关报告；
+<br>
+(ix)            您应避免通过使用服务从事任何非法活动；
+<br>
+(x)              您应始终避免从事或参与任何损害平台利益的行为或活动，无论其是否与本网站提供的服务有关；
+<br>
+(xi)            您不得以违反平台预期用途的方式行事，例如协助非法传输信息、传播有关平台的虚假信息、侵犯我方或其他用户的权利、邀请加入传销计划或伪造和转发此类虚假信息给我方或其他用户；
+<br>
+(xii)           您不得通过技术手段或其他方式恶意干扰平台的正常运行或其他用户对服务的使用；
+<br>
+(xiii)         您不得陈述或传播关于我方的虚假诽谤信息；
+<br>
+(xiv)         如您与其他用户发生争议，则您应仅诉诸司法手段或采用其他与政府相关的方式向我方索取信息；
+<br>
+(xv)           您应对您在使用服务过程中产生的与任何硬件、软件和其他第三方服务相关的所有费用和税款承担责任；及
+<br>
+(xvi)         您应遵守本协议以及我方发布的与本平台相关的其他指南和规则。
+<br>
+14.         责任和赔偿
+<br>
+您理解并同意，在以下任何一种情形下，我方概不承担任何责任，而您应承担全部责任：
+<br>
+(i)           收入损失；
+<br>
+(ii)         交易利润损失；
+<br>
+(iii)        合同损失；
+<br>
+(iv)        业务中断；
+<br>
+(v)          与货币有关的损失；
+<br>
+(vi)        信息或数据的丢失或损坏；
+<br>
+(vii)       失去机会；
+<br>
+(viii)     数字资产的价格或价值损失；
+<br>
+(ix)        购买服务范围之外的产品和服务的成本；
+<br>
+(x)          软件、硬件、互联网连接的任何故障以及由此引起的任何失真和延迟；
+<br>
+(xi)        因任何侵权（包括疏忽）和/或违反合同或任何其他原因而引起的任何间接的、特殊的或附带的损失或损害，无论我方是否可以合理预见此类损失或损害，也无论我方是否被提前告知此类损失或损害的可能性；
+<br>
+(xii)       您在使用服务时可能遇到的任何恶意程序，例如病毒或木马；
+<br>
+(xiii)     链接至本网站的第三方网站的信息、产品或业务；
+<br>
+(xiv)     平台上的任何信息或技术在其有效性、准确性、正确性、可靠性、质量、稳定性、完整性、及时性、适用性（包括特定目的）、无错误或遗漏及一致性方面造成的损失；
+<br>
+(xv)       我方对平台上的交易计算错误；
+<br>
+(xvi)     损害：
+<br>
+(a)          您的商誉或声誉的损害；
+<br>
+(b)         当我方有合理理由相信您在平台上进行的交易和/或行为可能涉及任何非法活动或违反本协议时，您所遭受的损害；
+<br>
+(c)          因通过服务购买或获取数据、信息或数字货币而产生的任何费用或损失；
+<br>
+(d)         因您对服务的误解而引起的损害；及/或
+<br>
+(e)          与服务有关的其他不能归于我方的任何损失所引起的损害。
+<br>
+14.1 责任限制
+<br>
+不管本协议有任何规定，我方对您负有的责任不应超过您自责任事件发生前3个月开始到相关事件发生时的总成本。
+<br>
+我方未放弃本协议中未提及的任何权利，并在适用法律允许的最大范围内限制、免除或抵消我方的损害赔偿责任。
+<br>
+如您与服务的一位或多位用户（我方除外）发生争议，则您同意我方、我方的关联方或服务提供方以及我们各自的高级管理人员、董事、代理人、合营者、员工和代表均不会对由此类争议引起的或与之相关的任何种类或性质的任何主张、要求和损害赔偿（实际的和附带的、直接的或间接的）承担责任。
+<br>
+14.2      赔偿
+<br>
+您同意向我方、我方的关联方和服务提供方以及我们各自的高级管理人员、董事、代理人、员工和代表赔偿因您违反本协议和/或我方执行本协议或您违反任何法律、规则或法规或任何第三方的权利而导致的任何主张、要求或损害赔偿所合理发生的任何成本（包括律师费及任何监管机关处以的任何罚金、费用或罚款）。
+<br>
+14.3      我方的保证
+<br>
+本协议中规定的保证和承诺是我方就我方根据本协议和通过本网站提供的服务作出的唯一保证和声明，并取代任何其他方式产生的任何和所有保证和承诺，无论是书面的或文字的、明示的或暗示的。所有这些保证和承诺仅代表我方自己的保证和承诺，并不保证任何第三方遵守本协议中包含的保证和承诺。
+<br>
+15.         因违约而终止及补救措施
+<br>
+我方有权随时终止我方根据本协议向您提供的所有服务，且本协议应在所有服务终止之日终止。您有权随时终止使用我方提供的服务，且本协议应在您终止使用服务之日终止。本协议终止后，您同意您无权要求我方继续向您提供服务或履行任何其他义务，包括但不限于无权要求我方保留或向您披露您的账户信息，或向您或任何第三方披露其中未阅读或发送的任何信息。
+<br>
+15.1      违反协议
+<br>
+如您违反本协议或任何适用的法律、规则或法规，则您应向我方支付至少200万美元的赔偿金，并承担我方因此而产生的所有费用，包括任何法律费用（“赔偿金”）。如赔偿金不能弥补我方的损失，则您应有责任承担超出赔偿金的额外金额。
+<br>
+为免生疑问，本协议的终止不妨碍守约方要求违约方承担在本协议之外产生的责任。
+<br>
+16.         通知和通讯
+<br>
+用户承诺定期及时查阅平台的公告、资料和信息。您因疏于查阅公告、资料和信息而发生个人损失的，我方将不承担任何责任或任何形式的赔偿。
+<br>
+17.         其他规定
+<br>
+17.1      转让
+<br>
+本协议约定的权利和义务对受益于该权利和义务的双方受让人、继承人、遗嘱执行人和接管人具有同等约束力。未经我方同意，您不得将您在本协议项下的任何权利或义务转让给任何第三方，但我方可在提前 30 天向您发出通知的情况下随时将我方在本协议下的权利和义务转让给任何第三方。
+<br>
+17.2      不可抗力
+<br>
+我方因信息网络设备维护、信息网络连接故障、计算机错误、通信或其他系统、电力故障、天气状况、意外事故、劳工行动、劳资纠纷、起义、暴动、缺乏生产力或生产材料、火灾、洪水、风暴、爆炸、战争、银行或其他合作伙伴的问题、数字资产市场的崩溃、政府行动、司法或行政机关的行动等不受我方控制或超出我方控制的行为或第三方的原因未向您提供服务或延迟提供服务承担的，我方不承担任何责任，也不承担您可能因此而遭受的损失。
+<br>
+17.3      双方关系
+<br>
+本协议仅对您与我方之间的权利和义务具有约束力，不涉及因本网站用户之间以及其他方与您之间的交易而产生的和与之相关的法律关系和法律纠纷。
+<br>
+除非本协议另有规定，否则，本协议中的任何内容均不得被视为创建、暗示或以其他方式将我方视为您的代理人、受托人或其他代表。
+<br>
+17.4      完整协议
+<br>
+如任何有管辖权的法院认定本协议的任何条款不可执行、无效或非法，则本协议其余条款的有效性不受影响。
+<br>
+17.5      协议的修订
+<br>
+我方有权随时自行决定修订或修改本协议的任何内容。本协议的“最后更新时间”部分显示的日期和时间是指本协议条款和本协议内容发生任何变更的时间。修改后的协议在平台上发布公告后立即生效。尽管我方已采取合理措施确保平台信息的准确性，但我方不保证该准确性的程度，也不承担因平台上的信息而直接或间接产生的任何损失或因未连接到网络、未传输或收到任何通知和信息所导致的任何延迟或失败而直接或间接产生的任何损失。
+<br>
+您应负责自行了解本协议的最新修订情况。如您不同意这些修订，请立即停止使用服务。继续使用服务的，视为您同意本协议的条款。
+
+17.6      继续有效
+<br>
+根据自身性质应在本协议到期或终止后继续有效的本协议所有条款，将在本协议终止或到期后继续具有约束力和效力。
+<br>
+17.7      数据保护
+<br>
+您的个人数据将得到妥善保护和保密，但我方有权根据本协议或适用法律收集、处理、使用或披露您的个人数据。根据所涉及的产品或服务，您的个人数据可能会披露给以下第三方：
+<br>
+(i)               您的交易对手；
+<br>
+(ii)             我方的股东、合作伙伴、投资者、董事、监事、高级管理人员和员工；
+<br>
+(iii)            我方的合营者、联盟伙伴和商业伙伴；
+<br>
+(iv)            我方的代理人、承包商、供应商、第三方服务提供商和专业顾问，包括在电信、信息技术、薪资管理、信息处理、培训、市场调研和存储等领域为我方提供行政、财务、研究、运营、IT和其他服务的签约提供方；
+<br>
+(v)              提供商品和服务或赞助竞赛或其他促销活动的第三方业务合作伙伴，无论其是否与我方合作提供；
+<br>
+(vi)            保险公司或保险调查员和信贷提供者；
+<br>
+(vii)           征信机构或任何债务催收机构或争议解决中心（在发生争议的情况下）；
+<br>
+(viii)         审计师、律师等专业顾问；
+<br>
+(ix)            相关政府监管机构或执法机构（目的是遵守政府机关实施的法律或法规）；
+<br>
+(x)              我方权利和义务的受让人；
+<br>
+(xi)            银行、信用卡公司及其各自的服务提供商；及
+<br>
+(xii)           由您或相关合同确定的且经您同意的人。
+<br>
+关于您个人信息的收集、使用和存储保护，以本网站公布的隐私政策为准。
+<br>
+17.8      出口管制
+<br>
+您对服务的使用受国际出口管制和经济制裁要求的约束。您使用服务发送、接收、购买、出售、交易或存储数字资产，即表示您同意遵守这些要求。在以下情况下，您不得获取数字资产或使用任何服务：
+<br>
+(i)               您身处以下国家或受以下国家的控制或是以下国家的国民或居民：索马里、南苏丹（简称“受制裁国家”），或者您是相关机构不时发布的经济制裁名单上的人员（包括但不限于MAS指定个人和实体名单、美国商务部被拒绝人员名单、未经核实名单、实体名单或欧盟金融制裁制度（“受制裁人”）；或
+<br>
+(ii)             您打算向受制裁国家（或受制裁国家的国民或居民）或受制裁人提供任何持有的或存储的数字资产或服务。
+<br>
+17.9      不弃权
+<br>
+我方或您放弃追究另一方违反本协议或本协议中所述的任何其他责任，不得被解释或视为放弃追究另一方违反本协议的其他行为。未行使任何权利或补救措施的，不得以任何方式解释为对该权利或补救措施的放弃。
+<br>
+17.10   管辖法律
+<br>
+本协议及我们之间的关系应受塞舌尔法律管辖并据其解释。
+<br>
+17.11   争议解决
+<br>
+您确认并同意，在提出任何争议或主张之前，您将通过客服与我方联系，我方将尽快在内部解决相关争议（“内部解决”）。双方同意本着诚意协商解决任何争议（此类协商应予以保密并受适用法律、规则和法规保护，且不会作为任何诉讼的证据）。
+<br>
+您确认并同意，如任何争议、纠纷、分歧或主张未通过内部解决得以解决，包括与本条款的存在、有效性、解释、履行、违反或终止有关的任何争议或与本条款有关或由此产生的争议（统称“争议”），双方应根据当时有效的国际商会仲裁规则将争议提交给国际商会国际仲裁法院（“ICC 国际仲裁院”）。仲裁应在塞舌尔进行，并适用根据国际商会仲裁规则确定的适用法律。除非双方另有约定，否则，根据国际商会仲裁规则，仅应指定一名仲裁员。仲裁员有权对其管辖权作出裁决，包括但不限于对仲裁协议的存在、范围或有效性或任何主张或反诉的可仲裁性提出的异议。仲裁应以英文进行。无论采用何种仲裁方式，仲裁员均应出具合理的书面决定，对仲裁裁决及其基本认定和结论（如有）作出解释。仲裁裁决为终局裁决，对双方具有约束力，可由任何有管辖权的法院执行。
+<br>
+17.12无人认领的财产  
+<br>
+如我方为您持有数字资产，但我方无法与您取得联系，且几年来没有您使用服务的记录，则在某些司法管辖区，适用法律可能要求我方将数字资产作为无人认领的财产报告给主管机关。我方将尝试按照我方记录中显示的地址联系您，但如我方无法找到您，则我方可能需要将任何此类数字资产作为无人认领的财产交给某些司法管辖区的主管机关。在适用法律允许的情况下，我方有权从这些无人认领的资金中扣除休眠费或其他管理费用。
+<br>
+17.13   集体诉讼豁免
+<br>
+您同意：与本协议有关的任何主张（无论是基于合同、侵权、法规、欺诈、虚假陈述或任何其他法律理论，以及无论主张是在本协议终止期间或之后产生）应在仲裁中以个案为基础对另一方提出，而不是在所谓的集体诉讼或代表诉讼中作为原告或集体成员。您进一步同意，在适用法律允许的范围内，放弃将此类主张作为集体、集合、代表性或私人总检察长诉讼而提出、审理或仲裁的任何权利。未经我方等所有当事方的同意，不得将个别仲裁合并或统一为单一仲裁。
+<br>
+</span>
+<div class="no_button_box">
+            <style>
+                .small_hs_btn{
+                    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    background: #FCD535;
+    float: right;
+    border-radius: 10px;
+    text-align: center;
+                }
+            </style>
+            <div class="small_hs_btn" style="background: linear-gradient(to right, rgb(122, 200, 111), rgb(122, 200, 111));" onclick="fanhui();">
+                <i style="color:#fff;" class="bi bi-arrow-right bi_right"></i>
+            </div>
+        </div>
+    </div>      
+    
+    
+    
+    <div id="xieyi2" class="yonghufuwuxieyi" style="display:none">
+<span>
+    <br>
+    <h3>隐私政策</h3>
+<br>
+<span style="color:#dc3545;">最后更新日期：2022年【5】月【31】日</span>
+<br>
+<br>
+本平台是一个专门供用户进行数字资产交易和提供相关服务（以下称“该服务”或“服务”）的平台。为了表述之方便，本平台在本协议中合称 “我们”或其他第一人称称呼，只要登陆该平台的自然人或其他主体均为本平台的用户，以下使用“您”或其他第二人称，我们和您合称为“双方”，我们或您单称为“一方”。
+<br>
+我们充分理解与尊重您的个人信息对您的重要性，我们将按法律法规要求，采取相应安全保护措施，保护您的个人信息安全。鉴于此，制定本《隐私政策》（下称“本政策 /本隐私政策”）并提醒您：
+<br>
+本政策适用于我们提供的所有产品和服务。如我们向您提供的产品或服务单独设立有隐私政策的，则该产品或服务适用其单独设立的隐私政策；如我们的产品或服务未单独设立隐私政策的，则适用于本政策。
+<br>
+需要特别说明的是，本政策不适用于其他第三方向您提供的服务，第三方向您提供的服务适用其向您另行说明的隐私政策。
+在使用我们各项产品或服务前，请您务必仔细阅读并透彻理解本政策，特别是以粗体/粗体下划线标识的条款，您应重点阅读，在确认充分理解并同意后再开始使用。如对本政策内容有任何疑问、意见或建议，您可通过我们官方提供的各种联系方式与我们联系。如您不同意本政策中的任何条款，您应立即停止访问本平台。
+ <br>
+第一部分 定义
+<br>
+个人信息：指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。
+<br>
+个人敏感信息：指包括身份证件号码、个人生物识别信息、银行账号、财产信息、行踪轨迹、交易信息、14岁以下（含）儿童信息等的个人信息（我们将在本隐私权政策中对具体个人敏感信息以粗体进行显著标识）。
+<br>
+个人信息删除：指在实现日常业务功能所涉及的系统中去除个人信息的行为，使其保持不可被检索、访问的状态。
+<br>
+儿童：指不满十四周岁的未成年人。
+<br>
+第二部分  隐私政策
+<br>
+本隐私政策部分将帮助您了解以下内容：
+<br>
+一、我们如何收集和使用您的信息
+<br>
+二、我们如何使用Cookie和同类技术
+<br>
+三、我们如何共享、转让、公开披露您的信息
+<br>
+四、我们如何保护您的信息
+<br>
+五、您如何管理您的信息
+<br>
+六、我们如何处理未成年人的信息
+<br>
+七、本隐私政策如何更新
+<br>
+八、如何联系我们
+ <br>
+一、 我们如何收集和使用您的信息
+<br>
+在您使用我们的产品及/或服务时，我们需要/可能需要收集和使用的您的个人信息包括如下两种：
+<br>
+1、为实现向您提供我们产品及/或服务的基本功能，您须授权我们收集、使用的必要的信息。如您拒绝提供相应信息，您将无法正常使用我们的产品及/或服务；
+<br>
+2、为实现向您提供我们产品及/或服务的附加功能，您可选择授权我们收集、使用的信息。如您拒绝提供，您将无法正常使用相关附加功能或无法达到我们拟达到的功能效果，但并不会影响您正常使用我们产品及/或服务的基本功能。
+<br>
+您理解并同意：
+<br>
+1、我们致力于打造多样的产品和服务以满足您的需求。因我们向您提供的产品和服务种类众多，且不同用户选择使用的具体产品/服务范围存在差异，相应的，基本/附加功能及收集使用的个人信息类型、范围等会有所区别，请以具体的产品/服务功能为准；
+<br>
+2、为给您带来更好的产品和服务体验，我们在持续努力改进我们的技术，随之我们可能会不时推出新的或优化后的功能，可能需要收集、使用新的个人信息或变更个人信息使用目的或方式。对此，我们将通过更新本政策、弹窗、页面提示等方式另行向您说明对应信息的收集目的、范围及使用方式，并为您提供自主选择同意的方式，且在征得您明示同意后收集、使用。在此过程中，如果您有任何疑问、意见或建议的，您可通过本平台提供的各种联系方式与我们联系，我们会尽快为您作出解答。<br>
+ <br>
+我们会为实现本政策下述的各项功能，收集和使用您的个人信息：
+<br>
+（一） 帮助您注册，并向您提供本平台所提供的服务；
+<br>
+1、注册服务
+<br>
+我们通过本平台账户为您提供基础会员服务。为注册成为会员并使用我们的会员服务，您在申请注册时需要填写和提供以下信息：
+<br>
+（1）身份信息。该信息可以帮助我们验证您是否有资格注册为本平台会员，包括但不限于您的名字、您的居住地址、您所属国家或政府签发的其他具有证明您身份信息的不同的证书以及涉及到的号码及所有其他可帮助我们验证您身份的信息（以下合称为“身份信息” ）。该身份信息具体根据您是个人用户还是机构用户而有所不同，根据不同司法管辖区的法律和法规，我们针对来自不同国家或地区的用户所收集的信息可能有所不同。以下信息和数据作为一个指示性的示例：
+<br>
+个人用户：国籍、法定全名（包括曾用名和当地语言名称）、身份证号、电子邮件地址、电话号码、社会安全号码（“SSN”），护照号码或任何政府颁发的身份证号码、出生日期、身份证明（例如护照，驾驶执照或政府颁发的身份证明）。
+<br>
+机构用户：公司法定名称（包括当地语言的法定名称）、注册信息、商务电话号码、授权代表及授权用户个人信息、主要营业地点、所有实益拥有人的个人信息）、股东/实益拥有人的身份证明文件（护照或政府签发的身份证）、公司架构、公司成立相关文件、董事会决议、资金来源申报、风险与合规控制说明及平台要求的其他信息或者文件。
+<br>
+（2）服务信息。该信息帮助我们与您联系并顺利为您提供不同模式的数字资产间交易服务，包括但不限于您的个人身份信息、联系信息、交易信息、以及您的借记卡信息和/或其他帐户信息（以下合称为“服务信息” ）。<br>
+同时请您理解，我们向您提供的服务是不断更新和发展的。如您选择使用了前述说明当中尚未涵盖的其他服务，基于该服务我们需要收集您的额外信息的，我们会通过页面提示、交互流程、协议约定、弹窗提示等方式向您说明信息收集的范围与目的，并征得您的同意。<br>
+如果您仅需使用浏览服务，您不需要注册成为我们的会员及提供上述信息。<br>
+2、其他注册服务<br>
+实名认证：当您注册登录后，需进入"个人中心"在身份认证中完成实名认证，您在使用实名认证过程中需向平台提供您的真实姓名、身份证号或护照号。<br>
+高级认证：当您在本平台中的交易额超过一定限额时，平台为了维护您的资产安全，会要求对您进行高级认证。认证过程除实名认证信息外，您认可平台对您进行“人脸识别”的高级认证，人脸识别会涉及到平台对您的相关视频流或人脸图像的收集。
+<br>
+账户信息展示：如果您已拥有本平台账户，我们可能会在服务中显示您的上述个人信息（实名认证仅显示认证是否通过的结果），以及您在平台账户相关联的产品和服务中执行的操作，包括通过本平台账户集中展示您的个人资料、交易订单。我们会尊重您对平台账户设置所做的选择。
+<br>
+（二） 安全管理服务和服务信息推送服务
+<br>
+当您使用本平台提供的服务或访问本平台时，本平台为保障您的交易安全及服务的安全稳定运行，我们需要自动接收并记录您的Web浏览器信息，您登录账户使用的设备信息（IDFA、操作系统、设备型号、设备制造商、系统版本、Android ID、IMEI 以及 MAC 地址等）、您请求访问的网页上的IP地址及记录、所在地区、网络环境、设备指纹信息、服务日志信息、软件信息、位置信息等。
+请注意，单独的设备信息是无法识别特定自然人身份的信息。如果我们将这类非个人信息与其他信息结合用于识别特定自然人身份，或者将其与个人信息结合使用，则在结合使用期间，这类非个人信息将被视为个人信息，除取得您授权或法律法规另有规定外，我们会将这类信息做匿名化、去标识化处理。
+<br>
+为向您提供更便捷、更符合您个性化需求的信息展示及推送服务，我们未来可能会根据您的设备信息和您本平台或客户端的浏览使用信息，提取您的偏好特征，并基于特征标签产出间接人群画像，用于展示、推送信息和可能的商业广告。若您不同意接收此类推送信息或撤回同意收集个人信息，您可根据本政策提供的联系方式与我们联系。
+<br>
+我们努力保障您的浏览体验。如果您不想接受我们给您发送的商业广告，您可通过短信提示回复退订或我们提供的其他方式进行退订或关闭。
+此外，我们也会为了不断改进和优化上述的功能来使用您的上述信息。
+<br>
+（三）交易记录保管及查询服务
+<br>
+我们就您在本平台上的交易所收集的相关数据，包括但不限于交易记录。如您需查询您的订单交易记录，可在平台“订单管理”中查询您的个人交易明细，具体包括：交易对方昵称、下单时间、订单号、交易信息、数字资产种类及数量等。
+<br>
+（四） 客服及争议处理
+<br>
+当您与我们联系或提出售中售后、争议纠纷处理申请时，为了保障您的账户及系统安全，我们需要您提供必要的个人信息以核验您的会员身份。
+为便于与您联系、尽快帮助您解决问题或记录相关问题的处理方案及结果，我们可能会保存您与我们的通信记录及相关内容（包括账号信息、订单信息、您为了证明相关事实提供的其他信息，或您留下的联系方式信息），如果您针对具体订单进行咨询、投诉或提供建议的，我们会使用您的账号信息和订单信息。
+<br>
+为了提供服务及改进服务质量的合理需要，我们还可能使用的您的其他信息，包括您与客服联系时您提供的相关信息，您参与问卷调查时向我们发送的问卷答复信息。
+<br>
+（五）其他
+<br>
+1、若你提供的信息中含有其他用户的个人信息，在向本平台提供这些个人信息之前，您需确保您已经取得合法的授权。若其中涉及儿童个人信息的，您需在发布前取得对应儿童监护人的同意，前述情形下监护人有权通过本政策第九条的途径联系我们，要求更正或删除涉及儿童个人信息的内容。
+<br>
+2、若我们将信息用于本政策未载明的其他用途，或者将基于特定目的收集而来的信息用于其他目的，或者我们主动从第三方处获取您的个人信息，均会事先获得您的同意。
+<br>
+若我们从第三方处间接获取您的信息的，我们会在收集前明确以书面形式要求该第三方在已依法取得您同意后收集个人信息，并向您告知共享的信息内容，且涉及敏感信息的在提供给我们使用前需经过您的明确确认，要求第三方对个人信息来源的合法性和合规性作出承诺，如第三方有违反行为的，我们会明确要求对方承担相应法律责任；同时，我们对个人信息会进行安全加固（包括敏感信息报备、敏感信息加密存储、访问权限控制等）。我们会使用不低于我们对自身用户个人信息同等的保护手段与措施对间接获取的个人信息进行保护。
+<br>
+3、征得授权同意的例外
+<br>
+您充分理解并同意，我们在以下情况下收集、使用您的个人信息无需您的授权同意，且我们可能不会响应您提出的更正/修改、删除、注销、撤回同意、索取信息的请求：
+<br>
+（1）与国家安全、国防安全有关的；
+<br>
+（2）与公共安全、公共卫生、重大公共利益有关的；
+<br>
+（3）与犯罪侦查、起诉、审判和判决执行等司法或行政执法有关的；
+<br>
+（4）出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；
+<br>
+（5）您自行向社会公众公开的个人信息；
+<br>
+（6）从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。
+<br>
+（7）根据与您签订和履行相关协议或其他书面文件所必需的；
+<br>
+（8）用于维护所提供的产品及/或服务的安全稳定运行所必需的，例如发现、处置产品及/或服务的故障；
+<br>
+（9）为合法的新闻报道所必需的；
+<br>
+（10）学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的；
+<br>
+（11）法律法规规定的其他情形。
+<br>
+请知悉，根据适用的法律，若我们对个人信息采取技术措施和其他必要措施进行处理，使得数据接收方无法重新识别特定个人且不能复原，或我们可能会对收集的信息进行去标识化地研究、统计分析和预测，用于改善本平台的内容和布局，为商业决策提供产品或服务支撑，以及改进我们的产品和服务（包括使用匿名数据进行机器学习或模型算法训练），则此类处理后数据的使用无需另行向您通知并征得您的同意。
+4、如我们停止运营本平台产品或服务，我们将及时停止继续收集您个人信息的活动，将停止运营的通知以逐一送达或公告的形式通知您，并对我们所持有的与已关停业务相关的个人信息进行删除或匿名化处理。
+<br>
+二、我们如何使用Cookie
+<br>
+如果您的浏览器或浏览器附加服务允许，您可修改对Cookie的接受程度或拒绝我们的Cookie。有关详情，请参见 AboutCookies.org。但如果您这么做，在某些情况下可能会影响您安全访问我们的平台，且可能需要在每一次访问我们的平台时更改用户设置。您理解并且同意：
+<br>
+1、 当您到访我们平台时, 我们通过cookies使用Google
+<br>
+Stats去记录我们的业绩以及核对在线广告的效果。Cookie是发送到您的浏览器上并在您的电脑硬盘驱动器上存储的小量数据。只有当您使用您的电脑进入我们平台时,Cookie才能够被发送到您的电脑硬盘上。
+<br>
+2、Cookies常用于记录访问者浏览我们平台上的各个项目时的习惯以及偏好。Cookies所搜集的资料是不记名的集体统计数据, 不载有个人资料。
+3、Cookies不能用于取得您的硬盘上的数据、您的电邮地址、及您的私人数据，其可使本平台或服务商系统识别到您的浏览器并捕捉和记忆信息。大多数浏览器都预设为可以接受Cookies。您可以选择将您的浏览器设定为不接受Cookies,或如果Cookies一被装上就通知您。不过, 若设定为禁止Cookies, 您或许便不能启动或使用我们平台的某些功能。
+<br>
+三、我们如何共享、转让、公开披露您的信息
+<br>
+（一）共享
+<br>
+我们不会与本平台服务提供者以外的公司、组织和个人共享您的个人信息，但以下情况除外：
+<br>
+1、在法定情形下的共享：我们可能会根据法律法规规定、诉讼、争议解决需要，或按行政、司法机关依法提出的要求，对外共享您的个人信息。
+2、在获取明确同意的情况下共享：获得您的明确同意后，我们会与其他方共享您的个人信息。
+<br>
+3、在您主动选择情况下共享：我们会根据您的选择，将您的订单信息中与交易有关的必要信息共享给数字资产的交易对方，以实现您的交易及售后服务需求。
+<br>
+4、与授权合作伙伴共享：我们的关联方、帮助我们经营我们的平台、开展业务、或者向您提供服务的受信任的第三方，只要这些当事方同意将这些信息保密；当我们相信披露的信息是适当的，是遵守法律、法规、规章制度的或来自于法院或他主管当局的命令、执行我们的平台策略，正常运行平台所需要，关联方提供服务所需或保护我们或他人的权利、财产或安全的。
+<br>
+（二）转让
+<br>
+我们不会将您的个人信息转让给任何公司、组织和个人，但以下情况除外：
+<br>
+1、在获取明确同意的情况下转让：获得您的明确同意后，我们会向其他方转让您的个人信息；
+<br>
+2、在本平台发生合并、收购或破产清算情形，或其他涉及合并、收购或破产清算情形时，如涉及到个人信息转让，我们会要求新的持有您个人信息的公司、组织继续受本政策的约束，否则我们将要求该公司、组织和个人重新向您征求授权同意。
+<br>
+（三）公开披露
+<br>
+我们仅会在以下情况下，公开披露您的个人信息：<br>
+
+1、获得您明确同意或基于您的主动选择，我们可能会公开披露您的个人信息；<br>
+2、如果我们确定您出现违反法律法规或严重违反本平台相关协议及规则的情况，或为保护本平台用户或公众的人身财产安全免遭侵害，我们可能依据法律法规或征得您同意的情况下披露关于您的个人信息，包括相关违规行为以及本平台已对您采取的措施。<br>
+（四）共享、转让、公开披露个人信息时事先征得授权同意的例外<br>
+以下情形中，共享、转让、公开披露您的个人信息无需事先征得您的授权同意：<br>
+1、与国家安全、国防安全有关的；<br>
+2、与公共安全、公共卫生、重大公共利益有关的；<br>
+3、与犯罪侦查、起诉、审判和判决执行等司法或行政执法有关的；<br>
+4、出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；<br>
+5、您自行向社会公众公开的个人信息；<br>
+6、从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。<br>
+请知悉，根据适用的法律，若我们对个人信息采取技术措施和其他必要措施进行处理，使得数据接收方无法重新识别特定个人且不能复原，则此类处理后数据的共享、转让、公开披露无需另行向您通知并征得您的同意。<br>
+四、我们如何保护您的信息<br>
+1、我们实施妥善的实物、电子、管理及技术方面的措施来保护和保障您的个人资料的安全。我们尽力确保通过我们平台所搜集的任何个人资料皆免于任何与我们无关的第三者的滋扰。我们采取的安全措施包括但不限于：<br>
+（1）实物措施：存有您个人资料的记录会被存放在有锁的地方。<br>
+（2）电子措施：存有您个人资料的电脑数据会被存放在受严格登入限制的电脑系统和存储媒体上。<br>
+（3）管理措施：我们内部设立有对用户信息进行安全保护的相关部门，并建立了相关内控制度，对可能接触到您的信息的工作人员采取严格授权原则，只有经我们授权的职员才能接触到您的个人资料,<br> 这些职员需要遵守我们个人资料保密的内部守则。此外，我们不断对工作人员培训相关法律法规及隐私安全准则和安全意识强化宣导，并定期组织内部相关人员进行应急响应培训和应急演练，使其掌握岗位职责和应急处置策略和规程<br>
+（4）技术措施：可能采用如Secure Socket Layer Encryption这种加密技术来输送您的个人资料。<br>
+（5）安全措施：为保障您的信息安全，我们致力于使用各种现行通用的安全技术及配套的管理体系来尽量降低您的信息被泄露、毁损、误用、非授权访问、非授权披露和更改的风险。例如：通过网络安全层软件（SSL）进行加密传输、信息加密存储、严格限制数据中心的访问。传输和存储个人敏感信息（含个人生物识别信息）时，我们将采用加密、权限控制、去标识化、脱敏化等安全措施。<br>
+（6）其它措施：定期审查我们的个人资料收集，存储和处理流程;<br> 并根据必要的原则限制我们的员工和供应商对您数据的访问权限，且我们的员工和供应商均需遵守严格的合同保密义务。。<br>
+2、若您知悉我们的平台上有任何安全方面的漏洞, 请马上联系我们, 使我们可以尽快采取妥适的行动。<br>
+3、尽管实施了上述技术和保安的措施, 我们不能保证资料在互联网上的输送绝对安全,<br> 因此我们不能绝对保证您通过我们平台提供给我们的个人资料在一切时候都是安全的。我们将不定期更新并公开安全风险、个人信息安全影响评估报告等有关内容，您可通过本平台公告方式获得。<br>
+五、您如何管理您的信息<br>
+您可以通过以下方式访问及管理您的信息：<br>
+（一）查询、更正和删除您的信息<br>
+您有权根据要求获得您的个人资料副本，并确定我们掌握的关于您的信息是否准确并且是最新的。如果您的任何个人数据不准确，您可以要求更新您的信息。您也可以要求删除您的个人资料，但我们可能会在某些情况下拒绝您的删除请求，例如出于法律要求或其他法律目的。有关数据访问，更正或删除请求，您可以通过第八条中的联系方式联系我们。 <br>
+为了响应数据访问，更正或删除请求，我们将验证请求方的身份，以确保<br>他/她在法律上有权提出此类请求。虽然我们的目标是免费回复这些请求，但我们保留在您的请求重复或繁重时向您收取合理费用的权利。<br> 
+（二）改变您授权同意的范围<br>
+每个业务功能需要一些基本的个人信息才能得以完成（见本隐私权政策“第一部分”）。除此之外，您可以通过第八条中的联系方式联系我们给予或收回您的授权同意。<br>
+当您收回同意后，我们将不再处理相应的个人信息。但您收回同意的决定，不会影响此前基于您的授权而开展的个人信息处理。<br>
+（三）注销您的账户<br>
+您可以通过第八条中的联系方式联系我们来申请注销您的账户；在您主动注销账户之后，我们将停止为您提供产品或服务，根据适用法律的要求删除您的个人信息，或使其匿名化处理。<br>
+（四）响应您的上述请求<br>
+为保障安全，您可能需要提供书面请求，或以其他方式证明您的身份。我们可能会先要求您验证自己的身份，然后再处理您的请求。<br>
+我们将在15天内做出答复。如您不满意，还可以通过我们提供的联系方式发起投诉。<br>
+对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将酌情收取一定费用。对于与您的身份不直接关联的信息、无端重复信息，或者需要过多技术手段（例如，需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者不切实际的请求，我们可能会予以拒绝。<br>
+在以下情形中，按照法律法规要求，我们将无法响应您的请求：<br>
+1、与国家安全、国防安全有关的；<br>
+2、与公共安全、公共卫生、重大公共利益有关的；<br>
+3、与犯罪侦查、起诉、审判和执行判决等有关的；<br>
+4、有充分证据表明个人信息主体存在主观恶意或滥用权利的；<br>
+5、响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；<br>
+6、涉及商业秘密的。<br>
+六、我们如何处理未成年人的信息<br>
+本平台向儿童开放，如果我们发现或怀疑用户未满14周岁，我们会要求用户关闭其帐户，且不会允许该用户继续使用平台产品或服务。我们会尽快删除有关资料。如果您知道有任何14周岁以下的人使用我们的服务，请通知我们，以便我们采取行动阻止他们获取我们的产品或服务。<br>
+对于已满14岁但尚未满18周岁的未成年人，我们期望父母或监护人指导未成年人使用我们的服务。我们将根据相关法律法规的规定保护未成年人的信息的保密性及安全性。<br>
+如您为未成年人，建议请您的父母或监护人阅读本政策，并在征得您父母或监护人同意的前提下使用我们的服务或向我们提供您的信息。对于经父母或监护人同意而收集您的信息的情况，我们只会在受到法律允许、父母或监护人明确同意或者保护您的权益所必要的情况下使用或公开披露此信息。如您的监护人不同意您按照本政策使用我们的服务或向我们提供信息，请您立即终止使用我们的服务并及时通知我们，以便我们采取相应的措施。<br>
+如您为未成年人的父母或监护人，当您对您所监护的未成年人的信息处理存在疑问时，请通过本政策公布的联系方式联系我们。<br>
+七、本隐私权政策如何更新<br>
+我们的隐私权政策可能变更。<br>
+未经您明确同意，我们不会限制您按照本隐私政策所应享有的权利。我们会在官方渠道上发布对隐私政策所做的任何变更。如果您不同意修订的内容，您应停止立即访问本平台。当隐私政策的更新版本发布，您持续访问本平台显示和表明您同意该更新的内容，并同意遵守该更新的隐私政策。<br>
+对于重大变更，我们还会提供更为显著的通知（包括我们会通过本平台公示的方式进行通知甚至向您提供弹窗提示）。<br>
+本政策所指的重大变更包括但不限于：<br>
+1、我们的服务模式发生重大变化。如处理个人信息的目的、处理的个人信息类型、个人信息的使用方式等；<br>
+2、我们在控制权等方面发生重大变化。如并购重组等引起的信息控制者变更等；<br>
+3、个人信息共享、转让或公开披露的主要对象发生变化；<br>
+4、您参与个人信息处理方面的权利及其行使方式发生重大变化；<br>
+5、我们负责处理个人信息安全的责任部门、联络方式及投诉渠道发生变化；<br>
+6、个人信息安全影响评估报告表明存在高风险。 <br>
+八、如何联系我们<br>
+1、如果您有任何要求和意见，您可以通过在线客服，这是属于我们与您沟通的唯一有效方式，所以我们对您未使用有效的联系方式，任何作为或不作为不承担责任。<br>
+2、我们只通过本平台上的有效的联系方式发布公告和信息或在本平台张贴公告，所以我们对由于您信任了未通过以上方式获得的信息而产生的任何损失不承担责任。<br>
+3、若您对我们的隐私政策有任何问题, 欢迎随时联系我们。<br>
+
+
+<br>
+</span>
+<div class="no_button_box">
+            <style>
+                .small_hs_btn{
+                    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    background: #FCD535;
+    float: right;
+    border-radius: 10px;
+    text-align: center;
+                }
+            </style>
+            <div class="small_hs_btn" style="background: linear-gradient(to right, rgb(122, 200, 111), rgb(122, 200, 111));" onclick="fanhuis();">
+                <i style="color:#fff;" class="bi bi-arrow-right bi_right"></i>
+            </div>
+        </div>
+    </div>     
+    
+    
+    
+</div>
+</body>
+
+<body>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+const xy1 = document.getElementById('xieyi')
+const xy2 = document.getElementById('xieyi2')
+function fanhuis(){
+    xy2.style.display = 'none';
+}
+
+function xieyi1(){
+    xy2.style.display = 'block';
+}
+
+function xieyi2(){
+    xy1.style.display = 'block';
+}
+
+function fanhui(){
+     xy1.style.display = 'none';
+}
+
+    function upreg(){
+        var email = $("#email").val();
+        var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if(email=='' || email == null){
+            layer.msg("{:L('请输入邮箱')}");return false;       
+        }
+        if(!reg.test(email)){
+            layer.msg("{:L('邮箱格式不正确')}");return false; 
+        }
+        var ecode = $("#ecode").val();
+        if(ecode == ''){
+            layer.msg("{:L('请输入邮箱验证码')}");return false; 
+        }
+        var lpwd = $("#lpwd").val();
+        if(lpwd == ''){
+            layer.msg("{:L('请输入密码')}");return false; 
+        }
+        // var invit = $("#invit").val();
+        // if( invit == ''){
+        //     layer.msg("{:L('请输入邀请码')}");return false; 
+        // }
+        $.post("{:U('Login/upregister')}",
+        {'email' : email, 'ecode' : ecode, 'lpwd' : lpwd},
+        function(data){
+            if(data.code == 1){
+                layer.msg(data.info);
+                setTimeout(function(){
+                    window.location.href="{:U('Login/index')}";
+                },2000);
+            }else{
+                layer.msg(data.info);return false;
+            }
+        }  
+        );
+
+
+    }
+</script>
+<script type="text/javascript">
+    function emailsend(){
+        var email = $("#email").val();
+        var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if(email=='' || email == null){
+            layer.msg("{:L('请输入邮箱')}");return false;       
+        }
+        if(!reg.test(email)){
+            layer.msg("{:L('邮箱格式不正确')}");return false; 
+        }
+        // var vcode = $("#vcode").val();
+        // if(vcode == ''){
+        //     layer.msg("{:L('请输入图形验证码')}");return false; 
+        // }
+        // var ecode = $("#ecode").val();
+        // if(ecode == ''){
+        //     layer.msg("{:L('请输入邮箱验证码')}");return false; 
+        // }
+        $.post("{:U('Login/sendcode')}",
+        {'email':email},
+        function(data){
+            if(data.code == 1){
+                layer.msg(data.info);
+                var obj = $("#sendsms");
+                var strobj = $("#smsstr");
+                var t = 60;
+                var interval = setInterval(function() {
+                    obj.removeAttr('onclick');
+                    obj.text(t + "{:L('秒后再发送')}");
+                    t--;
+                    if(t < 1){
+                        obj.attr("onclick","emailsend();");
+                        clearInterval(interval);
+                        obj.text("{:L('获取验证码')}");
+                    }
+                },1000);
+            }else{
+                layer.msg(data.info);
+                $("#sendsms").attr("onclick","emailsend();");
+                $("#sendsms").text("{:L('获取验证码')}");
+                $("#verifycode").click();
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    function goindex(){
+        window.location.href="{:U('Index/index')}";
+    }
+</script>
+
+
+</html>
+
+
+

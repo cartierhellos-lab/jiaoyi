@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN"  style="background:#fff;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base2.css" />
+	<link rel="stylesheet" href="/Public/Static/Icoinfont/iconfont.css">
+	<script src="/Public/Static/Icoinfont/iconfont.js"></script>
+	<title>{$webname}</title>
+	<style>
+	    ::-webkit-input-placeholder {color: #b5b5b5;font-size: 12px;}
+	    ::-moz-placeholder {color: #b5b5b5;font-size: 12px;}
+	    input:focus{background:#f5f5f5;outline: 1px solid #f5f5f5;}
+	    a:hover,a:link,a:visited,a:active{color:#707A8A;text-decoration:none;}
+        .topbox{width:100%;height:50px;border-bottom:1px solid #f5f5f5;padding:5px 10px;position: fixed;top: 0px;background: #fff;}
+        .topbox_1{width:80%;height:40px;float:left;padding:0px 10px;}
+        .topbox_1_b{width:100%;height:30px;margin-top:5px;background:#f5f5f5;border-radius:15px;padding:0px 5px;}
+        .topbox_2{width:20%;height:40px;line-height:40px;float:left;text-align:center;}
+        .sybolc{width:80%;height:25px;line-height:25px;margin-top:2px;border:#f5f5f5;background:#f5f5f5;}
+        .topbox_1_c{width:20%;height:30px;line-height:30px;text-align:center;float:left;}
+        .topbox_1_d{width:80%;height:30px;line-height:30px;float:right;}
+        .lmcoin{width:20%;height:30px;line-height:30px;float:left;text-align:center;border:1px solid #707A8A;border-radius:5px;margin-right:5%;}
+        .coinlistbox{width:100%;margin-top:10px;padding:10px;}
+        .coinlistbox_top{width:100%;height:30px;line-height:30px;}
+        .coinlistbox_info{width:100%;padding:10px 0px;;padding:5px;}
+        .coinlistbox_info_list{width:100%;height:40px;border-bottom:1px solid #f5f5f5;margin-top:10px;}
+        .coinlistbox_info_list_l{width:30%;height:40px;line-height:40px;float:left;}
+        .coinlistbox_info_list_c{width:30%;height:40px;line-height:40px;float:left;}
+        .coinlistbox_info_list_r{width:40%;height:40px;line-height:40px;float:right;text-align:right;}
+        .fast-bd {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 10px solid #f5f5f5;
+    border-bottom: 10px solid #f5f5f5;
+}
+.fast-bd {
+    margin: 10px 15px;
+    background-color: #cad2df;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+uni-view {
+    line-height: normal;
+}
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+.fast-bd-t {
+    margin-bottom: 10px;
+    line-height: 33px;
+    color: #000;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.fast-bd-t {
+    margin-bottom: 15px;
+    color: #999;
+}
+.fast-tit-right {
+    font-size: 12px;
+    color: #000;
+    float: right;
+    line-height: 30px;
+
+.blue-word {
+    color: #7ac86f;
+    font-size: 13px;
+    padding: 0px 15px;
+    background-color: #fff;
+}
+
+.blue-word {
+    font-size: 12px;
+    color: #7ac86f!important;
+}
+.fast-type-con {
+    display: flex;
+    padding: 0 15px;
+}
+uni-view {
+    line-height: normal;
+}
+.fast-type {
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e6e0e0;
+    padding: 10px 0;
+    margin: 0 5px;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+uni-resize-sensor {
+    display: block;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-animation: once-show 1ms;
+    animation: once-show 1ms;
+}
+
+uni-resize-sensor, uni-resize-sensor>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+uni-resize-sensor, uni-resize-sensor>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+uni-resize-sensor>div:first-child>div {
+    width: 100000px;
+    height: 100000px;
+}
+
+uni-resize-sensor>div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+uni-resize-sensor>div:last-child>div {
+    width: 200%;
+    height: 200%;
+}
+
+uni-resize-sensor>div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.fast-bnt {
+    padding: 0;
+}
+
+.fast-bnt {
+    padding: 15px;
+    text-align: center;
+}
+.fast-bd-t1 {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 15px 0;
+}
+
+.fast-bd-t1 {
+    font-size: 14px;
+    border-bottom: 0.5px solid #c7c6c6;
+    padding: 10px 0;
+    position: relative;
+}
+	</style>
+</head>
+<body style="background:#fff;">
+	<div class="container-fluid " style="padding:0px;width:100vw;">
+        <div class="topbox">
+            <div class="topbox_1" style="">
+                <div class="topbox_1_b">
+                    <div class="topbox_1_c">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div class="topbox_1_d">
+                        <input type="text" oninput="findc();" id="symbol" class="sybolc" placeholder="{:L('搜索您需要的币种')}" />
+                    </div>
+                </div>
+            </div>
+            <div class="topbox_2" onclick="goback();">
+                <span class="fzmmm fch">{:L('取消')}</span>
+            </div>
+        </div>
+        
+        <div style="width:100%;height:100px;margin-top:50px;padding:10px;">
+        <!--    <div style="width:100%;height:30px;line-height:30px;">-->
+        <!--        <span class="fzmmm fch" style="padding:5px;border-bottom:3px solid #7ac86f;">{:L('热门币种')}</span>-->
+        <!--    </div>-->
+        <!--    <div style="width:100%;height:70px;padding:20px;">-->
+        <!--        <a href="{:U('User/czpage')}?id=4">-->
+        <!--        <div class="lmcoin">-->
+        <!--            <span class="fzmm fch">USDT</span>-->
+        <!--        </div>-->
+        <!--        </a>-->
+                
+        <!--        <a href="{:U('User/czpage')}?id=6">-->
+        <!--        <div class="lmcoin">-->
+        <!--            <span class="fzmm fch">BTC</span>-->
+        <!--        </div>-->
+        <!--        </a>-->
+                
+        <!--        <a href="{:U('User/czpage')}?id=7">-->
+        <!--        <div class="lmcoin">-->
+        <!--            <span class="fzmm fch">ETH</span>-->
+        <!--        </div>-->
+        <!--        </a>-->
+                
+        <!--        <a href="{:U('User/czpage')}?id=16">-->
+        <!--        <div class="lmcoin">-->
+        <!--            <span class="fzmm fch">TRX</span>-->
+        <!--        </div>-->
+        <!--        </a>-->
+        <!--    </div>-->
+        <!--</div>-->
+       <uni-view data-v-0edd6518="" class="fast-bd-t">{:L('热门币种')}<uni-text data-v-0edd6518="" class="fast-tit-right blue-word">
+           <span style="color: #7ac86f;">
+               <a href="/User/index.html">{:L('账户余额')}&gt;</span></a></uni-text></uni-view>
+
+  <uni-view data-v-0edd6518="" class="fast-type-con" style="display: flex; padding: 0 15px; background-color: #fff; width: 100%; padding: 10px 0; margin: 0; border-bottom: 10px solid #f5f5f5;">
+      <uni-view data-v-0edd6518="" class="fast-type" style="flex: 1;text-align: center;border-radius: 5px; border: 1px solid #e6e0e0;padding: 10px 0;margin: 0 5px;">
+          <uni-image data-v-0edd6518="" class="fast-imgwh" style="height: 54px;">
+               <a href="{:U('User/czpage')}?id=4">
+              <div style="background-size: 100% 100%; background-repeat: no-repeat;" ></div>
+              <img src="/wap/static/img/fast-ico01.4ab1a4ca.png" draggable="true" style="width: 55px;margin-bottom: 10px;" >
+              <uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>
+              <uni-view data-v-0edd6518="">USDT{:L('网络')}</uni-view></uni-view></a>
+              
+              <uni-view data-v-0edd6518="" class="fast-type" style="flex: 1;text-align: center;border-radius: 5px; border: 1px solid #e6e0e0;padding: 10px 0;margin: 0 5px;">
+                  <uni-image data-v-0edd6518="" class="fast-imgwh" style="height: 56px;">
+                      <a href="{:U('User/czpage')}?id=6">
+                      <div style=" background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                      <img src="/wap/static/img/fast-ico02.de5c51b3.png" draggable="true" style="width: 55px;margin-bottom: 10px;" >
+                      <uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>
+                      <uni-view data-v-0edd6518="">BTC{:L('网络')}</uni-view></uni-view></a>
+                      
+                      <uni-view data-v-0edd6518="" class="fast-type" style="flex: 1;text-align: center;border-radius: 5px; border: 1px solid #e6e0e0;padding: 10px 0;margin: 0 5px;">
+                          <uni-image data-v-0edd6518="" class="fast-imgwh" style="height: 56px;">
+                              <a href="{:U('User/czpage')}?id=7">
+                              <div style=" background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                              <img src="/wap/static/img/fast-ico03.6b1bdbf1.png" draggable="true" style="width: 55px;margin-bottom: 10px;" >
+                              <uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>
+                              <uni-view data-v-0edd6518="">ETH{:L('网络')}</uni-view></uni-view></uni-view></a>
+
+<!--官方充值通道-->
+<div class="coinlistbox_info_list">
+    <a href="https://www.huobi.com/zh-cn/download/#exchange">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" >
+                            <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/png;base64,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">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                        <span class="fzmm fcc">Huobi{:L('数字货币充值')}</span>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+                </a>
+                
+                <!--官方充值通道-->
+<div class="coinlistbox_info_list">
+    <a href="https://www.coincola.com/?lang=zh-CN">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" >
+                            <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/png;base64,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">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                        <span class="fzmm fcc">Coincola{:L('数字货币充值')}</span>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+                </a>
+                <!--官方充值通道-->
+<div class="coinlistbox_info_list">
+    <a href="https://www.binance.com/zh-TC">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" >
+                            <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/png;base64,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">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                        <span class="fzmm fcc">Binance{:L('数字货币充值')}</span>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+                </a>
+                
+        
+        <div class="coinlistbox">
+            <div class="coinlistbox_top">
+                <span class="fzmmm fch" style="padding:5px;border-bottom:3px solid #7ac86f;">{:L('币种列表')}</span>
+            </div>
+            <div class="coinlistbox_info" id="coinbox">
+                <foreach name="list" item="vo">
+                <a href="{:U('User/czpage')}?id={$vo.id}">
+                <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l">
+                        <span class="fzmmm fcc"><?php echo strtoupper($vo['name']);?></span>
+                    </div>
+                    <div class="coinlistbox_info_list_c">
+                        <span class="fzmm fcc"><?php echo L($vo['title']);?></span>
+                    </div>
+                    <div class="coinlistbox_info_list_r">
+                        <if condition="$vo.czstatus neq 1">
+                        <span class="fzm fcc">{:L('不支持充币')}</span>
+                        </if>
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+                </a>
+                </foreach>
+
+            </div>
+        </div>
+        
+	</div>	
+</body>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+    function findc(){
+        var symbol = $("#symbol").val();
+        $.post("{:U('User/getsymbol')}",
+        {'symbol' : symbol},
+        function(data){
+            if(data.code == 1){
+                $("#coinbox").empty();
+                var html = '';
+                if(data.info != '' || data.info != null){
+                    html += '<a href="/User/czpage.html?id='+ data.info.id +'">'+
+                            '<div class="coinlistbox_info_list">'+
+                            '<div class="coinlistbox_info_list_l">'+
+                            '<span class="fzmmm fcc">' + data.info.uname + '</span>'+
+                            '</div>'+
+                            '<div class="coinlistbox_info_list_c">'+
+                            '<span class="fzmm fcc">' + data.info.title + '</span>'+
+                            '</div>'+
+                            '<div class="coinlistbox_info_list_r">'+
+                            '<i class="bi bi-chevron-right fcc"></i>'+
+                            '</div>'+
+                            '</div>'+
+                            '</a>';
+                    $("#coinbox").append(html);        
+                }
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    function goback(){
+        window.location.href = "{:U('Trade/tradelist')}";
+    }
+</script>
+</html>
+
+
+

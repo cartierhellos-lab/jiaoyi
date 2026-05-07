@@ -1,0 +1,1446 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <META http-equiv=Pragma content=no-cache>
+     <META http-equiv=Cache-Control content=no-cache>
+     <META http-equiv=Expires content=0>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base2.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/khddcs.css" />
+	<link rel="stylesheet" href="/Public/Home/css/jiami.css">
+	<link rel="stylesheet" href="/Public/Static/Icoinfont/iconfont.css">
+	<script src="/Public/Static/Icoinfont/iconfont.js"></script>
+	<!--<script type="text/javascript" src="/Public/Home/js/consrtle.log.js?v=version"></script>-->
+	<title id="webname" >{$webname}</title>
+	<style>
+	.fcc {
+        color: #000000 !important;
+        font-weight: 600;
+    }
+    .red {
+        font-weight: 600;
+        line-height: 25px;
+        font-size: 14px;
+        color: #1a8f5c!important;
+    }
+	    input::-webkit-input-placeholder{ /*WebKit browsers*/
+            
+            color: #292929;
+            font-size: 10px;
+            
+            }
+            
+            input::-moz-input-placeholder{ /*Mozilla Firefox*/
+            
+            color: #292929;
+            
+            }
+            
+            input::-ms-input-placeholder{ /*Internet Explorer*/ 
+            
+            color: #292929;
+            
+            }
+	</style>
+  </head>
+  <body>
+  <uni-view data-v-f5c6c904="" class="head-con">
+	<uni-view data-v-f5c6c904="" class="head-img-l">
+		<uni-view data-v-f5c6c904="" class="">
+			<div class="headerbox fl">
+				<if condition="$uid elt 0">
+					<a href="{:U('Login/loption')}">
+						<div class="imgbox" style="">
+							<img src="/wap/static/img/zh8-ico12.e4f1f1f8.png" style="width: 100%;height: 100%;">
+							<use xlink:href="#icon-ziyuan2">
+							</use>
+							</img>
+						</div>
+					</a>
+					<else />
+					<a href="{:U('Index/uoption')}">
+						<div class="imgbox" style="">
+							<img src="/wap/static/img/zh8-ico12.e4f1f1f8.png" style="width: 100%;height: 100%;">
+							<use xlink:href="#icon-ziyuan2">
+							</use>
+							</img>
+						</div>
+					</a>
+				</if>
+				<if condition="$uid elt 0">
+				</if>
+			</div>
+			</div>
+			<uni-image data-v-f5c6c904="" style="width: 26px;">
+				<uni-resize-sensor>
+					<div>
+						<div>
+						</div>
+					</div>
+					<div>
+						<div>
+						</div>
+					</div>
+				</uni-resize-sensor>
+			</uni-image>
+		</uni-view>
+	</uni-view>
+	<img src="/Public/Mobile/images/search.png" style="width: 13px;
+	margin-left: 32px;
+	position: absolute;
+	margin-top: 8px;">
+	<uni-image data-v-f5c6c904="" class="head-img-c" style="width: 82%;
+	margin-left: 20px;">
+		<input type="text" placeholder="{:L('搜索交易对')}" style="width: 100%;
+		height: 100%;
+		background: none;
+		padding: 0 30px 0 37px;
+		border-radius: 4px;
+		border: 1px solid #d5d5d5;" id="sousuo" autocomplete="off">
+		<uni-resize-sensor>
+			<div>
+				<div>
+				</div>
+			</div>
+			<div>
+				<div>
+				</div>
+			</div>
+		</uni-resize-sensor>
+	</uni-image>
+	<a href="{:U('Index/notice')}">
+		<div style="background-image: url(&quot;/wap/static/img/zh8-ico13.061684ae.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;">
+		</div>
+		</div>
+	</a>
+	<uni-resize-sensor>
+		<div>
+			<div>
+			</div>
+		</div>
+		<div>
+			<div>
+			</div>
+		</div>
+	</uni-resize-sensor>
+	</uni-image>
+</uni-view>
+<!--轮播图-->
+<div style="height:50px">
+</div>
+<div id="carouselExampleIndicators" class="carousel slide slidepm" data-ride="carousel"
+style="width:100%;margin: 0px;padding:0px 10px;--tw-bg-opacity: 1!important; border-radius: 0px 0px 20px 20px; height:130px">
+	<div class="carousel-inner" style="height: 150px;">
+		<div class="carousel-item active">
+			<img src="/Upload/public/{$clist.websildea}" class="d-block w-100" style="height:150px;border-radius:5px;"
+			/>
+		</div>
+		<div class="carousel-item">
+			<img src="/Upload/public/{$clist.websildeb}" class="d-block w-100" style="height:150px;border-radius:5px;"
+			/>
+		</div>
+		<div class="carousel-item">
+			<img src="/Upload/public/{$clist.websildec}" class="d-block w-100" style="height:150px;border-radius:5px;"
+			/>
+		</div>
+	</div>
+</div>
+<p>
+</p>
+<!--滚动新闻-->
+<div style="height: 40px;
+padding: 0px 10px;
+background-color: #f3f3f3;
+margin: 10px;
+margin-top: 2rem;
+border-radius: 5px;">
+	<div style="width:10%;height:40px;float:left;line-height: 40px;">
+		<img src="/wap/static/img/gg-ico02.6d8ba2aa.png" style="background-size: 100% 100%;background-repeat: no-repeat;width: 27px;">
+	</div>
+	<div style="width:75%;height:40px;float:left;line-height: 40px;">
+		<div class="scrollDiv" id="s1">
+			<ul>
+				<foreach name="nlist" item="vo">
+					<li>
+						<a href="{:U('Index/gginfo')}?id={$vo.id}">
+							{$vo.title}
+						</a>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+	</div>
+	<div style="width:10%;height:40px;float:right;line-height: 40px;text-align:right;">
+		<a href="{:U('Index/gglist')}">
+			<img src="data:image/png;base64,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"
+			style="background-size: 100% 100%;background-repeat: no-repeat;width: 17px;">
+		</a>
+	</div>
+</div>
+<!--单选项区 新-->
+<uni-view data-v-f5c6c904="" class="new-fast" style="display:none">
+	<uni-view data-v-f5c6c904="" class="new-fast-l">
+		<a href="{:U('User/czcoin')}">
+			<uni-image data-v-f5c6c904="">
+				<div style="background-image: url(&quot;/wap/static/img/ban02.7d6fbefa.gif&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+				</div>
+				<img src="/wap/static/img/ban02.7d6fbefa.gif" draggable="true">
+				<uni-view data-v-f5c6c904="" class="new-fast-word">
+					<uni-view data-v-f5c6c904="" class="new-fase-w1" style=" padding: 3px 8px; color: #ebebeb; -moz-border-radius: 5px; -webkit-borde-radius: 10px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,.5); text-shadow: 0 -1px 1px #1b1e25; vertical-align: midd;">
+						{:L('充币')}
+					</uni-view>
+				</uni-view>
+	</uni-view>
+</uni-view>
+</a>
+</uni-image>
+<!------------>
+<uni-view data-v-f5c6c904="" class="my-gr">
+	<uni-view data-v-f5c6c904="" class="my-gr-l">
+		<uni-view data-v-f5c6c904="" class="my-gr-ico">
+			<a href="{:U('User/czcoin')}">
+				<!--<a href="javascript:;">-->
+				<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+					<div style="background-image: url(&quot;/Public/Mobile/sc/充值.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+					</div>
+				</uni-image>
+		</uni-view>
+		<uni-view data-v-f5c6c904="" class="my-gr-t">
+			{:L('充值')}
+		</uni-view>
+	</uni-view>
+	</a>
+	<uni-view data-v-f5c6c904="" class="my-gr-l">
+		<a href="https://poloniex-nft.com/h5">
+			<uni-view data-v-f5c6c904="" class="my-gr-ico">
+				<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+					<div style="background-image: url(&quot;/Public/Mobile/sc/nft.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+					</div>
+					<!---->
+				</uni-image>
+			</uni-view>
+			<uni-view data-v-f5c6c904="" class="my-gr-t">
+				{:L('NFT')}
+			</uni-view>
+	</uni-view>
+	</a>
+	<uni-view data-v-f5c6c904="" class="my-gr-l">
+		<a href="{:U('Contract/index')}">
+			<uni-view data-v-f5c6c904="" class="my-gr-ico">
+				<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+					<div style="background-image: url(&quot;/Public/Mobile/sc/划转.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+					</div>
+				</uni-image>
+			</uni-view>
+			<uni-view data-v-f5c6c904="" class="my-gr-t">
+				{:L('划转')}
+			</uni-view>
+	</uni-view>
+	</a>
+	<uni-view data-v-f5c6c904="" class="my-gr-l">
+		<uni-view data-v-f5c6c904="" class="my-gr-ico">
+			<a href="{:U('Levertade/index')}">
+				<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+					<div style="background-image: url(&quot;/Public/Mobile/sc/活动.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+					</div>
+				</uni-image>
+		</uni-view>
+		<uni-view data-v-f5c6c904="" class="my-gr-t">
+			{:L('活动')}
+		</uni-view>
+	</uni-view>
+	</a>
+</uni-view>
+</a>
+<!--重点币行情区-->
+<div class="zixunlist">
+	<div class="zixunconten" id="whiles_btc" style="padding:10px;background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+		<div class="tjcoinbox1" style="">
+			<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+			font-weight: 600;" id="btc_coin_box">
+				BTC/USDT
+			</span>
+			<div class="tjcoinbox3" id="btc_change_box" style="margin: -0.33333rem 0 0;">
+				<span style="color:#333;display: inline-block;font-style: normal;font-size:8pt;">
+					+2.16%
+				</span>
+			</div>
+		</div>
+		<div class="tjcoinbox2" id="btc_money_box">
+			<span style="color: #333;width: 100%;font-size: 17px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">
+				22135.93
+			</span>
+		</div>
+	</div>
+	<div class="zixunconten" id="whiles_bch" style="padding:10px; background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+		<div class="tjcoinbox1">
+			<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+			font-weight: 600;" id="bch_coin_box">
+				BCH/USDT
+			</span>
+		</div>
+		<div class="tjcoinbox3" id="bch_change_box" style="margin: -0.33333rem 0 0;">
+			<span style="color:#333;display: inline-block;font-style: normal;font-size:8pt;">
+				+2.16%
+			</span>
+		</div>
+		<div class="tjcoinbox2" id="bch_money_box">
+			<span style="color: #333;width: 100%;font-size: 17px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">
+				127.88
+			</span>
+		</div>
+	</div>
+	<div class="zixunconten" id="whiles_eth" style="padding:10px; background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+		<div class="tjcoinbox1">
+			<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+			font-weight: 600;" id="eth_coin_box">
+				ETH/USDT
+			</span>
+		</div>
+		<div class="tjcoinbox3" id="eth_change_box" style="margin: -0.33333rem 0 0;">
+			<span style="color:#333;display: inline-block;font-style: normal;font-size:8pt;">
+				+2.16%
+			</span>
+		</div>
+		<div class="tjcoinbox2" id="eth_money_box">
+			<span style="color: #333;width: 100%;font-size: 17px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">
+				1538.64
+			</span>
+		</div>
+	</div>
+</div>
+<div style="width: 100%;box-shadow: 2px 2px 2px 1px #00000011;border: 2px solid #9499cd22;background-repeat: no-repeat;flex-direction: column;justify-content: space-between;">
+</div>
+</uni-view>
+</uni-view>
+</a>
+<div style="width: 100%;box-shadow: 2px 2px 2px 1px #00000011;border: 2px solid #9499cd22;background-repeat: no-repeat;flex-direction: column;justify-content: space-between;">
+</div>
+<!--市场行情-->
+<div style="width:100%;background:#fff;padding:10px;margin-top:20px;">
+	<div style="width:100%;height:30px;line-height:30px;margin: -3.73333rem 0 0;">
+	</div>
+	<div style="width: 100%;">
+		<div style="width:30%;height:30px;line-height:30px;float:left;">
+			<span class="fzm fcc">
+				24h {:L('涨跌')}
+			</span>
+		</div>
+		<div style="width:40%;height:30px;line-height:30px;float:left;text-align:center;">
+		</div>
+		<div style="width:30%;height:30px;line-height:30px;float:left;text-align:right;">
+			<a href="{:U('Trade/index')}">
+				<span class="fzm fcc">
+					{:L('全部行情')} >
+				</span>
+			</a>
+		</div>
+	</div>
+	<div style="width:100%;" id="tradebox">
+		<foreach name="market" item="vo">
+			<div style="width:100%;height:50px;">
+				<div class="list_cname">
+					<uni-view data-v-f5c6c904="" class="list" style="display: -webkit-flex;">
+						<uni-view data-v-f5c6c904="" class="css_{$vo.coinname}">
+						</uni-view>
+						<uni-view data-v-f5c6c904="" class="name">
+							<?php echo strtoupper($vo[ 'coinname']); ?>
+								/USDT
+						</uni-view>
+					</uni-view>
+					<div class="<?php echo  $price_arr['close']; ?>">
+					</div>
+				</div>
+				<a href="{:U('Levertade/index')}?symbol={$vo.coinname}&type=buy">
+					<!--a标签点击跳转杆杆-->
+					<div class="list_open cpr_{$vo.coinname}">
+						<span id="jiage" class='fzmmm fcc' style="font-weight: 600;line-height: 25px;font-size: 14px;color: #adb5bd!important;">
+							0.00000
+						</span>
+					</div>
+				</a>
+				<div class="list_change cch_{$vo.coinname}">
+					<span class='fzmm bgfcc' style='width: 70px; height: 30px;text-align: center; margin-top: 8px; display: -webkit-box;display: -ms-flexbox; display: flex; -webkit-box-pack: center;-ms-flex-pack: center; justify-content: center; -webkit-box-align: center;
+					-ms-flex-align: center; align-items: center;font-size: 12px;color: #fff!important;float: right;border-radius: 3px;font-weight: 600; line-height: 25px;font-size: 14px;'>
+						0%
+					</span>
+					</a>
+				</div>
+			</div>
+		</foreach>
+	</div>
+</div>
+
+<!--底部-->
+<div class="footer">
+	<div style="border-bottom: 2px solid #f5f5f5;">
+	</div>
+	<a href="{:U('Index/index')}">
+		<div class="footer_op">
+			<div class="f_op_t">
+				<img src="/wap/static/img/bot_bar_1_new_on.png" style="height: 25px;margin: 0.51667rem 0 0;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcy">
+					{:L('首页')}
+				</span>
+			</div>
+		</div>
+	</a>
+	<a href="{:U('Trade/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_2_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">
+					{:L('行情')}
+				</span>
+			</div>
+		</div>
+	</a>
+	<a href="{:U('Trade/trans')}?sytx=BTC/USDT">
+		<!--<a href="{:U('Levertade/index')}"> 杆杆交易	-->
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_7_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">
+					{:L('交易')}
+				</span>
+			</div>
+		</div>
+	</a>
+	<a href="{:U('Contract/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_3_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">
+					{:L('合约')}
+				</span>
+			</div>
+		</div>
+	</a>
+	<a href="{:U('User/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_6_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">
+					{:L('资产')}
+				</span>
+			</div>
+		</div>
+	</a>
+</div>
+	
+	
+	     
+     
+    
+    
+ 
+<!--公告-- 弹窗-->
+	<!--<div class="dongbox" id="dongbox" style="display:block;">-->
+ <!--   <div class="dong_order_c">-->
+ <!--   <div class="dong_order_x" id="x_dongbox">-->
+	<!--<i class="bi bi-x" style="font-size:18px;" ></i>-->
+	<!--</div>-->
+	<!--<div class="dong_order_title">-->
+	<!--<span class="fch" style="font-size:16px;font-weight:500;">{:L('公告中心')}</span>-->
+	<!--</div>-->
+	
+	<!--<div style="width:100%;height:340px;overflow-y:scroll;">-->
+	
+	<!--<div class="infotbox">-->
+	<!--	<span class="fcy" style="font-size:14px;font-weight:bold;">{$info.title}</span>-->
+	<!--	</div>-->
+		
+	<!--	<if condition="$info.img neq ''">-->
+	<!--	<div class="lboxc">-->
+	<!--	<img src="/Upload/article/{$info.img}" style="width:100%;border-radius:10px;"/>-->
+	<!--	</div>-->
+	<!--	</if>-->
+		
+	<!--	<div class="lboxc" style="text-indent:24px;">-->
+	<!--	<span>{$info.content}</span>-->
+	<!--	</div>-->
+	<!--	<div class="lbox">-->
+	<!--	<div class="lbox_l">-->
+	<!--	<span class="fcc fzmm">{:L('发布时间')}</span>-->
+	<!--	</div>-->
+	<!--	<div class="lbox_r">-->
+	<!--	<span class="fch fzmm">{$info.addtime}</span>-->
+	<!--	</div>-->
+	<!--	</div>-->
+	<!--</div>-->
+ <!--   </div>-->
+ <!--   </div>-->
+    
+    
+    <!--演示电报弹窗-->
+  <!--<div class="SidebarList"> -->
+            <!--<p>whatsApp</p> -->
+  <!--      <a class="Sidebar" target="_blank" href="https://t.me/PanAgentso"> -->
+  <!--          <div class="Sidebar_top Sidebar_Service"> </div> -->
+            <!--<p>Telegram</p> -->
+  <!--      </a> -->
+        <!--<a class="Sidebar" id="Sidebar_CounUs" target="_blank" href=""> -->
+        <!--    <div class="Sidebar_top Sidebar_CounUs"> </div> -->
+            <!--<p>在線客服</p> -->
+        <!--</a> -->
+  <!--  </div>-->
+
+<!--<div id="pic" style="display:block" class="mobile-download-wrap mobile-download-show mobile-download-wrap-login-out">-->
+<!--    <div class="mobile-download">-->
+<!--        <div class="mobile-download-left"><span class="download-logo">-->
+<!--            <img src="/wap/static/img/logo-login.491c2b19.png" alt="phoneLogo"></span>-->
+<!--            <span class="download-title">-->
+<!--                <span>GEDEX</span><span>BTC | USDT {:L('交易')}</span></span></div>-->
+<!--                <div class="mobile-download-right">-->
+<!--                    <a target="_blank" rel="noopener noreferrer" href="../UPUPWAPP">{:L('下载')}</a>-->
+<!--                    <i id="btn" class="bi bi-eye fcy"></i>-->
+<!--                    </div></div></div>-->
+
+
+</body>
+<!--<script src="https://cdn.bootcss.com/countup.js/1.9.3/countUp.js"></script>-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!--<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("input").keydown(function(event) {
+        if (event.keyCode == 13) {
+            //这里写事件，例如写个 a();
+            var sousuo = document.getElementById('sousuo').value;
+            window.location.href = sousuo;
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+    function obtain_btc() {
+        var coin = "btc";
+        var nameclass = ".cn_btc";
+        var priceclass = ".cpr_btc";
+        var changeclass = ".cch_btc";
+        var pricevol = ".vol_btc";
+        $.post("{:U('Ajaxtrade/obtain_btc')}", {
+                'coin': coin
+            },
+            function(data) {
+                if (data.code == 1) {
+                    $(nameclass).html(data.cname);
+                    $(priceclass).html(data.open);
+                    $(changeclass).html(data.change);
+                    $(pricevol).html(data.amount);
+                    $(priceclass).html(data.open1);
+                } else {
+                    console.log(data.info);
+                    return false;
+                }
+            }
+        );
+    }
+	function obtain_eth() {
+    var coin = "eth";
+    var nameclass = ".cn_eth";
+    var priceclass = ".cpr_eth";
+    var changeclass = ".cch_eth";
+    var pricevol = ".vol_eth";
+
+    $.post("{:U('Ajaxtrade/obtain_eth')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+                $(pricevol).html(data.amount);
+
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_eos() {
+    var coin = "eos";
+    var nameclass = ".cn_eos";
+    var priceclass = ".cpr_eos";
+    var changeclass = ".cch_eos";
+    $.post("{:U('Ajaxtrade/obtain_eos')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_doge() {
+    var coin = "doge";
+    var nameclass = ".cn_doge";
+    var priceclass = ".cpr_doge";
+    var changeclass = ".cch_doge";
+    $.post("{:U('Ajaxtrade/obtain_doge')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_bch() {
+    var coin = "bch";
+    var nameclass = ".cn_bch";
+    var priceclass = ".cpr_bch";
+    var changeclass = ".cch_bch";
+    var pricevol = ".vol_bch";
+    $.post("{:U('Ajaxtrade/obtain_bch')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+                $(pricevol).html(data.amount);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_ltc() {
+    var coin = "ltc";
+    var nameclass = ".cn_ltc";
+    var priceclass = ".cpr_ltc";
+    var changeclass = ".cch_ltc";
+    $.post("{:U('Ajaxtrade/obtain_ltc')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_iota() {
+    var coin = "iota";
+    var nameclass = ".cn_iota";
+    var priceclass = ".cpr_iota";
+    var changeclass = ".cch_iota";
+    $.post("{:U('Ajaxtrade/obtain_iota')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_fil() {
+    var coin = "fil";
+    var nameclass = ".cn_fil";
+    var priceclass = ".cpr_fil";
+    var changeclass = ".cch_fil";
+    $.post("{:U('Ajaxtrade/obtain_fil')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_flow() {
+    var coin = "flow";
+    var nameclass = ".cn_flow";
+    var priceclass = ".cpr_flow";
+    var changeclass = ".cch_flow";
+    $.post("{:U('Ajaxtrade/obtain_flow')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_jst() {
+    var coin = "jst";
+    var nameclass = ".cn_jst";
+    var priceclass = ".cpr_jst";
+    var changeclass = ".cch_jst";
+    $.post("{:U('Ajaxtrade/obtain_jst')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_itc() {
+    var coin = "itc";
+    var nameclass = ".cn_itc";
+    var priceclass = ".cpr_itc";
+    var changeclass = ".cch_itc";
+    $.post("{:U('Ajaxtrade/obtain_itc')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_ht() {
+    var coin = "ht";
+    var nameclass = ".cn_ht";
+    var priceclass = ".cpr_ht";
+    var changeclass = ".cch_ht";
+    $.post("{:U('Ajaxtrade/obtain_ht')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_trx() {
+    var coin = "trx";
+    var nameclass = ".cn_trx";
+    var priceclass = ".cpr_trx";
+    var changeclass = ".cch_trx";
+    $.post("{:U('Ajaxtrade/obtain_trx')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_xrp() {
+    var coin = "xrp";
+    var nameclass = ".cn_xrp";
+    var priceclass = ".cpr_xrp";
+    var changeclass = ".cch_xrp";
+    $.post("{:U('Ajaxtrade/obtain_xrp')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_sol() {
+    var coin = "sol";
+    var nameclass = ".cn_sol";
+    var priceclass = ".cpr_sol";
+    var changeclass = ".cch_sol";
+    $.post("{:U('Ajaxtrade/obtain_sol')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_bnb() {
+    var coin = "bnb";
+    var nameclass = ".cn_bnb";
+    var priceclass = ".cpr_bnb";
+    var changeclass = ".cch_bnb";
+    $.post("{:U('Ajaxtrade/obtain_bnb')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_wbtc() {
+    var coin = "wbtc";
+    var nameclass = ".cn_wbtc";
+    var priceclass = ".cpr_wbtc";
+    var changeclass = ".cch_wbtc";
+    $.post("{:U('Ajaxtrade/obtain_wbtc')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_dot() {
+    var coin = "dot";
+    var nameclass = ".cn_dot";
+    var priceclass = ".cpr_dot";
+    var changeclass = ".cch_dot";
+    $.post("{:U('Ajaxtrade/obtain_dot')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_avax() {
+    var coin = "avax";
+    var nameclass = ".cn_avax";
+    var priceclass = ".cpr_avax";
+    var changeclass = ".cch_avax";
+    $.post("{:U('Ajaxtrade/obtain_avax')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_uni() {
+    var coin = "uni";
+    var nameclass = ".cn_uni";
+    var priceclass = ".cpr_uni";
+    var changeclass = ".cch_uni";
+    $.post("{:U('Ajaxtrade/obtain_uni')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_etc() {
+    var coin = "etc";
+    var nameclass = ".cn_etc";
+    var priceclass = ".cpr_etc";
+    var changeclass = ".cch_etc";
+    $.post("{:U('Ajaxtrade/obtain_etc')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_near() {
+    var coin = "near";
+    var nameclass = ".cn_near";
+    var priceclass = ".cpr_near";
+    var changeclass = ".cch_near";
+    $.post("{:U('Ajaxtrade/obtain_near')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function obtain_xmr() {
+    var coin = "xmr";
+    var nameclass = ".cn_xmr";
+    var priceclass = ".cpr_xmr";
+    var changeclass = ".cch_xmr";
+    $.post("{:U('Ajaxtrade/obtain_xmr')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+// 	function obtain_ape() {
+//     var coin = "ape";
+//     var nameclass = ".cn_ape";
+//     var priceclass = ".cpr_ape";
+//     var changeclass = ".cch_ape";
+//     $.post("{:U('Ajaxtrade/obtain_ape')}", {
+//             'coin': coin
+//         },
+//         function(data) {
+//             if (data.code == 1) {
+//                 $(nameclass).html(data.cname);
+//                 $(priceclass).html(data.open);
+//                 $(changeclass).html(data.change);
+//             } else {
+//                 console.log(data.info);
+//                 return false;
+//             }
+//         }
+//     );
+// }
+</script>
+<script type="text/javascript">
+// 	function obtain_aave() {
+//     var coin = "aave";
+//     var nameclass = ".cn_aave";
+//     var priceclass = ".cpr_aave";
+//     var changeclass = ".cch_aave";
+//     $.post("{:U('Ajaxtrade/obtain_aave')}", {
+//             'coin': coin
+//         },
+//         function(data) {
+//             if (data.code == 1) {
+//                 $(nameclass).html(data.cname);
+//                 $(priceclass).html(data.open);
+//                 $(changeclass).html(data.change);
+//             } else {
+//                 console.log(data.info);
+//                 return false;
+//             }
+//         }
+//     );
+// }
+</script>
+<script type="text/javascript">
+	function obtain_usdz() {
+    var coin = "usdz";
+    var nameclass = ".cn_usdz";
+    var priceclass = ".cpr_usdz";
+    var changeclass = ".cch_usdz";
+    $.post("{:U('Ajaxtrade/obtain_usdz')}", {
+            'coin': coin
+        },
+        function(data) {
+            if (data.code == 1) {
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            } else {
+                console.log(data.info);
+                return false;
+            }
+        }
+    );
+}
+</script>
+<script type="text/javascript">
+	function jsdelivrjt() {
+    // var green = document.getElementById('green');
+    // var red = document.getElementById('red');
+    var whiles_btc = document.getElementById('whiles_btc');
+    var whiles_eth = document.getElementById('whiles_eth');
+    var whiles_bch = document.getElementById('whiles_bch');
+
+    var eth_change_box = document.getElementById('eth_change_box');
+    var btc_change_box = document.getElementById('btc_change_box');
+    var bch_change_box = document.getElementById('bch_change_box');
+
+    var lv_k = document.getElementById('lv_k');
+    var cny = document.getElementById('cny');
+    var webnam = document.getElementById('webname');
+
+    var btc_change_box1 = document.getElementById('btc_change_box1');
+    // var bb_cny = cny.innerText;
+
+    var eth = eth_change_box.innerText;
+    var btc = btc_change_box.innerText;
+    var bch = bch_change_box.innerText;
+
+    var btc_change_box1 = btc_change_box1.innerText; //新增数字 单独
+
+    // var str = " 6 6 ";
+
+    var str_btc = btc_change_box1.replace("CNY ¥ ", "");
+    // var rmb_btc = '6.742'; //人民币汇率
+
+    // var rmb = btc_k * rmb_btc;
+
+    webname.innerHTML = 'Bitcoin | ' + str_btc + ' | {$webname}';
+    //cny.innerHTML = '≈¥' + rmb.toFixed(2);
+    var reg = RegExp(/-/);
+    if (eth.match(reg)) {
+        // 包含  
+        whiles_eth.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        //   console.log('you');
+    } else {
+        whiles_eth.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        //   console.log('no');
+    }
+
+    if (btc.match(reg)) {
+        whiles_btc.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+    } else {
+        whiles_btc.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+    }
+
+    if (bch.match(reg)) {
+        whiles_bch.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+    } else {
+        whiles_bch.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+    }
+
+}
+</script>
+<script type="text/javascript">
+	function noMenuOne() {
+
+    document.onkeydown = function() {
+
+        if (window.event && window.event.keyCode == 123) {
+            alert("F12被禁用");
+            event.keyCode = 0;
+            event.returnValue = false;
+        }
+        if (window.event && window.event.keyCode == 13) {
+            window.event.keyCode = 505;
+        }
+        if (window.event && window.event.keyCode == 8) {
+            alert(str + "\n请使用Del键进行字符的删除操作！");
+            window.event.returnValue = false;
+        }
+
+    }
+
+    //设置右键事件
+    function noMenuOne() {
+        alert('禁止右键菜单!');
+        return false;
+    }
+    document.oncontextmenu = noMenuOne
+
+    //当用户按下鼠标按钮触发
+    function noMenu2() {
+        if (event.button == 2) {
+            alert('禁止右键菜单!');
+            return false;
+        }
+    }
+    document.onmousedown = noMenu2;
+
+    document.onkeydown = function() {
+        if (window.event && window.event.keyCode == 123) {
+            alert("F12被禁用");
+            event.keyCode = 0;
+            event.returnValue = false;
+        }
+        if (window.event && window.event.keyCode == 13) {
+            window.event.keyCode = 505;
+        }
+        if (window.event && window.event.keyCode == 8) {
+            alert(str + "\n请使用Del键进行字符的删除操作！");
+            window.event.returnValue = false;
+        }
+    }
+    document.onselectstart = function(event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    document.oncopy = function(event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    document.oncut = function(event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    document.oncontextmenu = function(event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+}
+</script>
+<script type="text/javascript">
+	$(function() {
+    //监听调试盗窃
+    setInterval("noMenuOne()", 2000);
+    //监听动态 红绿
+    //   setInterval("jsdelivrjt()",2000);
+
+    obtain_btc();
+    setInterval("obtain_btc()", 2000);
+    obtain_eth();
+    setInterval("obtain_eth()", 3000);
+    obtain_eos();
+    setInterval("obtain_eos()", 5000);
+    obtain_doge();
+    setInterval("obtain_doge()", 7000);
+    obtain_bch();
+    setInterval("obtain_bch()", 9000);
+    // obtain_ltc();
+    // setInterval("obtain_ltc()", 11000);
+
+    // obtain_iota();
+    // setInterval("obtain_iota()", 13000);
+
+    // obtain_fil();
+    // setInterval("obtain_fil()", 15000);
+
+    // obtain_flow();
+    // setInterval("obtain_flow()", 17000);
+
+    // obtain_jst();
+    // setInterval("obtain_jst()", 19000);
+
+    // obtain_itc();
+    // setInterval("obtain_itc()", 21000);
+
+    obtain_ht();
+    setInterval("obtain_ht()", 23000);
+
+    obtain_usdz();
+    setInterval("obtain_usdz()", 25000);
+
+    getonemarket();
+    setInterval("getonemarket()", 25000);
+
+    // obtain_trx();
+    // setInterval("obtain_trx()", 25000);
+
+    // obtain_xrp();
+    // setInterval("obtain_xrp()", 25000);
+
+    // obtain_sol();
+    // setInterval("obtain_sol()", 25000);
+
+    obtain_bnb();
+    setInterval("obtain_bnb()", 25000);
+
+    // obtain_wbtc();
+    // setInterval("obtain_wbtc()", 25000);
+
+    // obtain_dot();
+    // setInterval("obtain_dot()", 25000);
+
+    // obtain_avax();
+    // setInterval("obtain_avax()", 25000);
+
+    // obtain_uni();
+    // setInterval("obtain_uni()", 25000);
+
+    obtain_etc();
+    setInterval("obtain_etc()", 25000);
+
+    // obtain_near();
+    // setInterval("obtain_near()", 25000);
+
+    // obtain_xmr();
+    // setInterval("obtain_xmr()", 25000);
+
+    // obtain_ape();
+    // setInterval("obtain_ape()", 25000);
+
+    // obtain_aave();
+    // setInterval("obtain_aave()", 25000);
+
+});
+</script>
+<script type="text/javascript">
+	function getonemarket() {
+    $.post("{:U('Ajaxtrade/get_market_one')}",
+        function(data) {
+            if (data.code == 1) {
+                $("#btc_coin_box").html(data.btccoin);
+                $("#btc_money_box").html(data.btcnewprice);
+                $("#btc_change_box").html(data.btcchange);
+                $("#btc_change_box1").html(data.btcchange1);
+                $("#btc_licai").html(data.btcchange); //新增
+
+                $("#eth_coin_box").html(data.ethcoin);
+                $("#eth_money_box").html(data.ethnewprice);
+                $("#eth_change_box").html(data.ethchange);
+                $("#eth_change_box1").html(data.ethchange1);
+                $("#eth_licai").html(data.ethchange); //新增
+
+
+                $("#bch_coin_box").html(data.bchcoin);
+                $("#bch_money_box").html(data.bchnewprice);
+                $("#bch_change_box").html(data.bchchange);
+                $("#bch_change_box1").html(data.bchchange1);
+                $("#bch_licai").html(data.bchchange); //新增
+            }
+        });
+}
+</script>
+<script type="text/javascript">
+// 	function getallsymbol() {
+//     $.post("{:U('Ajaxtrade/getallsymbol')}",
+//         function(data) {
+//             if (data.code == 1) {
+//                 $("#tradebox").empty();
+//                 var html = '';
+//                 if (data.data == '' || data.data == null) {
+//                     html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">' +
+//                         '<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>' +
+//                         '</div>';
+//                     $("#tradebox").append(html);
+
+//                 } else {
+//                     $.each(data.data, function(key, val) {
+//                         html += '<div style="width:100%;height:50px;">' +
+//                             '<div class="list_cname">' +
+//                             '<span  class="fzmmm fcc">' + val.cname + '</span>' +
+//                             '</div>' +
+//                             '<div class="list_open">' + val.open + '</div>' +
+//                             '<div class="list_change">' + val.change + '</div>' +
+//                             '</div>';
+//                     });
+//                     $("#tradebox").append(html);
+//                 }
+//             } else {
+//                 html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">' +
+//                     '<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>' +
+//                     '</div>';
+//                 $("#tradebox").append(html);
+//             }
+//         });
+// }
+</script>
+<script type="text/javascript">
+// 	function AutoScroll(obj) {
+//     $(obj).find("ul:first").animate({
+//         marginTop: "-25px"
+//     }, 500, function() {
+//         $(this).css({
+//             marginTop: "0px"
+//         }).find("li:first").appendTo(this);
+//     });
+// }
+// $(document).ready(function() {
+//     setInterval('AutoScroll("#s1")', 3000);
+// });
+</script>
+</html>
+
+
+

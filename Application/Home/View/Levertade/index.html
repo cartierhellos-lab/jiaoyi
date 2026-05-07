@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1.0,initial-scale=1,user-scalable=no,viewport-fit=true" data-shuvi-head="true">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" type="text/css" href="/Public/Home/static/css/base.css" />
+	    <title>{$webname}</title>
+	    <style>
+            .css-1wr4jig {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+            .css-wp2li4 {
+               box-sizing: border-box;
+               margin: 0;
+               min-width: 0;
+               display: -webkit-box;
+               display: -webkit-flex;
+               display: -ms-flexbox;
+               display: flex;
+               overflow-x: hidden;
+               -webkit-flex-direction: column;
+               -ms-flex-direction: column;
+               flex-direction: column;
+            }
+            .klinetitle{width:100%;height:80px;background:#fff;padding:0px 20px;}
+	        .klinetitle_l{width:33.33%;height:80px;float:left;}
+	        .klinetitle_r{width:33.33%;height:80px;float:left;}
+	        .newpricebox{height:40px;line-height:60px;margin-bottom:0px;color:#2ebd85;font-size:22px;font-weight:bold;}
+	        .changebox{height:40px;line-height:40px;margin-bottom:0px;color:#2ebd85;font-weight:bold;}
+	        .klr3_box{width:100%;height:30px;}
+	        .klr2_box{width:100%;height:25px;}
+	        .klr3_box_dl{width:45%;height:30px;line-height:40px;float:left;text-align:left;}
+	        .klr3_box_dr{width:55%;height:30px;line-height:40px;float:right;text-align:right;}
+	        .klr2_box_dl{width:45%;height:25px;line-height:25px;float:left;text-align:left;}
+	        .klr2_box_dr{width:55%;height:25px;line-height:25px;float:right;text-align:right;}
+	        .dong_con{width:80%;height:100vh;background:#fff;margin-top:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;padding:20px 15px 10px 20px;float:left;}
+	        .dong_title{width:100%;height:40px;line-height:40px;}
+	        .dong_title_span{font-size:18px;font-weight:500;}
+	        .dong_find_box{width:100%;height:30px;background:#f5f5f5;border-radius:10px;}
+	        .dong_find_box_img{width:20%;height:30px;line-height:30px;float:left;text-align:center;}
+	        .dong_input_box{width:80%;height:30px;float:left;}
+	        .dong_symbox{width:90%;height:20px;border:none;background:#f5f5f5;margin-top:5px;}
+	        .dong_sel_box{width:100%;height:30px;border-bottom:1px solid #f5f5f5;}
+	        .dong_sel_span{display:block;width:35px;height:30px;line-height:30px;border-bottom:2px solid #FCD535;font-size:14px;text-align:center;font-size:14px;}
+	        .symbol_list{width:100%;height:1120px;margin-top:10px;}
+	        .no_header{position: fixed;z-index: 9999;padding:0px 10px;top:0px;background: #fff;}
+	        .txtl{line-height:50px;width:30%;}
+	        .contentbox{width:100%;background:#fff;padding:10px;}
+	        .content_title{width:100%;height:40px;line-height:40px;margin-top:50px;position: fixed;z-index: 9999;top:0px;padding:0px 10px;background:#fff;border-bottom:1px solid #f5f5f5;}
+	        .content_title_l{width:70%;height:40px;line-height:40px;float:left;}
+	        .content_title_r{width:30%;height:40px;line-height:40px;float:right;padding:0px 5px;}
+	        .tleft{text-align:left;}
+	        .tright{text-align:right;}
+	        .tradebox{width:100%;height:400px;background:#fff;}
+	        .tradebox_l{width:58%;height:400px;float:left;}
+	        .tradebox_r{width:40%;height:400px;float:right;}
+	        .tradebox_l_btn{width:100%;height:36px;}
+	        .tradebox_l_buybtn{width:48%;height:36px;line-height:36px;float:left;text-align:center;border-radius:5px;}
+	        .tradebox_l_sellbtn{width:48%;height:36px;line-height:36px;float:right;text-align:center;border-radius:5px;}
+	        .bggreen{background:#0ecb81;}
+	        .green{color:#0ecb81;}
+            .bgred{background:#f5465c;}
+            .red{color:#f5465c;}
+            .bghc{background:#f5f5f5;}
+            .cfff{color:#fff;}
+            .c000{color:#000;}
+            .formbox{width:100%;height:350px;margin-top:15px;}
+            .formbox_op{width:100%;height:30px;}
+            .formbox_op_list{width:20%;height:30px;line-height:30px;float:left;text-align:center;cursor:pointer;}
+            .inputbox{width:100%;height:36px;border:1px solid #f5f5f5;border-radius:5px;margin:10px 0px 20px;}
+	        .inputbox_float{width:60%;height:36px;float:left;}
+	        .xjinput{width:90%;background:#fff;border:#fff;margin-top:7px;padding:0px 10px;}
+	        .input_bi{width:50%;height:26px;line-height:26px;float:left;text-align:center;margin-top:5px;cursor:pointer;}
+	        .borderright{border-right:1px solid #f5f5f5;}
+	        .bistyle{font-size:16px;cursor: pointer;}
+	        .blbox{width:100%;height:30px;margin-top:15px;}
+	        .blbox_1{width:20%;height:30px;float:left;margin-right:6%;}
+	        .blbox_2{width:20%;height:30px;float:left;}
+	        .blbox_3{width:100%;height:10px;}
+	        .bgf5{background:#f5f5f5;border-radius:5px;cursor: pointer;}
+	        .blbox_4{width:100%;height:20x;line-height:20px;text-align:center;}
+	        .tradebox_title{width:50%;height:20px;line-height:20px;float:left;}
+	        .tl{text-align:left;}
+	        .tr{text-align:right;}
+	        .tc{text-align:center;}
+	        .fl{float:left;}
+	        .fr{float:right;}
+	        .trade_listbox{width:100%;height:300px;padding:5px;overflow:hidden;}
+	        .trade_listpricebox{width:100%;height:40px;line-height:40px;padding:0px 10px;}
+	        .trade_list{width:50%;height:30px;line-height:30px;float:left;}
+	        .dongbox{position:fixed;z-index:9999;display:none;top:0px;width:100%;height:100vh;background:rgba(0,0,0,0.2);}
+	        .dong_con{width:80%;height:100vh;background:#fff;margin-top:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;padding:20px 15px 10px 20px;float:left;}
+	        .dong_title{width:100%;height:40px;line-height:40px;}
+	        .dong_title_span{font-size:18px;font-weight:500;}
+	        .dong_find_box{width:100%;height:30px;background:#f5f5f5;border-radius:10px;}
+	        .dong_find_box_img{width:20%;height:30px;line-height:30px;float:left;text-align:center;}
+	        .dong_input_box{width:80%;height:30px;float:left;}
+	        .dong_symbox{width:90%;height:20px;border:none;background:#f5f5f5;margin-top:5px;}
+	        .dong_sel_box{width:100%;height:30px;border-bottom:1px solid #f5f5f5;}
+	        .dong_sel_span{display:block;width:35px;height:30px;line-height:30px;border-bottom:2px solid #FCD535;font-size:14px;text-align:center;font-size:14px;}
+	        .symbol_list{width:100%;margin-top:10px;}
+	        .sy_list_box{width:100%;height:30px;}
+	        .sy_list_boxl{width:35%;height:30px;line-height:30px;float:left;text-align:left;}
+	        .sy_list_boxr{width:30%;height:30px;line-height:30px;float:right;text-align:right;}
+	        .order_title{display: inline-block;margin-right: 20px;font-weight: 1000;}
+	        .FCD535{border-bottom: 2px solid #FCD535;}
+	        .fccbox{width:100%;height:15px;background:#f5f5f5;}
+	        .wtlistbox{width:100%;padding:0px 10px;} 
+	        .o_title_box{width:50%;height:40px;line-height:40px;border-bottom:1px solid #f5f5f5;}
+	        .tlistbox{width:100%;clear:both;padding:10px 0px;}
+	        .tlistbox_1{width:100%;height:100px;border-bottom:1px solid #f5f5f5;}
+	        .tlistbox_2{width:100%;height:30px;}
+	        .tlistbox_3{width:80%;height:30px;line-height:30px;}
+	        .tlistbox_4{width:20%;height:30px;line-height:30px;}
+	        .tlistbox_5{padding:5px 10px;background:#fcfcfc;border-radius:5px;}
+	        .tlistbox_6{width:100%;height:60px;}
+	        .tlistbox_7{width:33.33%;height:60px;}
+	        .tlistbox_8{width:100%;height:30px;line-height:30px;}
+	        .tlistbox_9{width:100%;height:30px;line-height:20px;}
+            .dongbox {position: fixed;z-index: 99999;display: none;top: 0px;width: 100%;height: 100vh;background: rgba(0,0,0,0.4);}
+            .t_contentbox{width:100%;overflow:hidden;min-height:400px;padding:5px 25px;}
+            .t_content_title{width:100%;height:40px;margin-bottom:15px;}
+            .t_content_title_l{width:50%;height:40px;line-height:40px;float:left;text-align:left;color:#000;font-size:16px;font-weight:bold;}
+            .t_content_title_r{width:50%;height:40px;line-height:40px;float:left;text-align:right;font-size:16px;color:#FCD535;cursor:pointer;}
+            .up_content_box{width:48%;overflow:hidden;min-height:380px;float:left;padding:15px 20px;border: 1px solid #f5f5f5;border-radius: 10px;box-shadow: 0px 0px 5px 0px #f5f5f5;}
+            .down_content_box{width:48%;overflow:hidden;min-height:380px;float:right;padding:15px 20px;border: 1px solid #f5f5f5;border-radius: 10px;box-shadow: 0px 0px 5px 0px #f5f5f5;}
+            .c_title_up{width:100%;height:40px;line-height:40px;text-align:center;font-size:14px;color:#fff;font-weight:bold;background: #0ecb81;border-radius: 5px;margin-bottom:10px;cursor:pointer;}
+            .c_title_down{width:100%;height:40px;line-height:40px;text-align:center;font-size:14px;color:#fff;font-weight:bold;background: #f5465c;border-radius: 5px;margin-bottom:10px;cursor:pointer;}
+            .up_type_box{width:100%;height:40px;}
+            .up_type_box_op{width:30%;height:40px;line-height:40px;text-align:left;font-size:14px;color:#707A8A;cursor:pointer;}
+            .up_type_box_op_ac{width:30%;height:40px;line-height:40px;text-align:left;font-size:14px;color:#FCD535;cursor:pointer;}
+            
+            .down_type_box{width:100%;height:40px;}
+            .down_type_box_op{width:30%;height:40px;line-height:40px;text-align:left;font-size:14px;color:#707A8A;cursor:pointer;}
+            .down_type_box_op_ac{width:30%;height:40px;line-height:40px;text-align:left;font-size:14px;color:#FCD535;cursor:pointer;}
+            
+            .trade_lots_title{width:100%;height:30px;line-height:30px;text-align:left;padding-left:10px;}
+	        .trade_lots_title_txt{font-size:14px;font-weight:bold;}
+	        .trade_lots_op_box{width:100%;height:30px;}
+	        .trade_lots_op_list{width:22%;height:30px;line-height:30px;border:1px solid #f5f5f5;float:left;text-align:center;color:#000;cursor:pointer;}
+	        .trade_ggan_op_list{width:18%;height:30px;line-height:30px;border:1px solid #f5f5f5;float:left;text-align:center;color:#000;cursor:pointer;}
+	        .active_lots{background:#f5f5f5;color:#000;font-size:16px;font-weight:bold;}
+	        .buy_zs_box{width:100%;height:30px;margin-bottom:5px;}
+	        .buy_zs_boxl{width:30%;height:30px;line-height:30px;float:left;color:#000;text-align:left;font-size:14px;}
+	        .buy_zs_boxr{width:65%;height:30px;line-height:30px;float:right;border:1px solid #f5f5f5;border-radius:5px;font-size:14px;}
+	        .buy_zs_input_lr{width:15%;height:30px;line-height:30px;text-align:center;float:left;}
+	        .buy_zs_input_box{width:70%;height:30px;line-height:30px;text-align:center;float:left;}
+	        .buy_zs_input{width:100%;height:20px;background:#fff;border:none;padding-left:5px;text-align:center;}
+	        .up_txt_box{width:100%;height:40px;border-bottom: 1px solid #f5f5f5;}
+	        .up_txt_box_l{width:60%;height:40px;line-height:40px;float:left;font-size:14px;}
+	        .up_txt_box_r{width:40%;height:40px;line-height:40px;float:left;text-align:right;}
+	        .buyduo_btn{width:100%;height:36px;line-height:36px;background:#0ecb81;text-align:center;color:#fff;border-radius:5px;margin-top:10px;cursor:pointer;}
+	        .buykong_btn{width:100%;height:36px;line-height:36px;background:#f5465c;text-align:center;color:#fff;border-radius:5px;margin-top:10px;cursor:pointer;}
+	    </style>
+	</head>
+	<body>
+	    <div class="App">
+	        <div class="css-tq0shg">
+	            <include file="Public:header"/>
+	            <div class="css-ogtd7z">
+	                <div class="css-jrzkh7">
+	                    <div id="header_global_js_wxgy34nj" class="css-1aac2e"></div>
+	                 </div>
+	            </div>
+	            <main class="css-1wr4jig">
+                    <div style="width:100%;overflow:hidden;min-height:1450px;background:#f5f5f5;padding:10px 0px 0px 0px;">
+                        <div style="width:100%;overflow:hidden;min-height:1450px;">
+                            <div style="width:20%;overflow:hidden;min-height:1450px;float:left;padding:0px 10px 0px 0px;">
+                                <div style="width:100%;overflow:hidden;min-height:1450px;background:#fff;">
+                                    <div style="width:100%;height:100%;padding:0px;padding:0px 10px;">
+	                                    <div style="width:100%;top:0px;">
+	                                        <div class="dong_title">
+	                                            <span class="dong_title_span" style="font-weight: bold;">{:L('永续合约')}</span>
+	                                        </div>
+                            
+	                                        <div class="dong_sel_box">
+	                                            <span class="fcc dong_sel_span">{:L('全部')}</span>
+	                                        </div>
+	                                    </div>
+	                                    
+	                                    
+	                                    <div class="symbol_list" id="smybolbox">
+	                                        <div style="width:100%;height:100px;line-height:100px;text-align:center;">
+                                                <span class="f14 fcc">{:L('没有获取数据')}</span>
+                                            </div>
+	                                    </div>
+	                                </div>
+                                    
+                                </div>
+                            </div>
+                            <div style="width:60%;overflow:hidden;min-height:1450px;background:#fff;float:left;">
+                                <div style="width:100%;height:90px;border-bottom:3px solid #f5f5f5;">
+                                    <div class="klinetitle">
+                                        <div class="klinetitle_l">
+			                        	    <p class="fch" style="font-size:18px;margin:0px;height:40px;line-height:60px;">{$coinname}</p>
+			                        	    <p class="fch" style="font-size:12px;margin:0px;height:40px;">{:L('永续合约')}</p>
+			                        	</div>
+			                        	<div class="klinetitle_l">
+			                        	    <p class="newpricebox closeprice" id="newpricebox" style="font-size:24px;">--</p>
+			                        	    <p class="changebox"  id="changebox">--</p>
+			                        	</div>
+			                        	<div class="klinetitle_r">
+			                        	    <div class="klr3_box">
+			                        	        <div class="klr3_box_dl">
+			                        	            <span class="f14 fcc">{:L('最低')}</span>
+			                        	        </div>
+			                        	        <div class="klr3_box_dr">
+			                        	            <span class="f14 fch" id="minmoney">--</span>
+			                        	        </div>
+			                        	    </div>
+			                        	    <div class="klr2_box">
+			                        	        <div class="klr2_box_dl">
+			                        	            <span class="f14 fcc">{:L('最高')}</span>
+			                        	        </div>
+			                        	        <div class="klr2_box_dr">
+			                        	            <span class="f14 fch" id="maxmoney">--</span>
+			                        	        </div>
+			                        	    </div>
+			                        	    <div class="klr2_box">
+			                        	        <div class="klr2_box_dl">
+			                        	            <span class="f14 fcc">24h{:L('量')}</span>
+			                        	        </div>
+			                        	        <div class="klr2_box_dr">
+			                        	            <span class="f14 fch" id="allvol">--</span>
+			                        	        </div>
+			                        	    </div>
+			                        	    
+			                        	</div>
+                			        </div>
+                                </div>
+                                <div style="width:100%;overflow:hidden;min-height:600px;padding:5px;">
+                                    <div style="width:100%;overflow:hidden;min-height:600px;">
+                                        <div style="width:100%;overflow:hidden;min-height:600px;">
+                                            <?php if($market == "ukbusdt"){?>
+			                                <iframe id="iframeid" width="100%" scrolling="no" height="600px" src="<?php echo U('Levertade/ordinaryh',array('market'=>$market));?>"  noresize="noresize" frameborder="0" >{:L('不支持IFRAME，请升级')}</iframe>
+			                                </eq>
+			                                <?php }else{ ?>
+			                                <iframe id="iframeid" width="100%" scrolling="no" height="600px" src="<?php echo U('Levertade/ordinary',array('market'=>$market));?>"  noresize="noresize" frameborder="0" >{:L('不支持IFRAME，请升级')}</iframe>
+			                                </eq>
+                                            <?php }?>
+			                            </div>
+                                    </div>
+                                </div>
+  
+                                <div class="t_contentbox">
+                                    <div class="t_content_title">
+                                        <div class="t_content_title_l">{:L('合约交易')}</div>
+                                        <a href="{:U('Levertade/cclist')}">
+                                        <div class="t_content_title_r">
+                                            <i class="bi bi-funnel-fill"></i>{:L('我的订单')}
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="up_content_box">
+                                        <div class="c_title_up" id="buybtn">{:L('上涨')}</div>
+                                        <div class="up_type_box">
+		                                    <div class="up_type_box_op_ac fl" id="buyxjbtn">
+		                                        <span id="xjspan">{:L('限价委托')}</span>
+		                                    </div>
+		                                    <div class="up_type_box_op fl" id="buysjbtn">
+		                                        <span id="sjspan">{:L('市价委托')}</span>
+		                                    </div>
+		                                </div>
+                                        
+                                        <!--限价委托单价框-->
+		                                <div class="inputbox" id="xjbox">
+		                                    <div class="inputbox_float">
+		                                        <input type="text" id="newprice" onblur="up_price();" class="fcc xjinput" value="" />
+		                                    </div>
+		                                    <div class="inputbox_float" style="width:40%;">
+		                                        <div class="input_bi borderright" id="dash_buyprice">
+		                                            <i class="bi bi-dash bistyle"></i>
+		                                        </div>
+		                                        <div class="input_bi" id="plus_buyprice">
+		                                            <i class="bi bi-plus bistyle"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                
+		                                <div class="trade_lots_box" style="width:100%;height:110px;">
+		                                    <div class="trade_lots_title">
+		                                        <span class="trade_lots_title_txt">{:L('交易手数')}</span>
+		                                    </div>
+		                                    <div class="trade_lots_op_box">
+		                                        <div class="trade_lots_op_list active_lots" id="up_lots_1" onclick="set_up_lotsnum(1,1,1)" style="margin-right:4%;">1</div>
+		                                        <div class="trade_lots_op_list" id="up_lots_2" onclick="set_up_lotsnum(5,1,2)" style="margin-right:4%;">5</div>
+		                                        <div class="trade_lots_op_list" id="up_lots_3" onclick="set_up_lotsnum(10,1,3)" style="margin-right:4%;">10</div>
+		                                        <div class="trade_lots_op_list" id="up_lots_4" onclick="set_up_lotsnum(20,1,4)">20</div>
+		                                    </div>
+		                    
+		                                    <div class="inputbox" id="xjbox">
+		                                        <div class="inputbox_float">
+		                                            <input type="text" id="lotsnum" readonly="readonly" class="fcc xjinput" value="1"  />
+		                                        </div>
+		                                        <div class="inputbox_float" style="width:40%;">
+		                                            <div class="input_bi borderright" id="dash_lotsnum">
+		                                                <i class="bi bi-dash bistyle"></i>
+		                                            </div>
+		                                            <div class="input_bi" id="plus_lotsnum">
+		                                                <i class="bi bi-plus bistyle"></i>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="trade_lots_box" style="width:100%;height:110px;">
+		                                    <div class="trade_lots_title">
+		                                        <span class="trade_lots_title_txt">{:L('杠杆倍数')}</span>
+		                                    </div>
+		                                    <div class="trade_lots_op_box">
+		                                        <div class="trade_ggan_op_list active_lots" id="up_ggan_1" onclick="set_up_ggan(5,1,1)" style="margin-right:2%;">5</div>
+		                                        <div class="trade_ggan_op_list" id="up_ggan_2" onclick="set_up_ggan(10,1,2)" style="margin-right:2%;">10</div>
+		                                        <div class="trade_ggan_op_list" id="up_ggan_3" onclick="set_up_ggan(20,1,3)" style="margin-right:2%;">20</div>
+		                                        <div class="trade_ggan_op_list" id="up_ggan_4" onclick="set_up_ggan(50,1,4)" style="margin-right:2%;">50</div>
+		                                        <div class="trade_ggan_op_list" id="up_ggan_5" onclick="set_up_ggan(100,1,5)">100</div>
+		                                    </div>
+		                    
+		                                    <div class="inputbox" id="xjbox">
+		                                        <div class="inputbox_float">
+		                                            <input type="text" id="upggan" readonly="readonly" class="fcc xjinput" value="5"  />
+		                                        </div>
+		                                    </div>
+                    		            </div>
+		                                
+		                                <div class="buy_zs_box">
+		                                    <div class="buy_zs_boxl">{:L('止损价')}：</div>
+		                                    <div class="buy_zs_boxr">
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-dash bistyle" id="dash_up_zsprice"></i>
+		                                        </div>
+		                                        <div class="buy_zs_input_box">
+		                                            <input type="text" id="up_zsprice" class="buy_zs_input" value="0"  />
+		                                        </div>
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-plus bistyle"  id="plus_up_zsprice"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                
+		                                <div class="buy_zs_box">
+		                                    <div class="buy_zs_boxl">{:L('止盈价')}：</div>
+		                                    <div class="buy_zs_boxr">
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-dash bistyle"  id="dash_up_zyprice"></i>
+		                                        </div>
+		                                        <div class="buy_zs_input_box">
+		                                            <input type="text" id="up_zyprice" class="buy_zs_input" value="0"  />
+		                                        </div>
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-plus bistyle"  id="plus_up_zyprice"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('占用保证金')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="upbondmoney">0</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('可用保证金')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="bzjmoney">{$levermoney}</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('手续费')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="upsxf">0.1</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('可用余额')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span id="upbalance">{$usdt_blance}</span>
+		                                    </div>
+		                                </div>
+                                        
+                                        <div onclick="bb_buycoin(1);" class="buyduo_btn">
+		                                    <span class="fzmm" style="color:#fff;">{:L('做多')}</span>
+		                                </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                    <div class="down_content_box">
+                                        <div class="c_title_down" id="sellbtn">{:L('下跌')}</div>
+ 
+		                                <div class="down_type_box">
+		                                    <div class="down_type_box_op_ac fl" id="sell_xjbtn">
+		                                        <span id="sell_xjspan">{:L('限价委托')}</span>
+		                                    </div>
+		                                    <div class="down_type_box_op fl" id="sell_sjbtn">
+		                                        <span id="sell_sjspan">{:L('市价委托')}</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <!--限价委托单价框-->
+		                                <div class="inputbox" id="sell_xjbox">
+		                                    <div class="inputbox_float">
+		                                        <input type="text" id="sell_newprice"  onblur="down_price();" class="fcc xjinput" value=""  />
+		                                    </div>
+		                                    <div class="inputbox_float" style="width:40%;">
+		                                        <div class="input_bi borderright" id="dash_sellprice">
+		                                            <i class="bi bi-dash bistyle"></i>
+		                                        </div>
+		                                        <div class="input_bi" id="plus_sellprice">
+		                                            <i class="bi bi-plus bistyle"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="trade_lots_box" style="width:100%;height:110px;">
+		                                    <div class="trade_lots_title">
+		                                        <span class="trade_lots_title_txt">{:L('交易手数')}</span>
+		                                    </div>
+		                                    <div class="trade_lots_op_box">
+		                                        <div class="trade_lots_op_list active_lots" id="down_lots_1" onclick="set_down_lotsnum(1,1,1)" style="margin-right:4%;">1</div>
+		                                        <div class="trade_lots_op_list" id="down_lots_2" onclick="set_down_lotsnum(5,1,2)" style="margin-right:4%;">5</div>
+		                                        <div class="trade_lots_op_list" id="down_lots_3" onclick="set_down_lotsnum(10,1,3)" style="margin-right:4%;">10</div>
+		                                        <div class="trade_lots_op_list" id="down_lots_4" onclick="set_down_lotsnum(20,1,4)">20</div>
+		                                    </div>
+		                                    <div class="inputbox" id="xjbox">
+		                                        <div class="inputbox_float">
+		                                            <input type="text" id="lots_down_num" readonly="readonly" class="fcc xjinput" value="1"  />
+		                                        </div>
+		                                        <div class="inputbox_float" style="width:40%;">
+		                                            <div class="input_bi borderright" id="dash_lots_down_num">
+		                                                <i class="bi bi-dash bistyle"></i>
+		                                            </div>
+		                                            <div class="input_bi" id="plus_lots_down_num">
+		                                                <i class="bi bi-plus bistyle"></i>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="trade_lots_box" style="width:100%;height:110px;">
+		                                    <div class="trade_lots_title">
+		                                        <span class="trade_lots_title_txt">{:L('杠杆倍数')}</span>
+		                                    </div>
+		                                    <div class="trade_lots_op_box">
+		                                        <div class="trade_ggan_op_list active_lots" id="down_ggan_1" onclick="set_down_ggan(5,1,1)" style="margin-right:2%;">5</div>
+		                                        <div class="trade_ggan_op_list" id="down_ggan_2" onclick="set_down_ggan(10,1,2)" style="margin-right:2%;">10</div>
+		                                        <div class="trade_ggan_op_list" id="down_ggan_3" onclick="set_down_ggan(20,1,3)" style="margin-right:2%;">20</div>
+		                                        <div class="trade_ggan_op_list" id="down_ggan_4" onclick="set_down_ggan(50,1,4)" style="margin-right:2%;">50</div>
+		                                        <div class="trade_ggan_op_list" id="down_ggan_5" onclick="set_down_ggan(100,1,5)">100</div>
+		                                    </div>
+		                    
+		                                    <div class="inputbox" id="xjbox">
+		                                        <div class="inputbox_float">
+		                                            <input type="text" id="downggan" readonly="readonly" class="fcc xjinput" value="5"  />
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                
+		                                <div class="buy_zs_box">
+		                                    <div class="buy_zs_boxl">{:L('止损价')}</div>
+		                                    <div class="buy_zs_boxr">
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-dash bistyle" id="dash_down_zsprice"></i>
+		                                        </div>
+		                                        <div class="buy_zs_input_box">
+		                                            <input type="text" id="down_zsprice" class="buy_zs_input" value="0"  />
+		                                        </div>
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-plus bistyle" id="plus_down_zsprice"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="buy_zs_box">
+		                                    <div class="buy_zs_boxl">{:L('止盈价')}</div>
+		                                    <div class="buy_zs_boxr">
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-dash bistyle" id="dash_down_zyprice"></i>
+		                                        </div>
+		                                        <div class="buy_zs_input_box">
+		                                            <input type="text" id="down_zyprice" class="buy_zs_input" value="0"  />
+		                                        </div>
+		                                        <div class="buy_zs_input_lr">
+		                                            <i class="bi bi-plus bistyle" id="plus_down_zyprice"></i>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('占用保证金')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="upbondmoney">0</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('可用保证金')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="bzjmoney">{$levermoney}</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('手续费')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span class="upsxf">0.1</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div class="up_txt_box">
+		                                    <div class="up_txt_box_l">{:L('可用余额')}：</div>
+		                                    <div class="up_txt_box_r">
+		                                        <span id="upbalance">{$usdt_blance}</span>
+		                                    </div>
+		                                </div>
+		                                
+		                                <div  onclick="bb_buycoin(2);" class="buykong_btn">
+		                                    <span class="fzmm" style="color:#fff;">{:L('做空')}</span>
+		                                </div>
+		                                
+                                    </div>
+                                    
+                                    <div style="width:100%;height:100px;"></div>
+                                </div>
+                                
+                            </div>
+                            <div style="width:20%;overflow:hidden;min-height:1450px;float:left;padding:0px 0px 0px 10px;">
+                                <div style="width:100%;overflow:hidden;min-height:1450px;background:#fff;">
+                                    <div style="width:100%;height:40px;padding:0px 15px;">
+                                        <div style="min-width:20%;height:40px;line-height:40px;border-bottom:2px solid #FCD535">
+                                            <span class="f14 fch">{:L('盘口')}</span>
+                                        </div>
+                                        <div style="width:100%;margin-top:20px;">
+                                            
+                                            <div style="width:100%;">
+		                                        <div style="width:100%;height:20px;padding:0px 5px;">
+		                                            <div class="tradebox_title tl">
+		                                                <span class="fch f12">{:L('价格')}</span>
+		                                            </div>
+		                                            <div class="tradebox_title tr">
+		                                                <span class="fch f12">{:L('数量')}</span>
+		                                            </div>
+		                                        </div>
+		                                        
+		                                        <div class="trade_listbox" id="tradesellbox">
+		                                            <div style="width:100%;height:30px;">
+		                                                <div class="trade_list tl">
+		                                                    <span class="red f12">--</span>
+		                                                </div>
+		                                                <div class="trade_list tr">
+		                                                    <span class="red f12">--</span>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="trade_listpricebox closeprice" id="closeprice">
+		                                            <span>--</span>
+		                                        </div>
+		                                        <div class="trade_listbox" id="tradebuybox">
+		                                            <div style="width:100%;height:30px;">
+		                                                <div class="trade_list tl">
+		                                                    <span class="green f12">--</span>
+		                                                </div>
+		                                                <div class="trade_list tr">
+		                                                    <span class="green f12">--</span>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+	            </main>
+	            
+
+	            <input type="hidden" id="flag" value="1" />
+                <input type="hidden" id="buy_usermoney" value="{$usdt_blance}" />
+                <input type="hidden" id="buy_usercoin" value="{$coin_blance}" />
+    
+                <input type="hidden" id="symbolbox" value="{$coinname}"  />
+                <!--手续费率-->
+	            <input type="hidden" id="t_rate" value="0" />
+                <!--止盈价格-->
+	            <input type="hidden" id="zyprice" value="0" />
+                <!--止损价格-->
+	            <input type="hidden" id="zsprice" value="0" />
+                <!--账户保证金-->
+	            <input type="hidden" id="bondmoney" value="{$levermoney}" />
+	            <!--占用保证金-->
+	            <input type="hidden" id="yj_bondmoney" value="0" />
+                <!--杠杆倍数-->
+	            <input type="hidden" id="tradeggnum" value="5" />
+                <!--交易手数-->
+	            <input type="hidden" id="tradelotsnum" value="1" />
+                <!--交易限价单价-->
+	            <input type="hidden" id="mprice" value="" />
+	            <!--交易限价买卖币的数量-->
+	            <input type="hidden" id="mnum" value="" />
+	            <!--交易限价买卖USDT的数量-->
+	            <input type="hidden" id="musdt" value="" />
+	            <!--购买类型，1限价2市价-->
+	            <input type="hidden" id="buytype" value="1" />
+	            <!--交易费率-->
+	            <input type="hidden" id="lever_fee" value="{$sysinfo.lever_fee}" />
+	            <!--交易开关-->
+	            <input type="hidden" id="lever_kg" value="{$sysinfo.lever_kg}" />
+	            
+	            
+	            
+	            
+	            
+	            
+	            
+	            <include file="Public:footer"/>
+	        </div>   
+	    </div>
+	    
+        <div class="dongbox" id="gotaxbox"  style="display:none;">
+            <div style="width:300px;height:260px;background:#fff;margin:18% auto;border-radius:10px;padding:15px;">
+                <div style="width:100%;height:100px;line-height:100px;text-align:center;">
+                    <i class="bi bi-exclamation-circle" style="font-size:56px;font-weight:bold;color:#f5465c;"></i>
+                </div>
+                <div style="width:100%;height:60px;text-align:center;color:#000;font-size:14px;">
+                    {:L('请先缴纳税金')}
+                </div>
+                <div style="width:100%;height:60px;">
+                    <a href="{:U('Finance/cztax')}" target="__blank">
+                    <div style="width:45%;height:36px;line-height:36px;text-align:center;float:left;font-size:14px;color:#fff;background:#0ecb81;border-radius:10px;">{:L('缴税')}</div></a>
+                    <div onclick="hidetaxbox()" style="width:45%;height:36px;line-height:36px;text-align:center;float:right;font-size:14px;color:#fff;background:#f5465c;border-radius:10px;">{:L('取消')}</div>
+                </div>
+            </div>
+        </div>
+
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/Home/static/js/layer/layer.js" ></script>
+    <script type="text/javascript" src="/Public/Home/static/js/jquery.SuperSlide.2.1.1.js" ></script>
+    <script type="text/javascript">
+    function bb_buycoin(direction){
+        var flag = $("#flag").val();
+        if(flag == 2){
+            return false;
+        }
+        var direction = direction;
+        if(direction <= 0){
+            layer.msg("{:L('缺少重要参数')}");return false;
+        }
+        var lever_kg = $("#lever_kg").val();
+        if(lever_kg != 0){
+            layer.msg("{:L('暂停交易')}");return false;
+        }
+        
+        var yj_bondmoney = $("#yj_bondmoney").val(); //占用保证金
+        var bondmoney = $("#bondmoney").val(); //可用保证金
+        if(bondmoney > yj_bondmoney){
+            layer.msg("{:L('可用保证金不足，请先从资金账户划转')}");return false;
+        }
+        var type = $("#buytype").val(); //限价，市价
+        var symbol = $("#symbolbox").val();
+        var mprice = $("#mprice").val();  //输入价格(限价)
+        var num = $("#tradelotsnum").val(); //手数
+        var ggan = $("#tradeggnum").val(); //杠杆倍数
+        var zyprice = $("#zyprice").val(); //止盈价;
+        var zsprice = $("#zsprice").val(); //止损价;
+        $("#flag").val(2);
+        $.post("{:U('Levertade/UpOrderHandle')}",
+        {'direction':direction,'type':type,'symbol':symbol,'mprice':mprice,'num':num,'ggan':ggan,'zyprice':zyprice,'zsprice':zsprice},
+        function(data){
+            if(data.code == 1){
+                layer.msg(data.info);
+                setTimeout(function(args){
+                    window.location.reload();
+                },2000);
+            }else{
+                layer.msg(data.info);return false;
+            }
+        });
+    }
+    
+    
+    $(function(){
+        CountBond();
+        CountSouxf();
+        setInterval("CountBond()",1000);
+        setInterval("CountSouxf()",1000);
+        var symbol = $("#symbolbox").val();
+        $.post("{:U('Ajaxtrade/getnewprice')}",
+        {'symbol':symbol},
+        function(data){
+            if(data.code == 1){
+                $("#newprice").val(data.price);
+                $("#mprice").val(data.price);
+                $("#sell_newprice").val(data.price);
+            }else{
+                console.log("{:L('未获取数据')}");
+            }
+        });
+    });
+
+    function up_price(){
+        var newprice = $("#newprice").val();
+        $("#mprice").val(newprice);
+    }
+    function down_price(){
+        var newprice = $("#sell_newprice").val();
+        $("#mprice").val(newprice);
+    }
+    //前台计算保证金
+    function CountBond(){
+        var mprice = $("#mprice").val();
+        var tradelotsnum = $("#tradelotsnum").val();
+        var tradeggnum = $("#tradeggnum").val();
+        var bond = parseFloat((mprice * tradelotsnum) / tradeggnum);
+        $(".upbondmoney").html(bond.toFixed(2));
+        $("#yj_bondmoney").val(bond.toFixed(2));
+        
+    }
+    
+    //前台手续费计算(开仓价格 * 开仓数量 * 手续费率)
+    function CountSouxf(){
+        var mprice = $("#mprice").val();
+        var tradelotsnum = $("#tradelotsnum").val();
+        var lever_fee = $("#lever_fee").val();
+        var sxf = parseFloat(lever_fee * mprice * tradelotsnum / 100).toFixed(2);
+        $(".upsxf").html(sxf);
+    }
+    $("#dash_sellprice").click(function(){
+        var newprice =  parseFloat($("#sell_newprice").val());
+        if(newprice > 0){
+            var buyprice = (newprice - 0.001).toFixed(4);
+        }else{
+            var buyprice = 0;
+        }
+        $("#sell_newprice").val(buyprice);
+        $("#mprice").val(buyprice);
+    });
+    
+    $("#plus_sellprice").click(function(){
+        var newprice = parseFloat($("#sell_newprice").val());
+        var buyprice = (newprice + 0.001).toFixed(4);
+        $("#sell_newprice").val(buyprice);
+        $("#mprice").val(buyprice);
+    });
+
+    $("#dash_buyprice").click(function(){
+        var newprice =  parseFloat($("#newprice").val());
+        if(newprice > 0){
+            var buyprice = (newprice - 0.001).toFixed(4);
+        }else{
+            var buyprice = 0;
+        }
+        $("#newprice").val(buyprice);
+        $("#mprice").val(buyprice);
+    });
+    $("#plus_buyprice").click(function(){
+        var newprice = parseFloat($("#newprice").val());
+        var buyprice = (newprice + 0.001).toFixed(4);
+        $("#newprice").val(buyprice);
+        $("#mprice").val(buyprice);
+    });
+    
+    
+    $("#dash_lotsnum").click(function(){
+        var lotsnum = parseInt($("#lotsnum").val());
+        if(lotsnum <= 1){
+            var newlotsnum = 1;
+        }else{
+            var newlotsnum = lotsnum - 1;
+        }
+        $("#lotsnum").val(newlotsnum);
+        $("#tradelotsnum").val(newlotsnum);
+    });
+    
+    $("#dash_lots_down_num").click(function(){
+        var lotsnum = parseInt($("#lots_down_num").val());
+        if(lotsnum <= 1){
+            var newlotsnum = 1;
+        }else{
+            var newlotsnum = lotsnum - 1;
+        }
+        $("#lots_down_num").val(newlotsnum);
+        $("#tradelotsnum").val(newlotsnum);
+    });
+    
+    
+    
+    $("#dash_up_zsprice").click(function(){
+        var up_zsprice = parseFloat($("#up_zsprice").val());
+        if(up_zsprice <= 1){
+            var new_up_zsprice = up_zsprice;
+        }else{
+            var new_up_zsprice = up_zsprice - 1;
+        }
+        $("#up_zsprice").val(new_up_zsprice);
+        $("#zsprice").val(up_zsprice);
+    });
+    
+    $("#dash_down_zsprice").click(function(){
+        var down_zsprice = parseFloat($("#down_zsprice").val());
+        if(down_zsprice <= 1){
+            var new_down_zsprice = down_zsprice;
+        }else{
+            var new_down_zsprice = down_zsprice - 1;
+        }
+        $("#down_zsprice").val(new_down_zsprice);
+        $("#zsprice").val(up_zsprice);
+    });
+    
+    $("#dash_down_zyprice").click(function(){
+        var down_zyprice = parseFloat($("#down_zyprice").val());
+        if(down_zyprice <= 1){
+            var new_down_zyprice = down_zyprice;
+        }else{
+            var new_down_zyprice = down_zyprice - 1;
+        }
+        $("#down_zyprice").val(new_down_zyprice);
+        $("#zyprice").val(up_zsprice);
+    });
+    
+    
+    
+    
+    $("#dash_up_zyprice").click(function(){
+        var up_zyprice = parseFloat($("#up_zyprice").val());
+        if(up_zyprice <= 1){
+            var new_up_zyprice = up_zyprice;
+        }else{
+            var new_up_zyprice = up_zyprice - 1;
+        }
+        $("#up_zyprice").val(new_up_zyprice);
+        $("#zyprice").val(new_up_zyprice);
+    });
+    
+    
+    
+    $("#plus_up_zsprice").click(function(){
+        var up_zsprice = parseFloat($("#up_zsprice").val());
+        var new_up_zsprice = up_zsprice + 1;
+        $("#up_zsprice").val(new_up_zsprice);
+        $("#zsprice").val(new_up_zsprice);
+    });
+    
+    $("#plus_up_zyprice").click(function(){
+        var up_zyprice = parseFloat($("#up_zyprice").val());
+        var new_up_zyprice = up_zyprice + 1;
+        $("#up_zyprice").val(new_up_zyprice);
+        $("#zyprice").val(new_up_zyprice);
+    });
+    
+    $("#plus_down_zsprice").click(function(){
+        var down_zsprice = parseFloat($("#down_zsprice").val());
+        var new_down_zsprice = down_zsprice + 1;
+        $("#down_zsprice").val(new_down_zsprice);
+        $("#zsprice").val(new_down_zsprice);
+    });
+    
+    $("#plus_down_zyprice").click(function(){
+        var down_zyprice = parseFloat($("#down_zyprice").val());
+        var new_down_zyprice = down_zyprice + 1;
+        $("#down_zyprice").val(new_down_zyprice);
+        $("#zyprice").val(new_down_zyprice);
+    });
+
+    
+    $("#plus_lotsnum").click(function(){
+        var lotsnum = parseInt($("#lotsnum").val());
+        var newlotsnum = lotsnum + 1;
+        $("#lotsnum").val(newlotsnum);
+        $("#tradelotsnum").val(newlotsnum);
+    });
+    
+    $("#plus_lots_down_num").click(function(){
+        var lotsnum = parseInt($("#lots_down_num").val());
+        var newlotsnum = lotsnum + 1;
+        $("#lots_down_num").val(newlotsnum);
+        $("#tradelotsnum").val(newlotsnum);
+    });
+    
+    function set_up_lotsnum(num,st,lots){
+        var lotsnum = num;
+        var type = st;
+        var number = lots;
+        if(number == 1){
+            $("#up_lots_1").addClass('active_lots');
+            $("#up_lots_2").removeClass('active_lots');
+            $("#up_lots_3").removeClass('active_lots');
+            $("#up_lots_4").removeClass('active_lots');
+        }else if(number == 2){
+            $("#up_lots_2").addClass('active_lots');
+            $("#up_lots_1").removeClass('active_lots');
+            $("#up_lots_3").removeClass('active_lots');
+            $("#up_lots_4").removeClass('active_lots');
+        }else if(number == 3){
+            $("#up_lots_3").addClass('active_lots');
+            $("#up_lots_2").removeClass('active_lots');
+            $("#up_lots_1").removeClass('active_lots');
+            $("#up_lots_4").removeClass('active_lots');
+        }else if(number == 4){
+            $("#up_lots_4").addClass('active_lots');
+            $("#up_lots_2").removeClass('active_lots');
+            $("#up_lots_3").removeClass('active_lots');
+            $("#up_lots_1").removeClass('active_lots');
+        }
+        $("#lotsnum").val(lotsnum);
+        $("#tradelotsnum").val(lotsnum);
+
+    }
+    
+    function set_down_lotsnum(num,st,lots){
+        var lotsnum = num;
+        var type = st;
+        var number = lots;
+        if(number == 1){
+            $("#down_lots_1").addClass('active_lots');
+            $("#down_lots_2").removeClass('active_lots');
+            $("#down_lots_3").removeClass('active_lots');
+            $("#down_lots_4").removeClass('active_lots');
+        }else if(number == 2){
+            $("#down_lots_2").addClass('active_lots');
+            $("#down_lots_1").removeClass('active_lots');
+            $("#down_lots_3").removeClass('active_lots');
+            $("#down_lots_4").removeClass('active_lots');
+        }else if(number == 3){
+            $("#down_lots_3").addClass('active_lots');
+            $("#down_lots_2").removeClass('active_lots');
+            $("#down_lots_1").removeClass('active_lots');
+            $("#down_lots_4").removeClass('active_lots');
+        }else if(number == 4){
+            $("#down_lots_4").addClass('active_lots');
+            $("#down_lots_2").removeClass('active_lots');
+            $("#down_lots_3").removeClass('active_lots');
+            $("#down_lots_1").removeClass('active_lots');
+        }
+        $("#lots_down_num").val(lotsnum);
+        $("#tradelotsnum").val(lotsnum);
+    }
+    
+    
+    
+    
+    function set_up_ggan(num,st,gg){
+        var lotsnum = num;
+        var type = st;
+        var number = gg;
+        if(number == 1){
+            $("#up_ggan_1").addClass('active_lots');
+            $("#up_ggan_2").removeClass('active_lots');
+            $("#up_ggan_3").removeClass('active_lots');
+            $("#up_ggan_4").removeClass('active_lots');
+            $("#up_ggan_5").removeClass('active_lots');
+        }else if(number == 2){
+            $("#up_ggan_2").addClass('active_lots');
+            $("#up_ggan_1").removeClass('active_lots');
+            $("#up_ggan_3").removeClass('active_lots');
+            $("#up_ggan_4").removeClass('active_lots');
+            $("#up_ggan_5").removeClass('active_lots');
+        }else if(number == 3){
+            $("#up_ggan_3").addClass('active_lots');
+            $("#up_ggan_2").removeClass('active_lots');
+            $("#up_ggan_1").removeClass('active_lots');
+            $("#up_ggan_4").removeClass('active_lots');
+            $("#up_ggan_5").removeClass('active_lots');
+        }else if(number == 4){
+            $("#up_ggan_4").addClass('active_lots');
+            $("#up_ggan_2").removeClass('active_lots');
+            $("#up_ggan_3").removeClass('active_lots');
+            $("#up_ggan_1").removeClass('active_lots');
+            $("#up_ggan_5").removeClass('active_lots');
+        }else if(number == 5){
+            $("#up_ggan_5").addClass('active_lots');
+            $("#up_ggan_2").removeClass('active_lots');
+            $("#up_ggan_3").removeClass('active_lots');
+            $("#up_ggan_4").removeClass('active_lots');
+            $("#up_ggan_1").removeClass('active_lots');
+        }
+        $("#upggan").val(lotsnum);
+        $("#tradeggnum").val(lotsnum);
+    }
+    
+    function set_down_ggan(num,st,gg){
+        var lotsnum = num;
+        var type = st;
+        var number = gg;
+        if(number == 1){
+            $("#down_ggan_1").addClass('active_lots');
+            $("#down_ggan_2").removeClass('active_lots');
+            $("#down_ggan_3").removeClass('active_lots');
+            $("#down_ggan_4").removeClass('active_lots');
+            $("#down_ggan_5").removeClass('active_lots');
+        }else if(number == 2){
+            $("#down_ggan_2").addClass('active_lots');
+            $("#down_ggan_1").removeClass('active_lots');
+            $("#down_ggan_3").removeClass('active_lots');
+            $("#down_ggan_4").removeClass('active_lots');
+            $("#down_ggan_5").removeClass('active_lots');
+        }else if(number == 3){
+            $("#down_ggan_3").addClass('active_lots');
+            $("#down_ggan_2").removeClass('active_lots');
+            $("#down_ggan_1").removeClass('active_lots');
+            $("#down_ggan_4").removeClass('active_lots');
+            $("#down_ggan_5").removeClass('active_lots');
+        }else if(number == 4){
+            $("#down_ggan_4").addClass('active_lots');
+            $("#down_ggan_2").removeClass('active_lots');
+            $("#down_ggan_3").removeClass('active_lots');
+            $("#down_ggan_1").removeClass('active_lots');
+            $("#down_ggan_5").removeClass('active_lots');
+        }else if(number == 5){
+            $("#down_ggan_5").addClass('active_lots');
+            $("#down_ggan_2").removeClass('active_lots');
+            $("#down_ggan_3").removeClass('active_lots');
+            $("#down_ggan_4").removeClass('active_lots');
+            $("#down_ggan_1").removeClass('active_lots');
+        }
+        $("#downggan").val(lotsnum);
+        $("#tradeggnum").val(lotsnum);
+    }
+    
+    
+        $("#sell_xjbtn").click(function(){
+            $("#sell_xjspan").addClass("fcy");
+            $("#sell_xjspan").removeClass("fcc");
+            $("#sell_sjspan").addClass("fcc");
+            $("#sell_sjspan").removeClass("fcy");
+            $("#sell_xjbox").show();
+            $("#buytype").val(1);
+            $("#sellxjcoin").hide();
+            
+            
+        });
+        $("#sell_sjbtn").click(function(){
+            $("#sell_sjspan").addClass("fcy");
+            $("#sell_sjspan").removeClass("fcc");
+            $("#sell_xjspan").addClass("fcc");
+            $("#sell_xjspan").removeClass("fcy");
+            $("#sell_sjbox").show();
+            $("#sell_xjbox").hide();
+            $("#buytype").val(2);
+            $("#sellxjcoin").show();
+        });
+
+        //买入框
+        $("#buyxjbtn").click(function(){
+            $("#buyxjbtn").addClass('up_type_box_op_ac');
+            $("#buyxjbtn").removeClass('up_type_box_op');
+            $("#buysjbtn").addClass('up_type_box_op');
+            $("#buysjbtn").removeClass('up_type_box_op_ac');
+            $("#xjbox").show();
+            $("#buytype").val(1);
+            $("#xjnumbox").show();
+        });
+        $("#buysjbtn").click(function(){
+            $("#buysjbtn").addClass('up_type_box_op_ac');
+            $("#buysjbtn").removeClass('up_type_box_op');
+            $("#buyxjbtn").addClass('up_type_box_op');
+            $("#buyxjbtn").removeClass('up_type_box_op_ac');
+            $("#xjbox").hide();
+            $("#buytype").val(2);
+            $("#xjnumbox").hide();
+        });
+        function hidetaxbox(){
+            $("#gotaxbox").hide();
+        }
+        $("#buybtn").click(function(){
+            $("#buytype").val(1);
+        });
+        $("#sellbtn").click(function(){
+            $("#buytype").val(1);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            getallsmybol();
+            gettradbuy();
+            gettradsell();
+            setInterval("getallsmybol()",3000);
+            setInterval("gettradbuy()",2000);
+            setInterval("gettradsell()",2000);
+        });
+        function getallsmybol(){
+            $.post("{:U('Ajaxtrade/getallcoin')}",
+            function(data){
+                if(data.code == 1){
+                    $("#smybolbox").empty();
+                    var html = '';
+                    if(data.data == '' || data.data == null){
+                        html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                               '<span class="f14 fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                               '</div>';
+                        $("#smybolbox").append(html);
+                        
+                    }else{
+                        $.each(data.data,function(key,val){
+                            html += '<a href="/Levertade/index.html?symbol='+ val.coin +'&type=buy">'+
+                                    '<div class="sy_list_box">'+
+                                    '<div class="sy_list_boxl">'+
+                                    '<span  class="f12 fch">'+ val.cname +'</span>'+
+                                    '</div>'+
+                                    '<div class="sy_list_boxl" style="text-align:center;font-size:12px;">' + val.open + '</div>'+
+                                    '<div class="sy_list_boxr" style="font-size:12px;">' + val.change +'</div>'+
+                                    '</div>'+
+                                    '</a>';
+                        });
+                        
+                        $("#smybolbox").append(html);
+                    }
+                }else{
+                    html =  '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                            '<span class="f14 fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                            '</div>';
+                    $("#smybolbox").append(html);
+                }
+            });
+        }
+        
+        function gettradsell(){
+            var symbol = $("#symbolbox").val();
+            $.post("{:U('Ajaxtrade/gettradsellten')}",
+            {'symbol':symbol},
+            function(data){
+                if(data.code == 1){
+                    $("#tradebuybox").empty();
+                    var html = '';
+                    if(data.data == '' || data.data == null){
+                        html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                               '<span class="f14 fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                               '</div>';
+                        $("#tradebuybox").append(html);
+                        
+                    }else{
+                        $.each(data.data,function(key,val){
+                            html += '<div style="width:100%;height:30px;">'+
+    		                        '<div class="trade_list tl">'+
+    		                        '<span class="red f12">'+ val.price +'</span>'+
+    		                        '</div>'+
+    		                        '<div class="trade_list tr">'+
+    		                        '<span class="red f12">'+ val.amount +'</span>'+
+    		                        '</div>'+
+    		                        '</div>';
+                        });
+                        $("#tradebuybox").append(html);
+                    }
+                }
+            });
+        }
+
+        function gettradbuy(){
+            var symbol = $("#symbolbox").val();
+            $.post("{:U('Ajaxtrade/gettradbuyten')}",
+            {'symbol':symbol},
+            function(data){
+                if(data.code == 1){
+                    $("#tradesellbox").empty();
+                    var html = '';
+                    if(data.data == '' || data.data == null){
+                        html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                               '<span class="f14 fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                               '</div>';
+                        $("#tradesellbox").append(html);
+                        
+                    }else{
+                        $.each(data.data,function(key,val){
+                            html += '<div style="width:100%;height:30px;">'+
+    		                        '<div class="trade_list tl">'+
+    		                        '<span class="green f12">'+ val.price +'</span>'+
+    		                        '</div>'+
+    		                        '<div class="trade_list tr">'+
+    		                        '<span class="green f12">'+ val.amount +'</span>'+
+    		                        '</div>'+
+    		                        '</div>';
+                        });
+                        $("#tradesellbox").append(html);
+                    }
+                }
+            });
+        }
+    </script>
+
+<script type="text/javascript">
+    $(function(){
+        getcoinprice();
+        setInterval("getcoinprice()",2000);
+    });
+    function getcoinprice(){
+        var symbol = $("#symbolbox").val();
+        $.post("{:U('Ajaxtrade/getcoinprice')}",
+        {'symbol':symbol},
+        function(data){
+            if(data.code == 1){
+                $("#changebox").html(data.change);
+                $(".closeprice").html(data.price);
+                $("#minmoney").html(data.low);
+                $("#maxmoney").html(data.high);
+                $("#allvol").html(data.amount);
+            }else{
+                console.log("{:L('未获取数据')}");
+            }
+        });
+    }
+</script>
+
+
+
+<script type="text/javascript">
+	$("#nav").slide({ 
+		type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nLi", //鼠标触发对象
+		targetCell:".sub", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:300 , //效果时间
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+</script>
+
+    
+</html>

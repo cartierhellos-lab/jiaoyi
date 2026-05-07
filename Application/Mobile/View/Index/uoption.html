@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<title>{$webname}</title>
+	<style>
+		::-webkit-input-placeholder { /* WebKit browsers */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+		input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+		a:hover,a:link,a:visited,a:active{color:#212529;text-decoration:none;}
+		.lbox{width:100%;height:60px;}
+		.lbox_l{width:70%;height:60px;line-height:60px;text-align:left;float:left;}
+		.lbox_r{width:30%;height:60px;line-height:60px;text-align:right;float:left;}
+		.userbox{
+    padding: 10px;
+    border-radius: 10px;
+    width: 167%;
+    height: 70px;
+    left: 0px;
+    right: 0;
+		}
+	</style>
+  </head>
+  <body>
+	
+		<style>
+		::-webkit-input-placeholder { /* WebKit browsers */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+		input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+		a:hover,a:link,a:visited,a:active{color:#212529;text-decoration:none;}
+		.lbox{width:100%;height:60px;padding: 0px 10px;}
+		.lbox_l{width:60%;height:60px;line-height:60px;text-align:left;float:left;}
+		.lbox_r{width:40%;height:60px;line-height:60px;text-align:right;float:left;}
+		.my-n-name {
+    width: 100%;
+    position: relative;
+    background: #00ac93;
+    display: table;
+    margin-bottom: 3.2vw;
+    height: 14vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50%;
+    -webkit-box-shadow: 0 0.53333vw 0.53333vw 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0.53333vw 0.53333vw 0 rgb(0 0 0 / 22%);
+    border-radius: 3.2vw;
+    
+}
+.my-n-ico {
+    font-size: 16px;
+}
+.my-name, .my-name-s {
+    font-size: 12px;
+}
+.my-name {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.my-name-b {
+    font-size: 21px;
+}
+.user-type-title {
+    position: relative;
+    padding: 10px 25px 10px 30px;
+    background-color: #f2f2f2;
+}
+
+.user-type-title {
+padding: 10px 10px 10px;
+    font-weight: 600;
+    color: #999;
+    font-size: 14px;
+}
+
+
+uni-view {
+    line-height: normal;
+}
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+uni-view {
+    display: block;
+}
+* {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.user_wallet {
+    position: relative;
+    padding: 10px 20px 15px;
+    background-color: #fff;
+}
+
+.marB10 {
+    margin-bottom: 10px!important;
+}
+.user-w-num {
+    line-height: 25px;
+    color: #999;
+}
+uni-view {
+    line-height: normal;
+}
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+.user-w-avi {
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 5px;
+    background-color: #03ad93;
+    border-radius: 40px;
+    padding: 2px 10px;
+}
+
+uni-view {
+    line-height: normal;
+}
+.my-kp-more {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.user-eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+uni-image>img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.user-w-num {
+    line-height: 25px;
+    color: #999;
+}
+.user-w-t1 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+}
+.user-w-t2 {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+.user-w-avi uni-text {
+    margin-left: 5px;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+.my-kp-more {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+}
+.user_wallet {
+    position: relative;
+    padding: 10px 20px 15px;
+    background-color: #fff;
+}
+.marB10 {
+    margin-bottom: 10px!important;
+}
+.user-index .my-list {
+    padding: 7px 15px;
+    font-weight: 600;
+    color: #333;
+}
+.my-list-wh60 {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin: 0 10px 1px 0;
+}
+uni-image>img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+uni-resize-sensor {
+    display: block;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-animation: once-show 1ms;
+    animation: once-show 1ms;
+}
+uni-resize-sensor, uni-resize-sensor>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+uni-resize-sensor>div:first-child>div {
+    width: 100000px;
+    height: 100000px;
+}
+uni-resize-sensor>div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.my-list-r {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    color: #ccc;
+    font-size: 12px;
+}
+.my-list-rico {
+    width: 15px;
+    height: 15px;
+    margin: 0 0 -2px 10px;
+}
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.my-list-r {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.user-index .my-list {
+    padding: 7px 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.user-index .my-list {
+    padding: 7px 20px;
+}
+
+.my-list {
+    padding: 7px 15px;
+    line-height: 35px;
+    background-color: #fff;
+    position: relative;
+    font-size: 14px;
+    border-bottom: 0.5px #e4e4e4 solid;
+}
+	</style>
+  </head>
+  <body>
+	<div class="container-fluid ctbox">
+		<div class="no_header">
+			<div class="fl bhalf allhg txtl" style="line-height:50px;padding: 0px 10px 0px;">
+				<i class="bi bi-arrow-left fcc fw" onclick="goindex()" style="font-size: 22px;"></i>
+			</div>
+		</div>
+		<div class="no_content" style=" box-sizing: border-box; margin: 0px;min-width: 0px; padding-left: 10px; padding-right: 10px; display: block;">
+
+<uni-view data-v-223adf79="" class="my-n-name">
+    <uni-view data-v-223adf79="" class="my-n-ico"><!---->
+    <uni-view data-v-223adf79="" class="my-name">
+        <uni-view data-v-223adf79="" class="my-name-b">
+            <div class="userbox">
+				<p style="font-size:20px;margin-bottom:5px; color:#fff;">{$info.username}</p>
+				<input type="hidden" id="invit" value="{$info.invit}" />
+				<span class="fzm fcc" style="color:#fff;" >{:L('邀请码')}：{$info.invit} &nbsp;&nbsp;</span>
+				<i class="bi bi-back fcy" onclick="copyUrl()"></i>
+			</div>
+            </uni-view><!---->
+        </uni-view></uni-view><!----></uni-view>
+        
+        <!--	<div class="container-fluid " style="padding:0px;width:100vw;">-->
+
+        <!--<div class="allmoneybox">-->
+        <!--    <div class="allmbox_1">-->
+        <!--        <input type="hidden" id="st" value="1" />-->
+        <!--        <i class="bi bi-eye fcy" style="font-size:22px;"  id="eyesid"></i>-->
+        <!--    </div>-->
+        <!--    <div class="allmbox_2">-->
+        <!--        <span class="fzmm fch">{:L('账户总资产折合')}(USDT)</span>-->
+        <!--        <i class="bi bi-exclamation-circle" style="font-size:16px;color: #212529;" id="showdongbtn"></i>-->
+        <!--    </div>-->
+        <!--    <div class="allmbox_3">-->
+        <!--        <span class="fch zhehebox" style="font-size:24px;" id="allzhehebox">--</span>-->
+        <!--    </div>-->
+        <!--    <uni-view data-v-79e4ce96="" class="wallet-type">-->
+        <!--        <uni-view data-v-79e4ce96="" class="wallet-type-list list-on">钱包</uni-view>-->
+        <!--</div>-->
+        
+        
+			<div class="no_inbox">
+			     <uni-view data-v-223adf79="" class="user-type-title">{:L('安全设置')}</uni-view>
+                <uni-view data-v-223adf79="" style="border-bottom: 8.5px #efefef solid;" class="user_wallet marB10">
+                    <a href="{:U('User/index')}">
+<uni-view data-v-223adf79="" class="user-w-num">{:L('账户总资产折合')}(USDT)
+<uni-image data-v-223adf79="" class="user-eye">
+    <div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAV1BMVEUAAAC7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMS7wMTcxrkqAAAAHHRSTlMABfLbZeanC/cuFHZONpjOgyQdF8W61LGQblhCFfffeQAAAblJREFUWMPt1+mOhCAMAOByiQfifU7f/zk3meyGLEWU8c9m4/dzMGBpLQw8Hn9Sb9psEoojci7GrDUdJDOrQEJZw1Leo1V4QLX91UlsjhH5OsA5VnE8wSWc6Rq8YCohaud4iaohosWrcnO8LRkm2G/N4hy8D52FZ7IeGBtqmfFAXC8IsOgRUrtRLQVdpQCi8teqmF9QOVmI5N34TwRWKgSpH/8JL/YmWPADqc3217ieydsGleR96kiS8gIOFLkfvHaD0hur4FCFnvVwYwSLNAAS1utnZPYGJERI9KjvsFa/qjREaFLP9v37Cz0ZRGUYylapkMaUFBU2LDx5VI2Oy+yIvpMGWSLBe9jRxyCKIbUAU3emccna7gc1MgCt7m6xeh+k252Eu2bKxL3y20jnS/kY6KrTjU+zcYt2/ONGwTtwto/aFj3zxqtNlEcX7NVHLd2C5/XJATPRTdzSjzuhgVpTD1/VQ4hNuwqoDsJs6GJSMlaGLiaqu3Vno7NQMsdrRpJJmoxzGYM4bfEUl3CubjBu6eCSfcZjs4HLzJJj0GggySAXUiqi7SAdK6Sd5ve/O9Us7d7D4/GffQF+hLX3TMHcYwAAAABJRU5ErkJggg==&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+<uni-view data-v-223adf79="">
+   </uni-view></a>
+   
+        <uni-view data-v-223adf79="" class="user-w-avi">{:L('可用')}:<uni-text data-v-223adf79=""><span id="allzhehebox" >0</span></uni-text></uni-view><uni-image data-v-223adf79="" class="my-kp-more"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view>
+                
+            <a href="{:U('User/czcoin')}">    
+    <uni-view data-v-223adf79="" class="my-list" >
+        <uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;" >
+<div style="background-image: url(&quot;/wap/static/img/coin01.7a0b5b81.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin01.7a0b5b81.png" draggable="true">
+<uni-resize-sensor>
+    <div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('充币')}<uni-view data-v-223adf79="" class="my-list-r">
+<uni-image data-v-223adf79="" class="my-list-rico">
+    <div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+</uni-image></uni-view></uni-view></a>
+
+<a href="{:U('User/txcoin')}">    
+<uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin02.e4f0e480.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin02.e4f0e480.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('提币')}<uni-view data-v-223adf79="" class="my-list-r"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+
+<uni-view data-v-223adf79="" class="user-type-title">{:L('账户总览')}</uni-view>
+
+<a href="{:U('User/authrz')}">  
+<uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin04.3c49e55b.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin04.3c49e55b.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('实名认证')}<uni-view data-v-223adf79="" class="my-list-r r-word"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+                
+   <a href="{:U('Index/respwd')}">
+   <uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin07.e826c9df.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin07.e826c9df.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('修改密码')}<uni-view data-v-223adf79="" class="my-list-r"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+   
+   <a href="{:U('User/addresslist')}">
+   <uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin08.d548ed44.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin08.d548ed44.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('提币地址')}<uni-view data-v-223adf79="" class="my-list-r"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+   
+   <uni-view data-v-223adf79="" class="user-type-title">{:L('选择')}</uni-view>
+   
+   <div class="lbox" style="
+    padding: 5px 17px;
+    line-height: 35px;
+    background-color: #fff;
+    position: relative;
+    font-size: 14px;
+    border-bottom: 0.5px #e4e4e4 solid;
+">
+          <div class="lbox_l">
+            <i class="bi bi-globe fcc fzmmm" style="font-size:20px;"></i>
+            <span class="fcc fzmmm" style="font-size:14px;color:#212529">&nbsp;&nbsp;{:L('语言')}</span> 
+          </div>
+          <a href="{:U('Login/setlang')}">
+          <div class="lbox_r">
+              <?php if(LANG_SET=='zh-cn'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">中文简体&nbsp;&nbsp;</span> 
+              <?php }elseif(LANG_SET=='en-us'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">English&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='fr-fr'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Français&nbsp;&nbsp;</span> 
+              <?php }elseif(LANG_SET=='de-de'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Deutsch&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='it-it'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Italiano&nbsp;&nbsp;</span> 
+              <?php }elseif(LANG_SET=='ja-jp'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">日本語&nbsp;&nbsp;</span>
+              <?php }elseif(LANG_SET=='ko-kr'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">한국어&nbsp;&nbsp;</span>
+              <?php }elseif(LANG_SET=='tr-tr'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Türk&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='pty-pty'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Español&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='pty1-pty1'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Português&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='yd-yd'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">हिंदीName&nbsp;&nbsp;</span>  
+              <?php }elseif(LANG_SET=='eyu-eyu'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">русский язык&nbsp;&nbsp;</span>
+              <?php }elseif(LANG_SET=='waht'){?>
+              <span class="fcc fzmmm" style="font-size:14px;">Malay&nbsp;&nbsp;</span>
+              <?php }?>
+            
+            
+            
+            <i class="bi bi-chevron-right fcc fw" style="font-size: 22px;"></i>
+          </div>
+          </a>
+        </div>
+   <a href="{:U('Login/lhelp')}">
+   <uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin15.0f5cc11a.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin15.0f5cc11a.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('帮助中心')}<uni-view data-v-223adf79="" class="my-list-r"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+   
+   	<a href="{:U('Index/notice')}">
+   <uni-view data-v-223adf79="" class="my-list"><uni-image data-v-223adf79="" class="my-list-wh60" style="height: 26px;"><div style="background-image: url(&quot;/wap/static/img/coin16.8b4da03d.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div><img src="/wap/static/img/coin16.8b4da03d.png" draggable="true"><uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image>{:L('通知')}<uni-view data-v-223adf79="" class="my-list-r"><uni-image data-v-223adf79="" class="my-list-rico"><div style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGrSURBVHja3JlBboJAFIYF3Ta9ARfwIh5DrPuWGlNEQK0o1AW1dtXag3AXdza9RqeL52viJDozZBiG+Td/QiYD38eEAbUIIYSQVukUTuEUDn10PoMmFvRi3lKc3rF37B3Z4zpyT4vgswvA6kWwYsuZBoEvgaOYODZUQNviG7dYQEexYQLi0x1OEr7xz9qIsOVOF0XQK0ERYWiIAEwoKGK5hJ6GhggoKyJRLsJWcxoUsV7rJsJWu+CmU+hUUEQQGCIAEwiKWK2gJ4EhAmgRWcY3fi1dRM0CMJNJORG+b4gAWsQLp4g0hX7yDRGA8QVFZKVFaCqAFrHZVCVCcwGYw0Fs/O2NIQKGQ+jPD84VkJ3vLo0VcEeBW4zrxGcFPkT509ETfM8AJ7/Q9x70+67hu8BgoBpcEwEI/rVXDV6zAFHwB+ngNQn4X+qc4N4Ierer6ooUCXApcJsT/G3b8N8DXGqp6wNesQBR8Efl4BUJcKntzGbMj+Bb5eCSBfT75+BtxguW59UNLllAt8sHXv8dr0jAeAyd59fBX3PdvjokfwuMTqD4V+H3j67gmL8BAHknlEFn31NGAAAAAElFTkSuQmCC&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view></uni-view></a>
+   
+   <div class="lbox">
+				    <a href="{:U('Login/loginout')}">
+					<div class="alltn" style="margin-top:20px;">
+						<span class="fch">{:L('退出')}</span>
+					</div>
+					</a>
+				</div>
+	
+				
+</body>
+
+<body>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+	function msg(){
+		layer.msg("{:L('待完善')}");return false;
+	}
+</script>
+
+
+<script type="text/javascript">
+    function copyUrl(){
+        var url_txt=$("#invit").val();
+        copy(url_txt);
+    }
+
+    function copy(message) {
+        var input = document.createElement("input");
+        input.value = message;
+        document.body.appendChild(input);
+        input.select();
+        input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+        document.body.removeChild(input);
+        layer.msg("{:L('复制成功')}");
+    }
+</script>
+<script type="text/javascript">
+    function goindex(){
+        window.location.href="{:U('Index/index')}";
+    }
+</script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+    function getmoney_usdt(){
+        var coin = "usdt";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyusdt')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_btc(){
+        var coin = "btc";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneybtc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_eth(){
+        var coin = "eth";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyeth')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_eos(){
+        var coin = "eos";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyeos')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_doge(){
+        var coin = "doge";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneydoge')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_bch(){
+        var coin = "bch";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneybch')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_ltc(){
+        var coin = "ltc";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyltc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_trx(){
+        var coin = "trx";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneytrx')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_xrp(){
+        var coin = "xrp";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyxrp')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_iotx(){
+        var coin = "iotx";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyiotx')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_fil(){
+        var coin = "fil";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyfil')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_shib(){
+        var coin = "shib";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyshib')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_flow(){
+        var coin = "flow";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyflow')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_jst(){
+        var coin = "jst";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyjst')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_itc(){
+        var coin = "itc";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyitc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_ht(){
+        var coin = "ht";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyht')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_ogo(){
+        var coin = "ogo";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyogo')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+    function getmoney_usdz(){
+        var coin = "usdz";
+        var numid = "#num_" + coin;
+        var numdid = "#numd_" + coin;
+        var zheheid = "#zhehe_" + coin;
+        $.post("{:U('User/getmoneyusdz')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(numid).html(data.num);
+                $(numdid).html(data.numd);
+                $(zheheid).html(data.zhe);
+            }else{
+                console.log("error");
+            }
+        }
+        );
+    }
+
+</script>
+<script type="text/javascript">
+    $(function(){
+        setInterval("getmoney_usdz()",27000);
+        setInterval("getmoney_ogo()",25000);
+        setInterval("getmoney_ht()",23000);
+        setInterval("getmoney_itc()",21000);
+        setInterval("getmoney_jst()",19000);
+        setInterval("getmoney_flow()",19000);
+        setInterval("getmoney_shib()",17000);
+        setInterval("getmoney_fil()",17000);
+        setInterval("getmoney_iotx()",15000);
+        setInterval("getmoney_xrp()",13000);
+        setInterval("getmoney_trx()",11000);
+        setInterval("getmoney_ltc()",9000);
+        setInterval("getmoney_bch()",7000);
+        setInterval("getmoney_doge()",5000);
+        setInterval("getmoney_eos()",5000);
+        setInterval("getmoney_eth()",3000);
+        setInterval("getmoney_btc()",2000);
+        getmoney_btc();
+        setInterval("getallzhehe()",2000);
+        getallzhehe();
+        getmoney_usdt();
+    });
+</script>
+<script type="text/javascript">
+    function getallzhehe(){
+        $.post("{:U('User/getallzhehe')}",
+        function(data){
+            if(data.code == 1){
+                $("#allzhehebox").html(data.allzhehe);
+            }
+        });
+    }
+</script>
+<!--
+<script type="text/javascript">
+    function getusermoney(){
+        $.post("{:U('User/getmoneyinfo')}",
+        function(data){
+            if(data.code == 1){
+                $("#moneylistbox").empty();
+                var html = '';
+                if(data.data == '' || data.data == null){
+                    html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                           '<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                           '</div>';
+                    $("#moneylistbox").append(html);
+                    
+                }else{
+                    $.each(data.data,function(key,val){
+                        html += '<a href="/User/coininfo?cid='+ val.cid +'">'+
+                                '<div class="listbox">'+
+                                '<div class="listbox_title">'+
+                                '<div class="listbox_title_l">'+
+                                '<span class="fcc" style="font-size:16px;font-weight:500;">' + val.cname + '</span>'+
+                                '</div>'+
+                                '<div class="listbox_title_r">'+
+                                '<i class="bi bi-chevron-right fcc" style="font-size:14px;"></i>'+
+                                '</div>'+
+                                '</div>'+
+                                '<div style="width:100%;height:60px;">'+
+                                '<div style="width:33.33%;height:60px;float:left;">'+
+                                '<div style="width:100%;height:30px;line-height:40px;">'+
+                                '<span style="color:#cbcbcb;">{:l("可用")}</span>'+
+                                '</div>'+
+                                '<div style="width:100%;height:30px;line-height:20px;">'+
+                                '<span class="fch">' + val.num + '</span>'+
+                                '</div>'+
+                                '</div>'+
+                                '<div style="width:33.33%;height:60px;float:left;">'+
+                                '<div style="width:100%;height:30px;line-height:40px;">'+
+                                '<span style="color:#cbcbcb;">{:l("冻结")}</span>'+
+                                '</div>'+
+                                '<div style="width:100%;height:30px;line-height:20px;">'+
+                                '<span class="fch">' + val.numd + '</span>'+
+                                '</div>'+
+                                '</div>'+
+                                '<div style="width:33.33%;height:60px;float:left;">'+
+                                '<div style="width:100%;height:30px;line-height:40px;text-align:right;">'+
+                                '<span style="color:#cbcbcb;">{:l("折合")}(USDT)</span>'+
+                                '</div>'+
+                                '<div style="width:100%;height:30px;line-height:20px;text-align:right;">'+
+                                '<span class="fch">' + val.zhe + '</span>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</a>';
+                    });
+                    $("#moneylistbox").append(html);
+                }
+            }else{
+                html =  '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+                        '<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>'+
+                        '</div>';
+                $("#moneylistbox").append(html);
+            }
+        });
+    }
+</script>
+---->
+
+<script type="text/javascript">
+    function goback(){
+        window.history.go(-1);
+    }
+    $("#eyesid").click(function(){
+        var st = $("#st").val();
+        if(st == 1){
+            $("#eyesid").removeClass("bi-eye");
+            $("#eyesid").addClass("bi-eye-slash");
+            $("#st").val(2);
+            $(".zhehebox").html("******.******");
+            $(".zhehebox").removeAttr("id");
+            
+        }else if(st == 2){
+            $("#eyesid").addClass("bi-eye");
+            $("#eyesid").removeClass("bi-eye-slash");
+            $("#st").val(1);
+            $(".zhehebox").attr("id","allzhehebox");
+            
+        }
+    });
+    $("#hidebtn").click(function(){
+        $("#dongbox").hide();
+    });
+    $("#showdongbtn").click(function(){
+        $("#dongbox").show();
+    });
+</script>
+</html>
+
+
+

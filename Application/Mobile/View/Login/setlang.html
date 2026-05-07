@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<title>{$webname}</title>
+	<style>
+		::-webkit-input-placeholder { /* WebKit browsers */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+		input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+		a:hover,a:link,a:visited,a:active{color:#FCD535;text-decoration:none;}
+		.lbox{width:100%;height:60px;}
+		.lbox_l{width:60%;height:60px;line-height:60px;text-align:left;float:left;}
+		.lbox_r{width:40%;height:60px;line-height:60px;text-align:right;float:left;}
+		.no_header{
+		        box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: block;
+		}
+		 ::-webkit-input-placeholder {color: #b5b5b5;font-size: 12px;}
+	    ::-moz-placeholder {color: #b5b5b5;font-size: 12px;}
+	    input:focus{background:#f5f5f5;outline: 1px solid #f5f5f5;}
+	    a:hover,a:link,a:visited,a:active{color:#707A8A;text-decoration:none;}
+        .topbox{width:85%;height:50px;border-bottom:1px solid #f5f5f5;padding:5px 10px;position: fixed;top: 0px;background: #fff;}
+        .topbox_1{width:80%;height:40px;float:left;padding:0px 10px;}
+        .topbox_1_b{width:100%;height:30px;margin-top:5px;background:#f5f5f5;border-radius:15px;padding:0px 5px;}
+        .topbox_2{width:20%;height:40px;line-height:40px;float:left;text-align:center;}
+        .sybolc{width:80%;height:25px;line-height:25px;margin-top:2px;border:#f5f5f5;background:#f5f5f5;}
+        .topbox_1_c{width:20%;height:30px;line-height:30px;text-align:center;float:left;}
+        .topbox_1_d{width:80%;height:30px;line-height:30px;float:right;}
+        .lmcoin{width:20%;height:30px;line-height:30px;float:left;text-align:center;border:1px solid #707A8A;border-radius:5px;margin-right:5%;}
+        .coinlistbox{width:100%;margin-top:10px;padding:10px;}
+        .coinlistbox_top{width:100%;height:30px;line-height:30px;}
+        .coinlistbox_info{width:100%;padding:10px 0px;;padding:5px;}
+        .coinlistbox_info_list{width:100%;height:40px;border-bottom:1px solid #f5f5f5;margin-top:10px;}
+        .coinlistbox_info_list_l{width:30%;height:40px;line-height:40px;float:left;}
+        .coinlistbox_info_list_c{width:30%;height:40px;line-height:40px;float:left;}
+        .coinlistbox_info_list_r{width:40%;height:40px;line-height:40px;float:right;text-align:right;}
+		.css-dwrvou > div {
+    background-color: rgb(30, 35, 41);
+    color: rgb(234, 236, 239);
+    box-shadow: rgb(0 0 0 / 8%) 0px 0px 20px;
+    max-width: 100vw;
+    max-height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.css-14doc9z {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    padding: 0px 0px 24px;
+    width: 100vw;
+    height: 100%;
+    border-radius: 0px;
+}
+.css-w2rxn5 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    color: rgb(94, 102, 115);
+}
+.css-3kwgah {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: currentcolor;
+    font-size: 24px;
+    fill: currentcolor;
+    width: 1em;
+    height: 1em;
+}
+.css-8cdui7 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    border-bottom: 1px solid rgb(39, 42, 46);
+    padding-left: 24px;
+    padding-right: 55%;
+}
+.css-t94xhh {
+    box-sizing: border-box;
+    margin: 0px 24px 0px 0px;
+    min-width: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(240, 185, 11);
+}
+.css-ibfrnl {
+    box-sizing: border-box;
+    margin: 0px 24px 0px 0px;
+    min-width: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+}
+.css-1tzfn88 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex: 1 1 0%;
+    overflow-y: auto;
+}
+.css-cbzd9 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: block;
+}
+.css-1p8zxym {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 16px;
+    padding-top: 24px;
+    font-weight: 500;
+}
+.css-q2wk8b {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.css-18uyel3 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 14px;
+    display: flex;
+    height: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(75 80 88);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+.css-18uyel3[data-active="true"] {
+    color: rgb(240, 185, 11);
+}
+.css-1hv3jiv {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    flex: 1 1 0%;
+    text-align: left;
+}
+.css-11jew6b {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: currentcolor;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    fill: currentcolor;
+    opacity: 1;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+ .fast-bd {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 10px solid #f5f5f5;
+    border-bottom: 10px solid #f5f5f5;
+}
+.fast-bd {
+    margin: 10px 15px;
+    background-color: #cad2df;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+uni-view {
+    line-height: normal;
+}
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+.fast-bd-t {
+    margin-bottom: 10px;
+    line-height: 33px;
+    color: #000;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.fast-bd-t {
+    margin-bottom: 15px;
+    color: #999;
+}
+.fast-tit-right {
+    font-size: 12px;
+    color: #000;
+    float: right;
+    line-height: 30px;
+
+.blue-word {
+    color: #7ac86f;
+    font-size: 13px;
+    padding: 0px 15px;
+    background-color: #fff;
+}
+
+.blue-word {
+    font-size: 12px;
+    color: #7ac86f!important;
+}
+.fast-type-con {
+    display: flex;
+    padding: 0 15px;
+}
+uni-view {
+    line-height: normal;
+}
+.fast-type {
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e6e0e0;
+    padding: 10px 0;
+    margin: 0 5px;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+uni-resize-sensor {
+    display: block;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-animation: once-show 1ms;
+    animation: once-show 1ms;
+}
+
+uni-resize-sensor, uni-resize-sensor>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+uni-resize-sensor, uni-resize-sensor>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+uni-resize-sensor>div:first-child>div {
+    width: 100000px;
+    height: 100000px;
+}
+
+uni-resize-sensor>div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+uni-resize-sensor>div:last-child>div {
+    width: 200%;
+    height: 200%;
+}
+
+uni-resize-sensor>div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+.fast-type .fast-imgwh {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.fast-imgwh {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.fast-bnt {
+    padding: 0;
+}
+
+.fast-bnt {
+    padding: 15px;
+    text-align: center;
+}
+.fast-bd-t1 {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    padding: 15px 0;
+}
+
+.fast-bd-t1 {
+    font-size: 14px;
+    border-bottom: 0.5px solid #c7c6c6;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+
+	</style>
+  </head>
+  
+	<div class="container-fluid ctbox">
+		<div class="no_header">
+			<div class="fl bhalf allhg txtl" style="line-height:50px;">
+				<i class="bi bi-arrow-left fcc fw" onclick="goback()" style="font-size: 26px;"></i>
+			</div>
+			<!--<div class="fr bhalf allhg txtr" style="line-height:50px;">-->
+			<!--</div>-->
+		</div>
+
+		<div class="no_header">
+
+			<div class="no_title"  style="height: 2px;">
+				<!--<span class="title_txt fch">{:L('语言选择')}</span>-->
+			</div>
+
+  <div class="css-14doc9z" style="display:none">
+   <div class="css-w2rxn5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" class="css-3kwgah">
+     <path d="M6.697 4.575L4.575 6.697 9.88 12l-5.304 5.303 2.122 2.122L12 14.12l5.303 5.304 2.122-2.122L14.12 12l5.304-5.303-2.122-2.122L12 9.88 6.697 4.575z" fill="currentColor"></path>
+    </svg>
+   </div>
+   <div class="css-8cdui7">
+    <div data-bn-type="text" class="css-t94xhh">
+     {:L('语言选择')}
+    </div>
+    <!--<div data-bn-type="text" class="css-ibfrnl">-->
+    <!-- exchange rate-->
+    <!--</div>-->
+   </div>
+   
+   <div class="css-1tzfn88" style="display:none">
+    <div class="css-cbzd9">
+     <!--<div data-bn-type="text" class="css-1p8zxym">-->
+     <!-- 选择语言和地区-->
+     <!--</div>-->
+        
+     </div>
+    </div>
+    </div>
+    <br>
+    <div class="topbox">
+            <div class="topbox_1" style="">
+                <div class="topbox_1_b">
+                    <div class="topbox_1_c">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div class="topbox_1_d">
+                        <input type="text" oninput="findc();" id="symbol" class="sybolc" placeholder="Search currency">
+                    </div>
+                </div>
+            </div>
+            <div class="topbox_2" onclick="goback();">
+                <span class="fzmmm fch" style="font-size:12px">Cancel</span>
+            </div>
+        </div>
+        
+    <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="zh()" >
+                            <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                       <button data-active="<?php if(LANG_SET=='zh-cn'){ echo "true"; }else{echo "false";} ?>" onclick="zh()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Chinese Simplified</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+               
+                
+                <div class="coinlistbox_info_list">
+
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="en()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                         <button data-active="<?php if(LANG_SET=='en-us'){ echo "true"; }else{echo "false";} ?>" onclick="en()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">English</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+               
+                
+                
+                  
+                 <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="fr()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='fr-fr'){ echo "true"; }else{echo "false";} ?>" onclick="fr()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Français</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+             
+                
+                
+                   
+                 <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="pty()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='pty-pty'){ echo "true"; }else{echo "false";} ?>" onclick="pty()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Español</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+             
+                
+                
+                <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="pty()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='pty1-pty1'){ echo "true"; }else{echo "false";} ?>" onclick="pty1()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Português</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+              
+                
+                
+                     <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="yd()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='yd-yd'){ echo "true"; }else{echo "false";} ?>" onclick="yd()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">हिंदीName</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+              
+                
+                 <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="ey()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='eyu-eyu'){ echo "true"; }else{echo "false";} ?>" onclick="ey()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">русский язык</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+           
+                
+                <div class="coinlistbox_info_list">
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="waht()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                 <button data-active="<?php if(LANG_SET=='waht'){ echo "true"; }else{echo "false";} ?>" onclick="waht()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Malay</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+             
+                
+                 <div class="coinlistbox_info_list">
+
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;"  onclick="it()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                         <button data-active="<?php if(LANG_SET=='ja-jp'){ echo "true"; }else{echo "false";} ?>" onclick="ja()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">こんにちは</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+        
+                 <div class="coinlistbox_info_list">
+   
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;"  onclick="ja()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                         <button data-active="<?php if(LANG_SET=='it-it'){ echo "true"; }else{echo "false";} ?>" onclick="it()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Italiano</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+        
+                
+                 <div class="coinlistbox_info_list">
+  
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="de()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                      <button data-active="<?php if(LANG_SET=='de-de'){ echo "true"; }else{echo "false";} ?>" onclick="de()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Deutsch</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+          
+                
+                 <div class="coinlistbox_info_list">
+   
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;"  onclick="ko()">
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                           <button data-active="<?php if(LANG_SET=='ko-kr'){ echo "true"; }else{echo "false";} ?>" onclick="ko()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">한국어</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+             
+                
+                 <div class="coinlistbox_info_list">
+    
+                    <div class="coinlistbox_info_list_l" style="width:15%;padding: 0px 10px;" onclick="tr()" >
+                             <img  class="fzmmm fcc" style="height: 25px; width: 25px;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ0MV8yMTM3NikiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMTAxMCAxMEExMC4wMDggMTAuMDA4IDAgMDAxMiAydjB6bTAgMTguMzIyYTEwLjgzIDEwLjgzIDAgMDEtMi4zNzMtMy43NjNBMTUuMTQ2IDE1LjE0NiAwIDAxMTIgMTYuMzczYy43NjcgMCAxLjUzMi4wNjIgMi4yODguMTg2QTEwLjYyNiAxMC42MjYgMCAwMTEyIDIwLjMyMnptMC01LjMwNWMtLjk0IDAtMS44NzkuMDgzLTIuODA1LjI0NmExMi45MTUgMTIuOTE1IDAgMDEtLjM5OC0yLjYwMmg2LjI4Yy0uMDQ2Ljg1OC0uMTczIDEuNzEtLjM4MiAyLjU0MkExNS40MzcgMTUuNDM3IDAgMDAxMiAxNS4wMTd6TTMuMzkgMTIuNjZoNC4wNjhjLjA0NS45ODQuMTkzIDEuOTYxLjQ0IDIuOTE1YTguNzg4IDguNzg4IDAgMDAtMi45NjYgMS4zOTlBOC41ODUgOC41ODUgMCAwMTMuMzkgMTIuNjZ6bTguNTI1LTguOTgzYTEwLjgyMiAxMC44MjIgMCAwMTIuMzQ4IDMuNzJjLS43NDguMTMtMS41MDUuMTk1LTIuMjYzLjE5NWExNC4xMiAxNC4xMiAwIDAxLTIuMzgxLS4yMDMgMTAuNiAxMC42IDAgMDEyLjI5Ni0zLjcxMnpNMTIgOC45NDlhMTQuNjM3IDE0LjYzNyAwIDAwMi42NzgtLjI1NGMuMjI4Ljg1OS4zNjggMS43NC40MTUgMi42MjdoLTYuMjhjLjA0NS0uODg3LjE3OS0xLjc2Ny4zOTktMi42MjcuOTIuMTcgMS44NTMuMjU0IDIuNzg4LjI1NHptLTQuNTQyIDIuMzRIMy4zOWE4LjU4NSA4LjU4NSAwIDAxMS41ODUtNC4zMjMgOS4wMjUgOS4wMjUgMCAwMDIuOTIzIDEuNDE1IDE0LjYxOSAxNC42MTkgMCAwMC0uNDQgMi45MDd6bTguOTkxIDEuNDA2bDQuMTYxLjA2YTguNTg1IDguNTg1IDAgMDEtMS41NiA0LjIzNiA5LjExMyA5LjExMyAwIDAwLTMuMDI1LTEuNDMyIDE0LjYxIDE0LjYxIDAgMDAuNDI0LTIuODY0em0wLTEuMzU2Yy0uMDQ4LTEtLjIwMS0xLjk5LS40NTgtMi45NThhOS4zMjIgOS4zMjIgMCAwMDMtMS40NjYgOC41ODUgOC41ODUgMCAwMTEuNjI4IDQuNDY2bC00LjE3LS4wNDJ6bTEuNjk1LTUuNDRhOC4xNjEgOC4xNjEgMCAwMS0yLjU0MiAxLjIwMyAxMi43MTQgMTIuNzE0IDAgMDAtMi4wMjYtMy41NzcgOC42MjcgOC42MjcgMCAwMTQuNTM0IDIuMzczaC4wMzR6bS03Ljg5OC0yLjM3NGExMi41NSAxMi41NSAwIDAwLTEuOTUgMy41NkE3Ljc2MyA3Ljc2MyAwIDAxNS44NDggNS45NGE4LjYzNiA4LjYzNiAwIDAxNC4zOTktMi40MTZ6TTUuNzg4IDE4YTcuNSA3LjUgMCAwMTIuNTQzLTEuMTQ0IDEyLjcxMyAxMi43MTMgMCAwMDEuOTc0IDMuNjE5QTguNjM2IDguNjM2IDAgMDE1Ljc4OCAxOHptNy44NTYgMi40NzVhMTIuNTY4IDEyLjU2OCAwIDAwMS45ODMtMy42MjggNy44NDYgNy44NDYgMCAwMTIuNTQyIDEuMTc4IDguNjI4IDguNjI4IDAgMDEtNC41MjUgMi40NXoiIGZpbGw9IiMxNDE4MUYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzQ0MV8yMTM3NiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgZD0iTTAgMGgyMHYyMEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==">
+                    </div>
+                    <div class="coinlistbox_info_list_c" style="width:60%" >
+                        <button data-active="<?php if(LANG_SET=='tr-tr'){ echo "true"; }else{echo "false";} ?>" onclick="tr()" class="css-18uyel3">
+   <div data-bn-type="text" class="css-1hv3jiv">Türk</div>
+    <use xlink:href="#checkmark-f"></use></button>
+                    </div>
+                    <div class="coinlistbox_info_list_r" style="width:8%">
+                        <i class="bi bi-chevron-right fcc"></i>
+                    </div>
+                </div>
+	
+</body>
+
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+    function goback(){
+        window.history.go(-1);
+    }
+    function zh(){
+        window.location.href = "{:U('Index/index?Lang=zh-cn')}";
+    }
+    function en(){
+        window.location.href = "{:U('Index/index?Lang=en-us')}";
+    }
+    function fr(){
+        window.location.href  = "{:U('Index/index?Lang=fr-fr')}";
+    }
+    function de(){
+        window.location.href = "{:U('Index/index?Lang=de-de')}";
+    }
+    function ja(){
+        window.location.href = "{:U('Index/index?Lang=ja-jp')}";
+    }
+    
+    function it(){
+   window.location.href = "{:U('Index/index?Lang=it-it')}";
+    }
+    	function ko(){
+    window.location.href = "{:U('Index/index?Lang=ko-kr')}";
+    	}
+    	
+    	function tr(){
+    	    window.location.href = "{:U('Index/index?Lang=tr-tr')}";
+    	}
+    	
+    function pty(){
+        window.location.href = "{:U('Index/index?Lang=pty-pty')}";
+    }
+    
+       function pty1(){
+        window.location.href = "{:U('Index/index?Lang=pty1-pty1')}";
+    }
+    
+    function yd(){
+        window.location.href = "{:U('Index/index?Lang=yd-yd')}";
+    }
+    
+    function ey(){
+        window.location.href = "{:U('Index/index?Lang=eyu-eyu')}";
+    }
+    
+    function waht(){
+        window.location.href = "{:U('Index/index?Lang=waht')}";
+    }
+    
+    
+    
+</script>
+</html>
+
+
+

@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base2.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/khddcs.css" />
+	<link rel="stylesheet" href="/Public/Home/css/jiami.css">
+	<link rel="stylesheet" href="/Public/Static/Icoinfont/iconfont.css">
+	<script src="/Public/Static/Icoinfont/iconfont.js"></script>
+	<title>{$webname}</title>
+	<style>
+		::-webkit-input-placeholder { /* WebKit browsers */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		  color: #b5b5b5;
+		  font-size: 18px;
+		}
+		input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+		a:hover,a:link,a:visited,a:active{color:rgb(0, 0, 0);text-decoration:none;}
+		.headerbox{height:50px;line-height:50px;}
+		.iconf{height: 30px;width: 30px;border-radius: 15px;background: #eaebed;margin-top: 10px;}
+		.imgbox{
+    width: 26px;
+    height: 25px;
+    line-height: 26px;
+    float: left;
+		}
+		.badge-light{background-color: #7ac86f;position: relative;left: 7px;top: 0px;}
+		.badge{line-height: 0.8;border-radius: .5rem;}
+		ul, li {list-style-type: none;padding: 0px;}
+		.scrollDiv {
+		font-size: 12px;
+			height: 25px;/* 必要元素 */
+			line-height: 25px;
+			border: none;
+			overflow: hidden;/* 必要元素 */
+			margin-top:8px;
+		}
+		.scrollDiv li {
+			height: 25px;
+			padding-left: 10px;
+		}
+		.optionbox{width:100%;height:90px;background:#fff;margin-top:10px;border-top-left-radius:20px;border-top-right-radius:20px;padding: 5px 8px;}
+		.oplist{width:20%;height:80px;float:left;}
+		.opimg{width:100%;height: 50px;line-height: 50px;text-align: center;}
+		.opicon{width:30px;height:30px;margin-top: 10px;}
+		.optext{width:100%;height: 30px;line-height: 30px;text-align: center;overflow: hidden;}
+		.hyicon{width:40px;height: 40px; margin-left: 20px;margin-top: 10px;}
+		.ricon{background: #eaebed;padding: 5px;border-radius: 20px;font-size: 20px;color: #000;}
+		.zixunlist {height: 100px;width: 100%;background: #fff;}
+		.zixunconten{height: 90px;width: 33.3%;background: #fff;float: left;margin: 0 auto;text-align: center;}
+.bgreen{background:#03ad93;}
+.bred{background:#be4237;}
+.bgfcc{background:#a0a0a0;}
+.green{
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 14px;
+    color: #03ad93!important;
+}
+.red{
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 14px;
+    color: #be4237!important;
+}
+.list_open{width:40%;height:50px;line-height:50px;float:left;text-align:center;}
+.list_cname{width:30%;height:50px;line-height:50px;float:left;}
+.list_change{width:30%;height:50px;line-height:50px;float:left;text-align:right;}
+.dongbox{position:fixed;z-index:9999;display:none;top:0px;width:100%;height:100vh;background:rgba(0,0,0,0.2);}
+.dong_order_c{
+    width: 90%;
+    height: 460px;
+    background: #fff;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* margin: 0; */
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* padding: 20px; */
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: 101px;
+    background-position: top -8px left 16px;
+    background-image: url(/wap/static/img/background-circle-svg.png);
+    /* width: 100%; */
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+	.dong_order_x{width:100%;height:20px;line-height:20px;text-align:right;}
+	.dong_order_title{
+	    width:100%;height:30px;line-height:20px;text-align:center;
+	 /*   border-bottom: 1px solid #f5f5f5;*/
+	 background: linear-gradient(90.29deg,#fcede873 0.05%,#FEF7F5 50.23%,#ffffff 100.4%);
+	}
+	.infobox{width:100%;height:400px;padding:5px 20px;margin-top:50px;}
+	.infotbox{width:100%;margin-top:15px;}
+	.lbox{width:100%;height:50px;}
+	.lboxc{width:100%;padding:15px 0px;}
+	.lbox_l{width:20%;height:50px;line-height:50px;float:left;text-align:left;}
+	.lbox_r{width:80%;height:50px;line-height:50px;float:right;text-align:right;}
+	</style>
+  </head>
+  <body>
+  <style>
+  .head-con {
+position: relative;
+    text-align: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 10px 0 0 0;
+    --tw-bg-opacity: 1!important;
+    background-color: rgba(13,157,135,var(--tw-bg-opacity))!important;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+uni-view {
+line-height: normal;
+}
+uni-view {
+font-size: 12px;
+line-height: 1.8;
+}
+uni-view {
+display: block;
+}
+* {
+margin: 0;
+-webkit-tap-highlight-color: transparent;
+}
+.head-img-l {
+position: absolute;
+left: 13px;
+top: 10px;
+z-index: 100;
+}
+.head-img-l uni-image {
+width: 25px;
+height: 25px;
+}
+uni-image {
+width: 320px;
+height: 240px;
+display: inline-block;
+overflow: hidden;
+position: relative;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+
+
+uni-image>img {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+uni-resize-sensor {
+display: block;
+z-index: -1;
+visibility: hidden;
+-webkit-animation: once-show 1ms;
+animation: once-show 1ms;
+}
+uni-resize-sensor>div {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+uni-resize-sensor {
+display: block;
+z-index: -1;
+visibility: hidden;
+-webkit-animation: once-show 1ms;
+animation: once-show 1ms;
+}
+uni-resize-sensor, uni-resize-sensor>div {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+uni-image>img {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+uni-resize-sensor {
+display: block;
+z-index: -1;
+visibility: hidden;
+-webkit-animation: once-show 1ms;
+animation: once-show 1ms;
+}
+uni-resize-sensor>div {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+.head-img-r {
+position: absolute;
+right: 12px;
+top: 10px;
+width: 25px;
+height: 25px;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+
+.head-img-c {
+width: 120px;
+height: 29px;
+vertical-align: middle;
+margin-right: -15px;
+}
+uni-image {
+width: 320px;
+height: 240px;
+display: inline-block;
+overflow: hidden;
+position: relative;
+}
+
+  </style>
+  <body>
+  <uni-view data-v-f5c6c904="" class="head-con">
+      <uni-view data-v-f5c6c904="" class="head-img-l">
+      <uni-view data-v-f5c6c904="" class="">
+
+			<div class="headerbox fl">
+				<if condition="$uid elt 0">
+			<a href="{:U('Login/loption')}">
+				<div class="imgbox" style="">
+					<img src="/wap/static/img/zh8-ico12.e4f1f1f8.png" style="width: 100%;height: 100%;">
+					<use xlink:href="#icon-ziyuan2"></use></img>
+				</div>
+				</a>
+				<else />	
+				<a href="{:U('Index/uoption')}">
+				<div class="imgbox" style="">
+					<img src="/wap/static/img/zh8-ico12.e4f1f1f8.png" style="width: 100%;height: 100%;">
+					<use xlink:href="#icon-ziyuan2"></use></img>
+				</div>
+				</a>
+				</if>
+
+				<if condition="$uid elt 0">
+				</if>
+			</div>
+
+		</div>
+
+  <uni-image data-v-f5c6c904="" style="width: 26px;">
+ <uni-resize-sensor>
+     <div><div>
+     </div></div><div><div></div></div></uni-resize-sensor></uni-image></uni-view></uni-view>
+      <uni-image data-v-f5c6c904="" class="head-img-c" style="width: 120px;">
+  <div style="background-image: url(/wap/static/img/blob_https.png); background-size: 100% 100%; background-repeat: no-repeat; height: 25px;"></div>
+  <uni-resize-sensor>
+      <div><div>
+          </div></div><div><div></div></div></uni-resize-sensor></uni-image>
+  <a href="{:U('Index/notice')}">
+  <uni-image data-v-f5c6c904="" class="head-img-r" style="width: 26px;">
+      <?php if($sum > 0){?>
+      <!--<i class="bi bi-bell fcc" style="font-size:22px;"></i>-->
+  <div style="background-image: url(&quot;/wap/static/img/zh8-ico13.061684ae.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;">
+      <span class="badge badge-light"><?php echo $sum;?></span>
+      <?php } ?>
+      <div style="background-image: url(&quot;/wap/static/img/zh8-ico13.061684ae.png&quot;); background-size: 100% 100%; background-repeat: no-repeat;"></div>
+  </div></a>
+  <uni-resize-sensor><div><div></div></div><div><div></div></div></uni-resize-sensor></uni-image></uni-view>
+		<!--轮播图-->
+	<div style="height:50px"></div>
+	
+		<div id="carouselExampleIndicators" class="carousel slide slidepm" data-ride="carousel" style="width:100%;margin: 0px;padding:0px 10px;--tw-bg-opacity: 1!important; background-color: rgba(13,157,135,var(--tw-bg-opacity))!important; border-radius: 0px 0px 20px 20px; height:130px">
+			<div class="carousel-inner" style="height: 150px;">
+			    
+				<div class="carousel-item active">
+					<img src="/Upload/public/{$clist.websildea}" class="d-block w-100" style="height:150px;border-radius:5px;" />
+				</div>
+				<div class="carousel-item">
+					<img src="/Upload/public/{$clist.websildeb}" class="d-block w-100" style="height:150px;border-radius:5px;" />
+				</div>
+				<div class="carousel-item">
+					<img src="/Upload/public/{$clist.websildec}" class="d-block w-100" style="height:150px;border-radius:5px;" />
+				</div>
+			</div>
+		</div>
+	    <p></p>
+		<!--滚动新闻-->
+		<div style="width:100%;height:40px;margin-top:5px;padding:0px 10px;">
+			<div style="width:10%;height:40px;float:left;line-height: 40px;">
+			<img src="/wap/static/img/gg-ico02.6d8ba2aa.png" style="background-size: 100% 100%;background-repeat: no-repeat;width: 17px;"> 
+			</div>
+			<div style="width:75%;height:40px;float:left;line-height: 40px;">
+				<div class="scrollDiv" id="s1">
+				<ul>
+				<foreach name="nlist" item="vo">
+  					<li><a href="{:U('Index/gginfo')}?id={$vo.id}">{$vo.title}</a></li>
+  					</foreach>
+				</ul>
+  				</div>
+
+			</div>
+			<div style="width:10%;height:40px;float:right;line-height: 40px;text-align:right;">
+				<a href="{:U('Index/gglist')}">
+			<img src="data:image/png;base64,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" style="background-size: 100% 100%;background-repeat: no-repeat;width: 17px;"> 
+				</a>
+			</div>
+		</div>
+
+<!--重点币行情区-->
+<style>
+    .list-top-rate {
+    color: #999;
+    line-height: 20px;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+</style>
+
+	<div class="zixunlist">
+<div class="zixunconten" id="whiles_btc" style="padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+<div class="tjcoinbox1" style="">
+				<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+font-weight: 600;" id="btc_coin_box">BTC/USDT</span>
+</div>
+<div class="tjcoinbox3" id="btc_change_box" style="margin: -0.33333rem 0 0;">
+				<span style="color:#03ad93!important;background:#e5f7f3!important;display: inline-block;font-style: normal;font-size:8pt;">+2.16%</span>
+</div>
+<div class="tjcoinbox2" id="btc_money_box">
+				<span style="color: #03ad93!important;width: 100%;font-size: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">22135.93</span>
+</div>
+<!--<div class="tjcoinbox3" id="bch_change_box">-->
+<!--				<span style="font-size:14px;color:#2ebd85;font-weight: 500;">+2.33%</span>-->
+<!--</div>-->
+<uni-text data-v-f5c6c904="" class="list-top-rate"><span>≈$<span id="span1">0</span></span></uni-text>
+</div>
+<!--<span id="span1">0</span>-->
+    <script>
+    //调用方法
+    NumDynamic("span1",1,30594);
+    /**
+    * 动态数字方法
+    * ID    => 对应ID
+    * speed => 递增速度 
+    * value => 接入的数字
+    */
+    function NumDynamic(ID,speed,value){
+    	var span1 = document.getElementById(ID);
+    	if(value>0){
+	    	var num = 0;
+	var t = setInterval(function(){
+		       num++;
+		       span1.innerText = num;
+			if(num==value){
+				clearInterval(t);
+			}       
+	},speed);
+    	}else{
+    		span1.innerText = value;
+    	}
+    }	
+	</script>
+	
+
+<div class="zixunconten" id="whiles_bch" style="padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+<div class="tjcoinbox1">
+				<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+font-weight: 600;"  id="bch_coin_box">BCH/USDT</span>
+</div>
+<div class="tjcoinbox3" id="bch_change_box" style="margin: -0.33333rem 0 0;">
+				<span style="color:#03ad93!important;background:#e5f7f3!important;display: inline-block;font-style: normal;font-size:8pt;">+2.16%</span>
+</div>
+<div class="tjcoinbox2" id="bch_money_box">
+				<span style="color: #be4237!important;width: 100%;font-size: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">127.88</span>
+</div>
+<!--<div class="tjcoinbox3" id="bch_change_box">-->
+<!--				<span style="font-size:14px;color:#2ebd85;font-weight: 500;">+2.33%</span>-->
+<!--</div>-->
+<uni-text data-v-f5c6c904="" class="list-top-rate"><span>≈$<span id="span2">0</span></span></uni-text>
+    <script>
+    //调用方法
+    NumDynamic("span2",5,1800);
+    /**
+    * 动态数字方法
+    * ID    => 对应ID
+    * speed => 递增速度 
+    * value => 接入的数字
+    */
+    function NumDynamic(ID,speed,value){
+    	var span2 = document.getElementById(ID);
+    	if(value>0){
+	    	var num = 0;
+	var t = setInterval(function(){
+		       num++;
+		       span2.innerText = num;
+			if(num==value){
+				clearInterval(t);
+			}       
+	},speed);
+    	}else{
+    		span2.innerText = value;
+    	}
+    }	
+	</script>
+</div>
+<div class="zixunconten" id="whiles_eth" style="padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;">
+<div class="tjcoinbox1">
+				<span style=" width: 100%;font-size: 10px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+font-weight: 600;"  id="eth_coin_box">ETH/USDT</span>
+</div>
+<div class="tjcoinbox3" id="eth_change_box" style="margin: -0.33333rem 0 0;">
+				<span style="color:#03ad93!important;background:#e5f7f3!important;display: inline-block;font-style: normal;font-size:8pt;">+2.16%</span>
+</div>
+<div class="tjcoinbox2" id="eth_money_box">
+				<span style="color: #be4237!important;width: 100%;font-size: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-weight: 600;line-height: normal;">1538.64</span>
+</div>
+<!--<div class="tjcoinbox3" id="eth_change_box">-->
+<!--				<span style="font-size:14px;color:#2ebd85;font-weight: 500;">+4.47%</span>-->
+<!--</div>-->
+<uni-text data-v-f5c6c904="" class="list-top-rate"><span>≈$<span id="span3">0</span></span></uni-text>
+    <script>
+    //调用方法
+    NumDynamic("span3",500,21);
+    /**
+    * 动态数字方法
+    * ID    => 对应ID
+    * speed => 递增速度 
+    * value => 接入的数字
+    */
+    function NumDynamic(ID,speed,value){
+    	var span3 = document.getElementById(ID);
+    	if(value>0){
+	    	var num = 0;
+	var t = setInterval(function(){
+		       num++;
+		       span3.innerText = num;
+			if(num==value){
+				clearInterval(t);
+			}       
+	},speed);
+    	}else{
+    		span3.innerText = value;
+    	}
+    }	
+	</script>
+</div>
+</div>
+
+	<div style="width: 100%;box-shadow: 2px 2px 2px 1px #00000011;border: 1px solid #5665ff22;background-repeat: no-repeat;flex-direction: column;justify-content: space-between;"></div>
+<!--单选项区 新-->
+<style>
+
+    .new-fast {
+     /* display: flex; */
+    /* background-color: #fff; */
+    padding: 10px 5px;
+    /* border-top: 5px solid #f5f5f5; */
+    /*border-bottom: 5px solid #f5f5f5;*/
+}
+
+uni-view {
+    line-height: normal;
+}
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+uni-view {
+    display: block;
+}
+.new-fast-l uni-image {
+    width: 100%;
+    height: 70px;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+uni-image>img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.new-fast-l uni-image {
+    width: 100%;
+    height: 70px;
+}
+
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.new-fast-word {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+}
+.new-fase-w1 {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0 2px 6px;
+}
+uni-view {
+    line-height: normal;
+}
+
+uni-view {
+    font-size: 12px;
+    line-height: 1.8;
+}
+uni-view {
+    display: block;
+}
+</style>
+<uni-view data-v-f5c6c904="" class="new-fast">
+    <uni-view data-v-f5c6c904="" class="new-fast-l">
+ <a href="{:U('User/czcoin')}">
+<uni-image data-v-f5c6c904="">
+<div style="background-image: url(&quot;/wap/static/img/ban02.7d6fbefa.gif&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+<img src="/wap/static/img/ban02.7d6fbefa.gif" draggable="true">
+<uni-view data-v-f5c6c904="" class="new-fast-word">
+<uni-view data-v-f5c6c904="" class="new-fase-w1" style=" padding: 3px 8px; color: #ebebeb; -moz-border-radius: 5px; -webkit-borde-radius: 10px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,.5); text-shadow: 0 -1px 1px #1b1e25; vertical-align: midd;">{:L('充币')}</uni-view></uni-view></uni-view></uni-view></a>
+</uni-image>
+
+
+
+
+<style>
+    .my-gr {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+
+}
+.my-gr {
+    padding: 5px 0 15px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.my-gr {
+    padding: 15px 0 5px 0;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.my-gr-l {
+    position: relative;
+}
+
+
+.my-gr-l {
+    float: left;
+    width: 25%;
+}
+
+.my-gr-l {
+    float: left;
+    width: 25%;
+}
+.my-gr-ico {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.my-gr-icowh {
+    width: 30px;
+    height: 30px;
+}
+
+uni-image {
+    width: 320px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+uni-image>div, uni-image>img {
+    width: 100%;
+    height: 100%;
+}
+uni-image>img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.my-gr-icowh {
+    width: 30px;
+    height: 30px;
+}
+.my-gr-t {
+    text-align: center;
+    color: #333;
+}
+
+uni-view {
+    line-height: normal;
+}
+.my-gr-l {
+    position: relative;
+}
+.my-gr-l {
+    float: left;
+    width: 25%;
+}
+.my-gr {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+}
+
+
+.my-gr {
+    padding: 5px 0 15px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.my-gr {
+    padding: 15px 0 5px 0;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+</style>
+<uni-view data-v-f5c6c904="" class="my-gr">
+    <uni-view data-v-f5c6c904="" class="my-gr-l">
+<uni-view data-v-f5c6c904="" class="my-gr-ico">
+    <a href="{:U('Trade/trans')}?sytx=BTC/USDT">
+<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+<div style="background-image: url(&quot;/wap/static/img/nav-ico17.f2632974.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+<uni-view data-v-f5c6c904="" class="my-gr-t">{:L('智能挖矿')}</uni-view></uni-view></a>
+<uni-view data-v-f5c6c904="" class="my-gr-l">
+    <a href="{:U('Index/tgcode')}">
+    <uni-view data-v-f5c6c904="" class="my-gr-ico">
+<uni-image data-v-f5c6c904="" class="my-gr-icowh">
+<div style="background-image: url(&quot;/wap/static/img/nav-ico09.3a522fb8.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----></uni-image></uni-view>
+<uni-view data-v-f5c6c904="" class="my-gr-t">{:L('分享')}</uni-view></uni-view></a>
+<uni-view data-v-f5c6c904="" class="my-gr-l">
+    <a href="{:U('Contract/index')}">
+    <uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico03.48732157.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+</uni-image></uni-view>
+<uni-view data-v-f5c6c904="" class="my-gr-t">{:L('快速合约')}</uni-view></uni-view></a>
+<uni-view data-v-f5c6c904="" class="my-gr-l">
+    <uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <a href="{:U('Levertade/index')}">
+    <uni-image data-v-f5c6c904="" class="my-gr-icowh">
+        <div style="background-image: url(&quot;/wap/static/img/nav-ico06.08e182b5.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+<uni-view data-v-f5c6c904="" class="my-gr-t">{:L('合约交易')}</uni-view></uni-view></a>
+<uni-view data-v-f5c6c904="" class="my-gr-l"><uni-view data-v-f5c6c904="" class="my-gr-ico">
+     <a href="{:U('Issue/index')}">
+    <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico11.46f38e09.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+
+<uni-view data-v-f5c6c904="" class="my-gr-t">{:L('认购')}</uni-view></uni-view></uni-view></a>
+<uni-view data-v-f5c6c904="" class="my-gr" style="border-bottom: 5px solid #f5f5f5;">
+    <uni-view data-v-f5c6c904="" class="my-gr-l"><uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <a href="{:U('User/authrz')}">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico02.0516c904.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+     
+    <uni-view data-v-f5c6c904="" class="my-gr-t">{:L('实名认证')}</uni-view></uni-view></a>
+    <uni-view data-v-f5c6c904="" class="my-gr-l"><uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <a href="{:U('Levertade/tradlist')}">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico05.2de00db4.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+    <uni-view data-v-f5c6c904="" class="my-gr-t">{:L('持仓单')}</uni-view></uni-view></a>
+    <uni-view data-v-f5c6c904="" class="my-gr-l"><uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <a href="{:U('User/txcoin')}">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico08.e5122b4e.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+    
+    <uni-view data-v-f5c6c904="" class="my-gr-t">{:L('提币')}</uni-view></uni-view></a>
+    <uni-view data-v-f5c6c904="" class="my-gr-l"><uni-view data-v-f5c6c904="" class="my-gr-ico">
+        <a href="{:U('User/online')}">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh"><div style="background-image: url(&quot;/wap/static/img/nav-ico12.be6f56ef.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+    
+    <uni-view data-v-f5c6c904="" class="my-gr-t">{:L('客服')}</uni-view></uni-view></a>
+    <uni-view data-v-f5c6c904="" class="my-gr-l">
+        <uni-view data-v-f5c6c904="" class="my-gr-ico">
+            <a href="{:U('Login/setlang')}">
+        <uni-image data-v-f5c6c904="" class="my-gr-icowh">
+            <div style="background-image: url(&quot;data:image/png;base64,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&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div></uni-image></uni-view>
+    <uni-view data-v-f5c6c904="" class="my-gr-t">{:L('语言')}</uni-view></uni-view></uni-view></a>
+
+	<!--市场行情-->
+	<div style="width:100%;background:#fff;padding:10px;">
+		<div style="width:100%;height:30px;line-height:30px;margin: -3.73333rem 0 0;">
+			<!--<span class="fzmmm fcc">USDT{:L('市场')}</span>-->
+		</div>
+		<div style="width: 100%;box-shadow: 2px 2px 2px 1px #00000011;border: 1px solid #5665ff22;background-repeat: no-repeat;flex-direction: column;justify-content: space-between;">
+			<div style="width:30%;height:30px;line-height:30px;float:left;">
+				<span  class="fzm fcc">{:L('交易对')}</span>
+			</div>
+			<div style="width:40%;height:30px;line-height:30px;float:left;text-align:center;">
+				<span  class="fzm fcc">{:L('最新价格')}</span>
+			</div>
+			<div style="width:30%;height:30px;line-height:30px;float:left;text-align:right;">
+				<span  class="fzm fcc">24h{:L('涨跌幅')}</span>
+			</div>
+		</div>
+
+		<div style="width:100%;" id="tradebox">
+		<foreach name="market" item="vo">
+		<div style="width:100%;height:50px;">
+<div class="list_cname">
+<style>
+    .list:first-child {
+    width: 50%;
+    text-align: left;
+}
+
+.list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: right;
+    height: 50px;
+}
+.list-con .list uni-view:first-child {
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 14px;
+}
+.name {
+    width: 75px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+.number {
+    width: 110px;
+    font-size: 11px;
+    color: #a0a0a0;
+    margin-top: 0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.≈{
+      font-size: 11px;
+    color: #a0a0a0;
+    margin-top: 0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+        .SidebarList {
+            position: fixed;
+            right: 5px;
+            bottom: 220px;
+            background: #ffffff;
+            box-shadow: rgb(78 75 75 / 17%) 0 0 15px 5px;
+            z-index: 99;
+            border-radius: 4px;
+        }
+        .Sidebar {
+            display: block;
+            transition: all 0.3s;
+            position: relative;
+            text-align: center;
+            width: 72px;
+            height: 72px;
+            border-bottom: 1px solid #3e3e3e;
+            box-sizing: border-box;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        .Sidebar {
+            width: 30px;
+            height: 40px;
+            padding: 7px 0;
+        }
+        .Sidebar>.Sidebar_top {
+            display: block;
+            transition: all 0.3s;
+            width: 36px;
+            height: 36px;
+            background: url(/Public/Static/img/SidebarList.png) no-repeat;
+            box-sizing: border-box;
+            margin: 0 auto 1px;
+        }
+        .Sidebar_App {
+            background-position: 3px -54px !important;
+        }
+        .Sidebar_img {display: none;position: absolute;z-index: 100;right: 85px;width: 152px;top: 12px;box-sizing: border-box;padding: 9px 8px;background: #fff;border-radius: 3px;box-shadow: rgb(78 75 75 / 17%) 0 0 15px 5px;}
+        .Sidebar_img>p {text-align: left;font-size: 14px;border-bottom: 1px #ddd dashed;}
+        .Sidebar>.Sidebar_top {display: block;transition: all 0.3s;width: 36px;height: 36px;background: url(/Public/Static/img/SidebarList.png) no-repeat;box-sizing: border-box;margin: 0 auto 1px;}
+        .Sidebar>.Sidebar_top {width: 100%;height: 100%;background-size: 25px;padding: 0 0 0;}
+        .Sidebar_Service {background-position: 2px -108px !important;}
+        .Sidebar>p {font-size: 12px;color: #273e57;}
+        .Sidebar:last-child {border-bottom: 0;}
+        .Sidebar>.Sidebar_top {display: block;transition: all 0.3s;width: 36px;height: 36px;background: url(/Public/Static/img/SidebarList.png) no-repeat;box-sizing: border-box;margin: 0 auto 1px;}
+        .Sidebar>.Sidebar_top {width: 100%;height: 100%;background-size: 25px;padding: 0 0 0;}
+        .Sidebar_CounUs {background-position: 3px 0 !important;}
+        
+        .css_btc{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/87496d50-2408-43e1-ad4c-78b47b448a6a.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+        .css_eth{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/00454e4d-b30f-4fef-bf8b-5b5fbc4b8f1e.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+        .css_eos{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/09f93059-fe85-42cc-96b7-603ef6da07c6.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+            .css_doge{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/22ef2baf-b210-4882-afd9-1317bb7a3603.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+               .css_bch{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/db45566d-6c97-4944-937e-1b6333be3a7f.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                   .css_ltc{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/359ca651-a084-4010-92d8-4eaff96e6384.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                       .css_iota{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/de02e5d5-8a24-401c-ba14-1db8aaff4d22.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                          .css_fil{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/6e56be27-4780-4dc7-ac1c-ec7f88940697.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                              .css_flow{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/e963718b-7589-45a1-94a8-974978ce7032.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                                  .css_jst{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/3dbaccf0-e55c-4bf6-ac6c-d8ea9b7943f0.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                                          .css_itc{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/b6b0ea3d-995f-4c16-b635-c76a21c0a726.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+                                          .css_ht{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/3222a10d-5618-4100-8476-ee7fe0a6fb12.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+        }
+      .css_ukb{
+           box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/7898209b-dbee-4ba6-8c66-804d001cf4c9.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+      }
+      .css_dog{
+           box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 99999px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px inset;
+    background-image: url("/logo_css/c39c01c2-f6cc-4f18-8415-182e586fb791.png");
+    background-repeat: no-repeat;
+    background-size: 96% 96%;
+    background-position: center center;
+      }
+      
+        
+</style>
+    <uni-view data-v-f5c6c904="" class="list" style="display: -webkit-flex;">
+        <uni-view data-v-f5c6c904="" class="css_{$vo.coinname}"></uni-view>
+        <uni-view data-v-f5c6c904="" class="name" ><?php echo strtoupper($vo['coinname']); ?>/USDT</uni-view>
+        </uni-view>
+        <div class="<?php echo  $price_arr['close']; ?>">
+            
+        </div>
+<!--<span  class="fzmmm fcc cn_{$vo.coinname}"><?php echo strtoupper($vo['coinname']);?>/USDT</span>-->
+</div>
+
+
+
+<a href="{:U('Levertade/index')}?symbol={$vo.coinname}&type=buy">
+    <!--a标签点击跳转杆杆-->
+<div class="list_open cpr_{$vo.coinname}">
+<span id="jiage" class='fzmmm fcc' style="font-weight: 600;line-height: 25px;font-size: 14px;color: #adb5bd!important;">0.00000</span>
+<!--<span class="number">≈$USDT</span>-->
+</div></a>
+<div class="list_change cch_{$vo.coinname}">
+<span  class='fzmm bgfcc' style='width: 70px; height: 30px;text-align: center; margin-top: 8px; display: -webkit-box;display: -ms-flexbox; display: flex; -webkit-box-pack: center;-ms-flex-pack: center; justify-content: center; -webkit-box-align: center;
+    -ms-flex-align: center; align-items: center;font-size: 12px;color: #fff!important;float: right;border-radius: 3px;font-weight: 600; line-height: 25px;font-size: 14px;'>0%</span></a>
+</div>
+</div>
+</foreach>
+		</div>
+	</div>
+
+
+<!--新增加 展示btc购买-->
+	<div class="dongbox" id="dongbox" style="display:block;">
+    <div class="dong_order_c">
+    <div class="dong_order_x" id="x_dongbox">
+	<i class="bi bi-x" style="font-size:18px;" ></i>
+	</div>
+	<div class="dong_order_title">
+	<span class="fch" style="font-size:16px;font-weight:500;">{:L('币币市场')}</span>
+	</div>
+	
+	<div style="width:100%;height:380px;overflow-y:scroll;">
+	<div class="infotbox">
+	    
+	<div class="css-1cb450p">
+   <div class="css-1mtiudv">
+    <div class="css-wv86cc">
+     {:L('币币交易购买')}
+    </div>
+    <div class="css-19oposz">
+     <div class="css-vurnku">
+      <div class="css-1hmvz8g">
+          
+      </div>
+      <div class="css-19o53ad">
+       <div class="bn-steps-step css-1pqhwvz" data-status="process" >
+        <div class="css-yyvsvt">
+         <div data-bn-type="text" class="css-vdqias"></div>
+         <div class="step_marker_row css-vurnku" data-class="step_marker_row" >
+          <span data-bn-type="text" data-class="step_marker_number" class="css-1p4nx4e" onclick="qh_btc()">
+           <div class="css-1ks2cih" id="btc_class">
+            1
+           </div></span>
+         </div>
+        </div>
+       </div>
+       <div data-status-line="wait" class="css-13dco2g"></div>
+       <div class="bn-steps-step css-1pqhwvz" data-status="wait">
+        <div class="css-yyvsvt">
+         <div data-bn-type="text" class="css-vdqias"></div>
+         <div class="step_marker_row css-vurnku" data-class="step_marker_row" >
+          <span data-bn-type="text" data-class="step_marker_number" class="css-1p4nx4e" onclick="qh_eth()">
+           <div class="css-1ks3cih" id="eth_class">
+            2
+           </div></span>
+         </div>
+        </div>
+       </div>
+       <div data-status-line="wait" class="css-13dco2g"></div>
+       <div class="bn-steps-step css-1pqhwvz" data-status="wait">
+        <div class="css-yyvsvt">
+         <div data-bn-type="text" class="css-vdqias"></div>
+         <div class="step_marker_row css-vurnku" data-class="step_marker_row" >
+          <span data-bn-type="text" data-class="step_marker_number" class="css-1p4nx4e" onclick="qh_bch()">
+           <div class="css-1ks3cih" id="bch_class">
+            3
+           </div></span>
+
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   
+   
+   <div id="btc_1" class="css-1ukfkuj" style="display:block">
+    <div class="css-1hgogrt">
+     <img src="/wap/static/img/ban02.7d6fbefa.gif" class="css-1g5n5o9" />
+    </div>
+    <div class="css-ih2psb">
+     <div class="css-1y3yk4n">
+      {:L('最近成交')}
+      <div class="css-cmucs3">
+       <img class="css-1h4okcl" src="/logo_css/87496d50-2408-43e1-ad4c-78b47b448a6a.png" />
+       <div class="css-qfamc4">
+        &nbsp;BTC
+       </div>
+      </div>
+     </div>
+     <div class="css-1s7ihkk">
+      <a href="/Trade/transinfo.html?symbol=BTC&type=buy">
+      <div class="css-1sofs9o">
+        {:L('卖出')}BTC
+      </div></a>
+      <a href="/Trade/transinfo.html?symbol=BTC&type=buy">
+      <div class="css-1r09nd6">
+        {:L('买入')}BTC
+      </div></a>
+     </div>
+     <div class="css-jfbgiv">
+      <div class="css-13vk4iw">
+       <div class="css-17gh8gg">
+        <span class="f14 fch fw vol_btc">0.0000</span>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-18470ki" />
+       <div class="css-4cffwv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" cursor="pointer" class="css-1rh46qq">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.314 4.781l3.889 3.89-1.768 1.767-3.889-3.889 1.768-1.768zm-3.182 3.182l3.89 3.89-5.129 5.127H15v3H7.893l-.004.004H4v-3.889l8.132-8.132zM17 16.98h3v3h-3v-3z" fill="currentColor"></path>
+        </svg>
+       </div>
+      </div>
+      
+      <?php
+      $now = time();
+      $date = strtotime('1 day',time());
+      $date = strtotime('1 month',time());
+      $date = strtotime('1 year',time());
+      $date = date('Y-m-t h:m:s', $time);
+      ?>
+      <div class="css-1klmeyb">
+       {:L('盈亏状态')}
+      </div>
+      <div class="css-10atzj">
+       {:L('时间')}&nbsp;
+       <div class="css-17txzu1">
+       <?php  echo $date = date('Y-m-t'); ?>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-kazoia" />{:L('收益率')}
+       <!-- -->:&nbsp;
+       <div class="css-17qg5ii">
+        <span id="btc_licai" >0.00%</span>
+       </div>
+      </div>
+      <div class="css-tyfyof " >
+       {:L('最新价格')}
+       <!-- -->:
+       &nbsp;<div id="jiage" class="css-17txzu1 cpr_btc">
+        &nbsp;0.00000
+       </div>
+      </div>
+     </div>
+     <div class="css-i2js87">
+      <div class="css-v23n6v">
+       <div class="css-2bc2yz"></div>
+       <div class="css-i6pav4"></div>
+       <div class="css-o1uf9l"></div>
+       <div class="css-14jhrrk"></div>
+      </div>
+     </div>
+    </div>
+     </div>
+     </div>
+     </div>
+    
+    
+    <!--eth-->
+    <div id="eth_2" class="css-1ukfkuj" style="display:none">
+    <div class="css-1hgogrt">
+     <img src="/wap/static/img/ban02.7d6fbefa.gif" class="css-1g5n5o9" />
+    </div>
+    <div class="css-ih2psb">
+     <div class="css-1y3yk4n">
+      {:L('最近成交')}
+      <div class="css-cmucs3">
+       <img class="css-1h4okcl" src="/logo_css/00454e4d-b30f-4fef-bf8b-5b5fbc4b8f1e.png" />
+       <div class="css-qfamc4">
+        &nbsp;ETH
+       </div>
+      </div>
+     </div>
+     <div class="css-1s7ihkk">
+         <a href="/Trade/transinfo.html?symbol=ETH&type=buy">
+      <div class="css-1sofs9o" >
+        {:L('卖出')}ETH
+      </div></a>
+      <a href="/Trade/transinfo.html?symbol=ETH&type=buy">
+      <div class="css-1r09nd6" >
+        {:L('买入')}ETH
+      </div></a>
+     </div>
+     <div class="css-jfbgiv">
+      <div class="css-13vk4iw">
+       <div class="css-17gh8gg">
+        <span class="f14 fch fw vol_eth">0.0000</span>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-18470ki" />
+       <div class="css-4cffwv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" cursor="pointer" class="css-1rh46qq">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.314 4.781l3.889 3.89-1.768 1.767-3.889-3.889 1.768-1.768zm-3.182 3.182l3.89 3.89-5.129 5.127H15v3H7.893l-.004.004H4v-3.889l8.132-8.132zM17 16.98h3v3h-3v-3z" fill="currentColor"></path>
+        </svg>
+       </div>
+      </div>
+      
+      <?php
+      $now = time();
+      $date = strtotime('1 day',time());
+      $date = strtotime('1 month',time());
+      $date = strtotime('1 year',time());
+      $date = date('Y-m-t h:m:s', $time);
+      ?>
+      <div class="css-1klmeyb">
+       {:L('盈亏状态')}
+      </div>
+      <div class="css-10atzj">
+       {:L('时间')}&nbsp;
+       <div class="css-17txzu1">
+       <?php  echo $date = date('Y-m-t'); ?>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-kazoia" />{:L('收益率')}
+       <!-- -->:&nbsp;
+       <div class="css-17qg5ii">
+        <span id="eth_licai" >0.00%</span>
+       </div>
+      </div>
+      <div class="css-tyfyof " >
+       {:L('最新价格')}
+       <!-- -->:
+       &nbsp;<div id="jiage" class="css-17txzu1 cpr_eth">
+        &nbsp;0.00000
+       </div>
+      </div>
+     </div>
+     <div class="css-i2js87">
+      <div class="css-v23n6v">
+       <div class="css-2bc2yz"></div>
+       <div class="css-i6pav4"></div>
+       <div class="css-o1uf9l"></div>
+       <div class="css-14jhrrk"></div>
+      </div>
+     </div>
+    </div>
+     </div>
+  
+  
+ 
+
+     
+     <!--bhc-->
+     <div id="cbh_3" class="css-1ukfkuj" style="display:none">
+    <div class="css-1hgogrt">
+     <img src="/wap/static/img/ban02.7d6fbefa.gif" class="css-1g5n5o9" />
+    </div>
+    <div class="css-ih2psb">
+     <div class="css-1y3yk4n">
+      {:L('最近成交')}
+      <div class="css-cmucs3">
+       <img class="css-1h4okcl" src="/logo_css/db45566d-6c97-4944-937e-1b6333be3a7f.png" />
+       <div class="css-qfamc4">
+        &nbsp;BCH
+       </div>
+      </div>
+     </div>
+     <div class="css-1s7ihkk">
+         <a href="/Trade/transinfo.html?symbol=BCH&type=buy">
+      <div class="css-1sofs9o" >
+        {:L('卖出')}BCH
+      </div></a>
+      <a href="/Trade/transinfo.html?symbol=BCH&type=buy">
+      <div class="css-1r09nd6" >
+        {:L('买入')}BCH
+      </div></a>
+     </div>
+     <div class="css-jfbgiv">
+      <div class="css-13vk4iw">
+       <div class="css-17gh8gg">
+        <span class="f14 fch fw vol_bch">0.0000</span>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-18470ki" />
+       <div class="css-4cffwv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" cursor="pointer" class="css-1rh46qq">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.314 4.781l3.889 3.89-1.768 1.767-3.889-3.889 1.768-1.768zm-3.182 3.182l3.89 3.89-5.129 5.127H15v3H7.893l-.004.004H4v-3.889l8.132-8.132zM17 16.98h3v3h-3v-3z" fill="currentColor"></path>
+        </svg>
+       </div>
+      </div>
+      
+      <?php
+      $now = time();
+      $date = strtotime('1 day',time());
+      $date = strtotime('1 month',time());
+      $date = strtotime('1 year',time());
+      $date = date('Y-m-t h:m:s', $time);
+      ?>
+      <div class="css-1klmeyb">
+       {:L('盈亏状态')}
+      </div>
+      <div class="css-10atzj">
+       {:L('时间')}&nbsp;
+       <div class="css-17txzu1">
+       <?php  echo $date = date('Y-m-t'); ?>
+       </div>
+       <img src="/wap/static/img/vertical_line-svg.png" class="css-kazoia" />{:L('收益率')}
+       <!-- -->:&nbsp;
+       <div class="css-17qg5ii">
+        <span id="bch_licai" >0.00%</span>
+       </div>
+      </div>
+      <div class="css-tyfyof " >
+       {:L('最新价格')}
+       <!-- -->:
+       &nbsp;<div id="jiage" class="css-17txzu1 cpr_bch">
+        &nbsp;0.00000
+       </div>
+      </div>
+     </div>
+     <div class="css-i2js87">
+      <div class="css-v23n6v">
+       <div class="css-2bc2yz"></div>
+       <div class="css-i6pav4"></div>
+       <div class="css-o1uf9l"></div>
+       <div class="css-14jhrrk"></div>
+      </div>
+     </div>
+    </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     
+	<div style="width:100%;height:100px;"></div>
+	
+	<!--底部-->
+	<div class="footer">
+    <div style="border-bottom: 2px solid #f5f5f5;"></div>
+		<a href="{:U('Index/index')}">
+		<div class="footer_op">
+			<div class="f_op_t">
+				<img src="/wap/static/img/bot_bar_1_new_on.png" style="height: 25px;margin: 0.51667rem 0 0;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcy">{:L('首页')}</span>	
+			</div>
+		</div>
+		</a>
+
+		<a href="{:U('Trade/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_2_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('行情')}</span>	
+			</div>
+		</div>
+		</a>
+		
+		<a href="{:U('Trade/trans')}?sytx=BTC/USDT">
+		<!--<a href="{:U('Levertade/index')}"> 杆杆交易	--> 
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_7_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('交易')}</span>	
+			</div>
+		</div>
+		</a>
+
+		<a href="{:U('Contract/index')}">	
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_3_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('合约')}</span>	
+			</div>
+		</div>
+		</a>
+
+<a href="{:U('User/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+				<img src="/wap/static/img/bot_bar_6_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('钱包')}</span>	
+			</div>
+		</div>
+		</a>
+	</div>
+	
+	
+	     
+     
+    
+    
+ 
+<!--公告-- 弹窗-->
+	<!--<div class="dongbox" id="dongbox" style="display:block;">-->
+ <!--   <div class="dong_order_c">-->
+ <!--   <div class="dong_order_x" id="x_dongbox">-->
+	<!--<i class="bi bi-x" style="font-size:18px;" ></i>-->
+	<!--</div>-->
+	<!--<div class="dong_order_title">-->
+	<!--<span class="fch" style="font-size:16px;font-weight:500;">{:L('公告中心')}</span>-->
+	<!--</div>-->
+	
+	<!--<div style="width:100%;height:340px;overflow-y:scroll;">-->
+	
+	<!--<div class="infotbox">-->
+	<!--	<span class="fcy" style="font-size:14px;font-weight:bold;">{$info.title}</span>-->
+	<!--	</div>-->
+		
+	<!--	<if condition="$info.img neq ''">-->
+	<!--	<div class="lboxc">-->
+	<!--	<img src="/Upload/article/{$info.img}" style="width:100%;border-radius:10px;"/>-->
+	<!--	</div>-->
+	<!--	</if>-->
+		
+	<!--	<div class="lboxc" style="text-indent:24px;">-->
+	<!--	<span>{$info.content}</span>-->
+	<!--	</div>-->
+	<!--	<div class="lbox">-->
+	<!--	<div class="lbox_l">-->
+	<!--	<span class="fcc fzmm">{:L('发布时间')}</span>-->
+	<!--	</div>-->
+	<!--	<div class="lbox_r">-->
+	<!--	<span class="fch fzmm">{$info.addtime}</span>-->
+	<!--	</div>-->
+	<!--	</div>-->
+	<!--</div>-->
+ <!--   </div>-->
+ <!--   </div>-->
+    
+    
+    <!--演示电报弹窗-->
+  <!--<div class="SidebarList"> -->
+            <!--<p>whatsApp</p> -->
+  <!--      <a class="Sidebar" target="_blank" href="https://t.me/PanAgentso"> -->
+  <!--          <div class="Sidebar_top Sidebar_Service"> </div> -->
+            <!--<p>Telegram</p> -->
+  <!--      </a> -->
+        <!--<a class="Sidebar" id="Sidebar_CounUs" target="_blank" href=""> -->
+        <!--    <div class="Sidebar_top Sidebar_CounUs"> </div> -->
+            <!--<p>在線客服</p> -->
+        <!--</a> -->
+  <!--  </div>-->
+    
+    
+	<style>
+	    .mobile-download-wrap.mobile-download-wrap-login-out {
+    bottom: 48px;
+}
+
+.mobile-download-wrap.mobile-download-show {
+    display: block;
+    -webkit-animation: downloadShow ease-in-out .3s;
+    animation: downloadShow ease-in-out .3s;
+}
+.mobile-download-wrap {
+    position: fixed;
+    padding: 0 8px;
+    bottom: 84px;
+    width: 100%;
+    min-height: 60px;
+    z-index: 41;
+}
+.mobile-download-wrap .download-logo, .mobile-download-wrap .mobile-download, .mobile-download-wrap .mobile-download-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mobile-download-wrap .mobile-download {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    background: rgba(0,102,237,.9);
+}
+.mobile-download-wrap .download-logo {
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -o-linear-gradient(top,#fff 0,#e6e6e6 100%);
+    background-image: linear-gradient(180deg,#fff,#e6e6e6);
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.mobile-download-wrap .download-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 26px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.mobile-download-wrap .download-title span:first-child {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.mobile-download-wrap .download-title span:last-child {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+}
+.mobile-download-wrap .mobile-download-right a {
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-width: 68px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 8px;
+    font-size: 14px;
+    margin-right: 15px;
+    color: #12b298;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.mobile-download-wrap .mobile-download-right i {
+    /*font-size: 16px;*/
+    /*height: 10px;*/
+    /*opacity: .5;*/
+    /*cursor: pointer;*/
+    color: #fff;
+}
+.mobile-download-wrap .download-logo img {
+    width: 35px;
+}
+.mobile-download-wrap .mobile-download-right a {
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-width: 68px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 8px;
+    font-size: 14px;
+    margin-right: 15px;
+    color: #12b298;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.mobile-download-wrap .mobile-download-right i {
+    font-size: 10px;
+    height: 10px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+	</style>
+<div id="pic" style="display:block" class="mobile-download-wrap mobile-download-show mobile-download-wrap-login-out">
+    <div class="mobile-download">
+        <div class="mobile-download-left"><span class="download-logo">
+            <img src="/wap/static/img/logo-login.491c2b19.png" alt="phoneLogo"></span>
+            <span class="download-title">
+                <span>GEDEX</span><span>BTC | USDT {:L('交易')}</span></span></div>
+                <div class="mobile-download-right">
+                    <a target="_blank" rel="noopener noreferrer" href="../UPUPWAPP">{:L('下载')}</a>
+                    <i id="btn" class="bi bi-eye fcy"></i>
+                    </div></div></div>
+
+
+</body>
+<script>
+    var btn = document.getElementById("btn");
+				var pic = document.getElementById("pic");
+				btn.onclick = function() {
+				pic.style.display = "none";
+				}
+				
+    let ua = navigator.userAgent.toLowerCase();
+    console.log(ua);
+
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+    console.log('微信')
+    pic.style.display = "block";
+    }else{
+    console.log('浏览器')
+    // pic.style.display = "none";
+
+    }
+
+</script>
+
+<script src="https://cdn.bootcss.com/countup.js/1.9.3/countUp.js"></script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<script type="text/javascript">
+
+var btc_1 = document.getElementById('btc_1')
+var eth_2 = document.getElementById('eth_2')
+var bch_3 = document.getElementById('cbh_3')
+
+var eth_class = document.getElementById('eth_class')
+var btc_class = document.getElementById('btc_class')
+var bch_class = document.getElementById('bch_class')
+
+
+function qh_btc(){
+    
+    btc_class.style = 'background-color:#FCD535'
+    eth_class.style = 'background-color:#dee2e6'
+    bch_class.style = 'background-color:#dee2e6'
+    btc_1.style.display = 'block';
+    eth_2.style.display = 'none';
+    bch_3.style.display = 'none';
+}
+
+function qh_eth(){
+    
+    eth_class.style = 'background-color:#FCD535'
+    btc_class.style = 'background-color:#dee2e6'
+    bch_class.style = 'background-color:#dee2e6'
+    btc_1.style.display = 'none';
+    eth_2.style.display = 'block';
+    bch_3.style.display = 'none';
+}
+
+function qh_bch(){
+    btc_class.style = 'background-color:#dee2e6'
+    eth_class.style = 'background-color:#dee2e6'
+    bch_class.style = 'background-color:#FCD535'
+    btc_1.style.display = 'none';
+    eth_2.style.display = 'none';
+    bch_3.style.display = 'block';
+}
+// --------------------------------------------
+// function obtain_btc(){
+//             var coin = "btc";
+//             var nameclass = ".cn_btc";
+//             var priceclass = ".cpr_btc";
+//             var pricehl = ".hl_btc";
+//             var pricevol = ".vol_btc";
+//             var changeclass = ".cch_btc";
+//             $.post("{:U('/Ajaxtrade/obtain_btc')}",
+//             {'coin':coin},
+//             function(data){
+//                 if(data.code == 1){
+//                     $(nameclass).html(data.cname);
+//                     $(priceclass).html(data.open);
+//                     $(pricehl).html(data.highlow);
+//                     $(pricevol).html(data.amount);
+//                     $(changeclass).html(data.change);
+//                 }else{
+//                     console.log(data.info);return false;
+//                 }
+//             }
+//             );
+//         }
+        //新的变量btc！^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        // function obtain_eth2(){
+        //     var coin = "eth";
+        //     var nameclass = ".cn_eth2";
+        //     var priceclass = ".cpr_eth2";
+        //     var pricehl = ".hl_eth2";
+        //     var pricevol = ".vol_eth2";
+        //     var changeclass = ".cch_eth2";
+        //     $.post("{:U('Ajaxtrade/obtain_eth')}",
+        //     {'coin':coin},
+        //     function(data){
+        //         if(data.code == 1){
+        //             $(nameclass).html(data.cname);
+        //             $(priceclass).html(data.open);
+        //             $(pricehl).html(data.highlow);
+        //             $(pricevol).html(data.amount);
+        //             $(changeclass).html(data.change);
+        //         }else{
+        //             console.log(data.info);return false;
+        //         }
+        //     }
+        //     );
+        // }
+
+        // eth_2
+        
+
+
+$("#x_dongbox").click(function(){
+$("#dongbox").hide();
+});
+
+function obtain_btc(){
+var coin = "btc";
+var nameclass = ".cn_btc";
+var priceclass = ".cpr_btc";
+var changeclass = ".cch_btc";
+var pricevol = ".vol_btc";
+$.post("{:U('Ajaxtrade/obtain_btc')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+$(pricevol).html(data.amount);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_eth(){
+var coin = "eth";
+var nameclass = ".cn_eth";
+var priceclass = ".cpr_eth";
+var changeclass = ".cch_eth";
+var pricevol = ".vol_eth";
+
+$.post("{:U('Ajaxtrade/obtain_eth')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+$(pricevol).html(data.amount);
+
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_eos(){
+var coin = "eos";
+var nameclass = ".cn_eos";
+var priceclass = ".cpr_eos";
+var changeclass = ".cch_eos";
+$.post("{:U('Ajaxtrade/obtain_eos')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_doge(){
+var coin = "doge";
+var nameclass = ".cn_doge";
+var priceclass = ".cpr_doge";
+var changeclass = ".cch_doge";
+$.post("{:U('Ajaxtrade/obtain_doge')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_bch(){
+var coin = "bch";
+var nameclass = ".cn_bch";
+var priceclass = ".cpr_bch";
+var changeclass = ".cch_bch";
+var pricevol = ".vol_bch";
+$.post("{:U('Ajaxtrade/obtain_bch')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+$(pricevol).html(data.amount);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_ltc(){
+var coin = "ltc";
+var nameclass = ".cn_ltc";
+var priceclass = ".cpr_ltc";
+var changeclass = ".cch_ltc";
+$.post("{:U('Ajaxtrade/obtain_ltc')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_iota(){
+var coin = "iota";
+var nameclass = ".cn_iota";
+var priceclass = ".cpr_iota";
+var changeclass = ".cch_iota";
+$.post("{:U('Ajaxtrade/obtain_iota')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_fil(){
+var coin = "fil";
+var nameclass = ".cn_fil";
+var priceclass = ".cpr_fil";
+var changeclass = ".cch_fil";
+$.post("{:U('Ajaxtrade/obtain_fil')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_flow(){
+var coin = "flow";
+var nameclass = ".cn_flow";
+var priceclass = ".cpr_flow";
+var changeclass = ".cch_flow";
+$.post("{:U('Ajaxtrade/obtain_flow')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_jst(){
+var coin = "jst";
+var nameclass = ".cn_jst";
+var priceclass = ".cpr_jst";
+var changeclass = ".cch_jst";
+$.post("{:U('Ajaxtrade/obtain_jst')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_itc(){
+var coin = "jst";
+var nameclass = ".cn_itc";
+var priceclass = ".cpr_itc";
+var changeclass = ".cch_itc";
+$.post("{:U('Ajaxtrade/obtain_itc')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+<script type="text/javascript">
+function obtain_ht(){
+var coin = "ht";
+var nameclass = ".cn_ht";
+var priceclass = ".cpr_ht";
+var changeclass = ".cch_ht";
+$.post("{:U('Ajaxtrade/obtain_ht')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_usdz(){
+var coin = "usdz";
+var nameclass = ".cn_usdz";
+var priceclass = ".cpr_usdz";
+var changeclass = ".cch_usdz";
+$.post("{:U('Ajaxtrade/obtain_usdz')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html("USDZ/USDT");
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+    function jsdelivrjt(){
+        // var green = document.getElementById('green');
+        // var red = document.getElementById('red');
+        var whiles_btc = document.getElementById('whiles_btc');
+        var whiles_eth = document.getElementById('whiles_eth');
+        var whiles_bch = document.getElementById('whiles_bch');
+        
+        var eth_change_box = document.getElementById('eth_change_box');
+        var btc_change_box = document.getElementById('btc_change_box');
+        var bch_change_box = document.getElementById('bch_change_box');
+        
+        var eth = eth_change_box.innerText;
+        var btc = btc_change_box.innerText;
+        var bch = bch_change_box.innerText;
+
+        var reg = RegExp(/-/);
+
+        
+        if(eth.match(reg)){
+    // 包含  
+       whiles_eth.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        //   console.log('you');
+        }else{
+             whiles_eth.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        //   console.log('no');
+        }
+        
+       if(btc.match(reg)){
+             whiles_btc.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        }else{
+             whiles_btc.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        }
+        
+        if(bch.match(reg)){
+             whiles_bch.style = 'padding:10px; background-image: url(/wap/static/img/hq_bgs.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        }else{
+             whiles_bch.style = 'padding:10px; background-image: url(/wap/static/img/hq_bg.png);background-position: 0% 0%;background-size: 100% 100%;background-repeat: no-repeat;';
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+    function noMenuOne(){
+
+    //设置右键事件
+    function noMenuOne() {
+        alert('禁止右键菜单!');
+        return false;
+    }
+    document.oncontextmenu = noMenuOne
+    
+       //当用户按下鼠标按钮触发
+    function noMenu2() {
+        if(event.button == 2) {
+            alert('禁止右键菜单!');
+            return false;
+        }
+    }
+    document.onmousedown = noMenu2;
+    
+       document.onkeydown = function () {
+        if (window.event && window.event.keyCode == 123) {
+            alert("F12被禁用");
+            event.keyCode = 0;
+            event.returnValue = false;
+        }
+        if (window.event && window.event.keyCode == 13) {
+            window.event.keyCode = 505;
+        }
+        if (window.event && window.event.keyCode == 8) {
+            alert(str + "\n请使用Del键进行字符的删除操作！");
+            window.event.returnValue = false;
+        }
+}
+        document.onselectstart = function (event) {
+            if (window.event) {
+                event = window.event;
+            }
+            try {
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                    return false;
+                }
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+        
+            document.oncopy = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+    
+      document.oncut = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+    
+    document.oncontextmenu = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+}
+</script>
+<script type="text/javascript">
+  $(function(){
+      
+//   obtain_eth2();
+//   setInterval("obtain_eth2()",2000); 
+
+  //监听调试盗窃
+  noMenuOne("jsdelivrjt()",1000);
+  //监听动态 红绿
+  setInterval("jsdelivrjt()",2000);
+  
+  obtain_btc();
+  setInterval("obtain_btc()",2000); 
+  obtain_eth();
+  setInterval("obtain_eth()",3000); 
+  obtain_eos();
+  setInterval("obtain_eos()",5000);
+  obtain_doge();
+  setInterval("obtain_doge()",7000);
+  obtain_bch();
+  setInterval("obtain_bch()",9000);
+  obtain_ltc();
+  setInterval("obtain_ltc()",11000);
+  
+  obtain_iota();
+  setInterval("obtain_iota()",13000);
+  
+  obtain_fil();
+  setInterval("obtain_fil()",15000);
+  
+  obtain_flow();
+  setInterval("obtain_flow()",17000);
+  
+  obtain_jst();
+  setInterval("obtain_jst()",19000);
+  
+  obtain_itc();
+  setInterval("obtain_itc()",21000);
+  
+  obtain_ht();
+  setInterval("obtain_ht()",23000);
+  
+  obtain_usdz();
+  setInterval("obtain_usdz()",25000);
+  
+//   getallsymbol();
+//   setInterval("getallsymbol()",2000); 
+  
+  getonemarket();
+  setInterval("getonemarket()",2000); 
+  
+
+  });
+</script>
+<script type="text/javascript">
+        
+function getonemarket(){
+$.post("{:U('Ajaxtrade/get_market_one')}",
+function(data){
+if(data.code == 1){
+$("#btc_coin_box").html(data.btccoin);
+$("#btc_money_box").html(data.btcnewprice);
+$("#btc_change_box").html(data.btcchange);
+$("#btc_licai").html(data.btcchange);//新增
+
+$("#eth_coin_box").html(data.ethcoin);
+$("#eth_money_box").html(data.ethnewprice);
+$("#eth_change_box").html(data.ethchange);
+$("#eth_licai").html(data.ethchange); //新增
+
+
+$("#bch_coin_box").html(data.bchcoin);
+$("#bch_money_box").html(data.bchnewprice);
+$("#bch_change_box").html(data.bchchange);
+$("#bch_licai").html(data.bchchange);
+}
+});
+}
+</script>
+<script type="text/javascript">
+function getallsymbol(){
+$.post("{:U('Ajaxtrade/getallsymbol')}",
+function(data){
+if(data.code == 1){
+$("#tradebox").empty();
+var html = '';
+if(data.data == '' || data.data == null){
+html = '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+   '<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>'+
+   '</div>';
+$("#tradebox").append(html);
+
+}else{
+$.each(data.data,function(key,val){
+html += '<div style="width:100%;height:50px;">'+
+'<div class="list_cname">'+
+'<span  class="fzmmm fcc">'+ val.cname +'</span>'+
+'</div>'+
+'<div class="list_open">' + val.open + '</div>'+
+'<div class="list_change">' + val.change +'</div>'+
+'</div>';
+});
+$("#tradebox").append(html);
+}
+}else{
+html =  '<div style="width:100%;height:100px;line-height:100px;text-align:center;">'+ 
+'<span class="fzmm fcc">' + "{:L('没有获取数据')}" + '</span>'+
+'</div>';
+$("#tradebox").append(html);
+}
+});
+}
+</script>
+
+<script type="text/javascript">
+	function AutoScroll(obj) {
+		$(obj).find("ul:first").animate({
+			marginTop: "-25px"
+		}, 500, function() {
+			$(this).css({
+				marginTop: "0px"
+				}).find("li:first").appendTo(this);
+		});
+	}
+	$(document).ready(function() {
+		setInterval('AutoScroll("#s1")', 3000);
+	});
+	
+</script>
+</html>
+
+
+

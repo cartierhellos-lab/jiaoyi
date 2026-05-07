@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+    <title>{$webname}</title>
+    <style>
+        ::-webkit-input-placeholder { /* WebKit browsers */
+          color: #b5b5b5;
+          font-size: 18px;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: #b5b5b5;
+          font-size: 18px;
+        }
+        input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+        a:hover,a:link,a:visited,a:active{color:#FCD535;text-decoration:none;}
+        .boxh{height: 90px}
+        .smsbtn{width:35%;float:right;height:50px;line-height:50px;border-radius:5px;text-align: center;}
+    </style>
+  </head>
+  <body>
+      <style>
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #b5b5b5;
+font-size: 18px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #b5b5b5;
+font-size: 18px;
+}
+input:focus{background:#F5F5F5;outline: 1px solid #F5F5F5;}
+a:hover,a:link,a:visited,a:active{color:#333;text-decoration:none;}
+.boxh{height: 90px}
+</style>
+  </head>
+  <body>
+ 	<style>
+	body.pages-login-index {
+background-color: #d5d5d5;
+}
+uni-app, uni-page-head {
+display: block;
+box-sizing: border-box;
+}
+
+uni-app {
+width: 100%;
+height: 100%;
+}
+uni-page {
+display: block;
+width: 100%;
+height: 100%;
+}
+
+uni-app, uni-page-head {
+display: block;
+box-sizing: border-box;
+}
+uni-page-head .uni-page-head {
+position: fixed;
+left: var(--window-left);
+right: var(--window-right);
+height: 44px;
+height: calc(44px + constant(safe-area-inset-top));
+height: calc(44px + env(safe-area-inset-top));
+padding: 7px 3px;
+padding-top: calc(7px + constant(safe-area-inset-top));
+padding-top: calc(7px + env(safe-area-inset-top));
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+overflow: hidden;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+justify-content: space-between;
+box-sizing: border-box;
+z-index: 998;
+color: #fff;
+background-color: #000;
+-webkit-transition-property: all;
+transition-property: all;
+}
+uni-page-head .uni-page-head~.uni-placeholder {
+width: 100%;
+height: 44px;
+height: calc(44px + constant(safe-area-inset-top));
+height: calc(44px + env(safe-area-inset-top));
+}
+uni-page-head .uni-page-head-hd {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+align-items: center;
+font-size: 16px;
+}
+
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+.uni-page-head-btn {
+position: relative;
+width: auto;
+margin: 0 2px;
+word-break: keep-all;
+white-space: pre;
+cursor: pointer;
+}
+uni-page-head .uni-btn-icon {
+overflow: hidden;
+min-width: 1em;
+}
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+[class*=" uni-btn-icon"], [class^=uni-btn-icon] {
+display: inline-block;
+font: normal normal normal 14px/1 unibtn;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+}
+uni-page-head .uni-page-head * {
+box-sizing: border-box;
+}
+
+.uni-page-head-btn {
+position: relative;
+width: auto;
+margin: 0 2px;
+word-break: keep-all;
+white-space: pre;
+cursor: pointer;
+}
+uni-page-head .uni-page-head-hd {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+align-items: center;
+font-size: 16px;
+}
+uni-page-head .uni-page-head-bd {
+position: absolute;
+left: 70px;
+right: 70px;
+min-width: 0;
+}
+uni-page-head .uni-page-head__title {
+font-weight: 700;
+font-size: 16px;
+line-height: 30px;
+text-align: center;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+uni-page-head[uni-page-head-type=default]~uni-page-wrapper {
+height: calc(100% - 44px);
+height: calc(100% - 44px - constant(safe-area-inset-top));
+height: calc(100% - 44px - env(safe-area-inset-top));
+}
+body.pages-login-index uni-page-body {
+background-color: #d5d5d5;
+}
+
+uni-page-body, uni-page-refresh {
+display: block;
+box-sizing: border-box;
+width: 100%;
+}
+.login-input-new {
+position: relative;
+}
+
+uni-view {
+line-height: normal;
+}
+
+uni-view {
+font-size: 12px;
+line-height: 1.8;
+}
+uni-view {
+display: block;
+}
+.content[data-v-ca466704] {
+display: flex;
+flex-direction: column;
+justify-content: center /* margin-top: 128upx; */;
+}
+.login-logo {
+width: 80px;
+margin: 50px auto 10px;
+}
+
+uni-image {
+width: 320px;
+height: 240px;
+display: inline-block;
+overflow: hidden;
+position: relative;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+uni-image>img {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+uni-image>div, uni-image>img {
+width: 100%;
+height: 100%;
+}
+uni-resize-sensor {
+display: block;
+z-index: -1;
+visibility: hidden;
+-webkit-animation: once-show 1ms;
+animation: once-show 1ms;
+}
+
+uni-resize-sensor, uni-resize-sensor>div {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+.input_title {
+width: 100%;
+height: 5px;
+}
+.login-logo {
+width: 80px;
+margin: 50px auto 10px;
+}
+.lr-word {
+padding: 20px 0 20px 23px;
+}
+.login-con-new {
+ height: 220px;
+width: 100% /* margin: 66upx auto 0; */ /* overflow-x: hidden; */;
+}
+.login-all-list-new {
+width: 335px;
+padding: 0 20px;
+}
+
+.login-all-list-new {
+width: 100%;
+padding: 0 37px;
+display: inline-block;
+}
+.oBorder[data-v-2f28a320] {
+border: none;
+border-radius: 2.5rem;
+-webkit-box-shadow: 0 0 30px 0 rgb(43 86 112 / 10%);
+box-shadow: 0 0 30px 0 rgb(43 86 112 / 10%);
+}
+
+.main-list[data-v-2f28a320] {
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+height: 18px;
+color: #333;
+padding: 16px;
+margin-top: 12px;
+margin-bottom: 12px;
+}
+.login-input-new .oBorder {
+height: 50px;
+background-color: #fff;
+border-radius: 0px!important;
+box-shadow: unset!important;
+}
+.login-input-new .oBorder {
+border-radius: 10px!important;
+box-shadow: 0 0 10px 0 rgba(43,86,112,.17)!important;
+}
+.main-input[data-v-2f28a320] {
+flex: 1;
+text-align: left;
+font-size: 14px;
+padding-right: 5px;
+margin-left: 10px;
+}
+
+.main-input {
+font-size: 15px!important;
+}
+uni-input {
+display: block;
+font-size: 16px;
+line-height: 1.4em;
+height: 1.4em;
+min-height: 1.4em;
+overflow: hidden;
+}
+.uni-input-form, .uni-input-wrapper {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+position: relative;
+width: 100%;
+height: 100%;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+}
+.uni-input-form, .uni-input-input, .uni-input-placeholder, .uni-input-wrapper {
+outline: none;
+border: none;
+padding: 0;
+margin: 0;
+text-decoration: inherit;
+}
+.uni-input-placeholder {
+color: #ccc!important;
+}
+
+.uni-input-placeholder {
+position: absolute;
+top: auto!important;
+left: 0;
+color: grey;
+overflow: hidden;
+text-overflow: clip;
+white-space: pre;
+word-break: keep-all;
+pointer-events: none;
+line-height: inherit;
+}
+.uni-input-input {
+color: #000!important;
+}
+
+.uni-input-input {
+position: relative;
+display: block;
+height: 100%;
+background: none;
+color: inherit;
+opacity: 1;
+font: inherit;
+line-height: inherit;
+letter-spacing: inherit;
+text-align: inherit;
+text-indent: inherit;
+text-transform: inherit;
+text-shadow: inherit;
+}
+.main-input[data-v-2f28a320] {
+flex: 1;
+text-align: left;
+font-size: 14px;
+padding-right: 5px;
+margin-left: 10px;
+}
+
+.main-input {
+font-size: 15px!important;
+}
+uni-input {
+display: block;
+font-size: 16px;
+line-height: 1.4em;
+height: 1.4em;
+min-height: 1.4em;
+overflow: hidden;
+}
+.buttonBorder[data-v-05f4107d] {
+border: none;
+border-radius: 2.5rem;
+-webkit-box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+-webkit-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-moz-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-ms-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+-o-transition: all .4s cubic-bezier(.57,.19,.51,.95);
+transition: all .4s cubic-bezier(.57,.19,.51,.95);
+}
+<style>
+.dlbutton[data-v-05f4107d] {
+color: #fff;
+font-size: 15px;
+width: 300px;
+height: 50px;
+line-height: 50px!important;
+background: linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.6));
+box-shadow: 0px 0px 6px 0px rgb(164 217 228 / 40%);
+border-radius: 2.5rem;
+line-height: 50px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 48px;
+}
+
+.login-input-new .buttonBorder {
+border-radius: 0px!important;
+}
+
+.login-input-new .buttonBorder {
+border-radius: 10px!important;
+}
+
+.dlbutton {
+width: 335px!important;
+}
+
+uni-button, uni-button:after {
+border-radius: 0;
+}
+uni-button {
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-left: 14px;
+padding-right: 14px;
+box-sizing: border-box;
+font-size: 18px;
+text-align: center;
+text-decoration: none;
+line-height: 2.55555556;
+border-radius: 5px;
+-webkit-tap-highlight-color: transparent;
+overflow: hidden;
+color: #000;
+background-color: #f8f8f8;
+cursor: pointer;
+}
+.footer[data-v-ca466704] {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/*font-size: 14px;*/
+margin-top: 40px;
+color: #7ac86f;
+text-align: center;
+height: 20px;
+line-height: 20px;
+margin-bottom: 7px;
+height: 190px;
+}
+.content[data-v-ca466704] {
+display: flex;
+flex-direction: column;
+justify-content: center /* margin-top: 128upx; */;
+}
+.content {
+display: flex;
+flex-direction: column /* align-items: center; justify-content: center; */;
+}
+.reg-steps {
+text-align: center;
+padding: 0 0 10px 0;
+}
+.reg-steps-list-on {
+background-color: #dc3545;
+}
+
+.reg-steps-list {
+position: relative;
+display: inline-block;
+background-color: #dc3545;
+width: 35px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+color: #fff;
+font-size: 12px;
+border-radius: 35px;
+margin: 20px 40px 20px 0;
+vertical-align: top;
+}
+.reg-steps-list-on .reg-steps-w {
+color: #7ac86f;
+}
+
+.reg-steps-w {
+position: absolute;
+width: 100px;
+left: 50%;
+margin-left: -50px;
+top: 40px;
+color: #9c9897;
+}
+.reg-steps-list-on:after {
+background-color: #7ac86f;
+}
+
+.reg-steps-list:after {
+content: "";
+position: absolute;
+top: 15px;
+right: -40px;
+width: 0px;
+height: 2px;
+background-color: #9c9897;
+}
+.reg-steps-list:last-child {
+margin-right: 0;
+}
+
+.reg-steps-list {
+position: relative;
+display: inline-block;
+background-color: #7ac86f;
+width: 35px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+color: #fff;
+font-size: 12px;
+border-radius: 35px;
+margin: 20px 40px 20px 0;
+vertical-align: top;
+}
+.reg-steps-w {
+position: absolute;
+width: 100px;
+left: 50%;
+margin-left: -50px;
+top: 40px;
+color: #9c9897;
+}
+.lr-word {
+padding: 20px 0 20px 23px;
+}
+.lr-list {
+max-width: 153px;
+text-align: center;
+}
+
+.lr-list {
+display: inline-block;
+margin-right: 10px;
+font-size: 16px;
+font-weight: 400;
+color: #9c9897;
+}
+.lr-list:last-child {
+margin-right: 0;
+}
+
+.lr-list {
+max-width: 153px;
+text-align: center;
+}
+
+.lr-list-on {
+color: #7ac86f;
+position: relative;
+}
+.shuomings{
+    margin: auto;
+    width: 95%;
+    /* border: 1px solid green; */
+    padding: 45px;
+    /*margin: -0.33333rem 0 0;*/
+    font-size: 10px;
+}
+.yonghufuwuxieyi{
+width: 100%;
+    height: 100%;
+    line-height: .96rem;
+    font-size: .32rem;
+    padding: 0px 1.4rem;
+    overflow: hidden;
+    background-color: #fff;
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* position: absolute; */
+    position: relative;
+    margin: -510px auto;
+}
+</style>
+
+      <uni-view data-v-8140ff00="" class="reg-steps">
+<uni-view data-v-8140ff00="" class="reg-steps-list reg-steps-list-on">1
+<uni-view data-v-8140ff00="" class="reg-steps-w">验证邮箱</uni-view></uni-view>
+<!--<uni-view data-v-8140ff00="" class="reg-steps-list">2-->
+<!--<uni-view data-v-8140ff00="" class="reg-steps-w">-->
+<!--    <a href="/Login/index.html">修改密码</uni-view></uni-view>--->
+</uni-view>
+
+<uni-view data-v-8140ff00="" class="lr-word">
+<uni-view data-v-8140ff00="" class="lr-list lr-list-on">{:L('邮箱')}/{:L('重置密码')} </uni-view></uni-view>
+
+
+ <uni-view data-v-8140ff00="" class="login-all-list-new">
+<uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+<uni-input data-v-2f28a320="" class="main-input">
+    <div class="uni-input-wrapper">
+<div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('重置密码')}</div>
+
+<input class="uni-input-input" type="text" id="email" name="email" /></div></uni-input></uni-view>
+
+ 
+ <!--增加！-->
+ <uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+  <uni-input data-v-2f28a320="" class="main-input">
+      <div class="uni-input-wrapper">
+         
+ <div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('图形验证码')}</div>
+  <input type="text" id="vcode" name="vcode" class="uni-input-input">
+ </div>
+ </uni-input>
+ <div style="width:35%;float:right;padding:0px;" >
+    <img style="width:100%;height:28px;border-radius:5px;"src="{:U('Verify/code')}" onclick="this.src=this.src+'?t='+Math.random()" title="{:L('换一张')}" id="verifycode">
+    </div></uni-view>
+
+<!-- <div class="inputbox boxh">-->
+    <!--                <div class="input_title txtl">-->
+    <!--                    <span class="fzmm fcc">{:L('邮箱验证码')}</span>-->
+    <!--                </div>-->
+    <!--                <div class="input_div" style="width:60%;float:left;" >-->
+    <!--                    <input type="text" id="ecode" class="cinput" placeholder="{:L('请输入邮箱验证码')}" />-->
+    <!--                </div>-->
+                    <!--<div class="smsbtn" onclick="emailsend()"  id="sendsms">-->
+                    <!--    <span class="fzmmm fcy" id="smsstr">{:L('获取验证码')}</span>-->
+                    <!--</div>-->
+    <!--            </div>-->
+    
+     <uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+  <uni-input data-v-2f28a320="" class="main-input">
+      <div class="uni-input-wrapper">
+         
+ <div class="uni-input-placeholder input-placeholder" data-v-2f28a320="" data-v-8140ff00="">{:L('请输入邮箱验证码')}</div>
+ <input type="text" id="ecode" class="cinput" class="uni-input-input"></div></uni-input>
+ <div class="smsbtn" onclick="emailsend()"  id="sendsms" >
+                        <span class="reg-steps-list" style="margin: 0.66667rem 0 0;" id="smsstr">{:L('获取验证码')}</span>
+                    </div>
+    </div></uni-view>
+
+ <uni-view data-v-8140ff00="" class="lr-list lr-list-on">{:L('新密码')} </uni-view>
+  
+ <uni-view data-v-2f28a320="" data-v-8140ff00="" class="main-list oBorder">
+<uni-input data-v-2f28a320="" class="main-input">
+<div class="uni-input-wrapper">
+
+<input type="password" id="lpwd" class="cinput" class="uni-input-input" placeholder="{:L('新密码')}"></div></uni-input>
+</uni-view></uni-view>
+
+<uni-view data-v-05f4107d="" data-v-ca466704="">
+<uni-button data-v-05f4107d="" class="buttonBorder dlbutton" style="background: linear-gradient(to right, rgb(122, 200, 111), rgb(122, 200, 111)); color: rgb(255, 255, 255);">
+<uni-view data-v-05f4107d="" class="">
+<uni-text data-v-05f4107d="" onclick="resetpwd()" style="line-height: 3.5 !important;"><span>{:L('修改密码')}</span>
+</uni-text>
+</uni-view>
+</uni-button></uni-view>
+
+<div class="shuomings" >
+    <!--<span>{:L('注册即表示同意')}&nbsp;&nbsp;</span>-->
+    <a onclick="xieyi2()" style="color:#000680">《{:L('为保障资金安全，当您账户安全策略变更，密码修改，我们会对提币进行人工审核，请耐心等待工作人员电话或邮件联系.')}》</a>
+    <hr/>
+    <a onclick="xieyi1()" style="color:#dc3545" >{:L('原路返回')}</a>
+    </div>
+
+</body>
+
+<body>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+    function xieyi1(){
+     window.location.href ="/";
+    }
+    function resetpwd(){
+        var email = $("#email").val();
+        var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if(email=='' || email == null){
+            layer.msg("{:L('请输入邮箱')}");return false;       
+        }
+        if(!reg.test(email)){
+            layer.msg("{:L('邮箱格式不正确')}");return false; 
+        }
+        var ecode = $("#ecode").val();
+        if(ecode == ''){
+            layer.msg("{:L('请输入邮箱验证码')}");return false; 
+        }
+        var lpwd = $("#lpwd").val();
+        if(lpwd == ''){
+            layer.msg("{:L('请输入密码')}");return false; 
+        }
+        $.post("{:U('Login/resetpwd')}",
+        {'email':email,'ecode':ecode,'lpwd':lpwd},
+        function(data){
+            if(data.code == 1){
+                layer.msg(data.info);
+                setTimeout(function(){
+                    window.location.href = "{:U('Login/index')}";
+                },2000);
+            }else{
+                layer.msg(data.info);return false;
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function emailsend(){
+        var email = $("#email").val();
+        var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if(email=='' || email == null){
+            layer.msg("{:L('请输入邮箱')}");return false;       
+        }
+        if(!reg.test(email)){
+            layer.msg("{:L('邮箱格式不正确')}");return false; 
+        }
+        var vcode = $("#vcode").val();
+        if(vcode == ''){
+            layer.msg("{:L('请输入图形验证码')}");return false; 
+        }
+        $.post("{:U('Login/findsendcode')}",
+        {'email':email,'vcode':vcode},
+        function(data){
+            if(data.code == 1){
+                layer.msg(data.info);
+                var obj = $("#sendsms");
+                var strobj = $("#smsstr");
+                var t = 60;
+                var interval = setInterval(function() {
+                    obj.removeAttr('onclick');
+                    strobj.text(t + "{:L('秒后再发送')}");
+                    t--;
+                    if(t < 1){
+                        obj.attr("onclick","emailsend();");
+                        clearInterval(interval);
+                        strobj.text("{:L('获取验证码')}");
+                    }
+                },1000);
+            }else{
+                layer.msg(data.info);
+                $("#sendsms").attr("onclick","emailsend();");
+                $("#smsstr").text("{:L('获取验证码')}");
+                $("#verifycode").click();
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    function goback(){
+        window.history.back(-1);
+    }
+</script>
+</html>
+
+
+

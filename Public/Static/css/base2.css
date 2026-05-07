@@ -1,0 +1,59 @@
+html, body {
+	background-color: #fff;
+	margin:0px;
+	padding:0px;
+	/*font-family: BinancePlex,Arial,sans-serif!important;*/
+	font-size:14px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #424852;
+  font-size: 14px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #424852;
+  font-size: 14px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #424852;
+  font-size: 14px;
+}
+input:focus{background:#1b1e25;outline: 1px solid #1b1e25;}
+select:focus{background:#1b1e25;outline: 1px solid #1b1e25;}
+textarea:focus{background:#1b1e25;outline: 1px solid #1b1e25;}
+.fl{float:left;}/*左浮动*/
+.fr{float:right;}/*右浮动*/
+.bhalf{width:50%;}/*div50%的宽度*/
+.allhg{height:100%;}/*继承父元素100%的高度*/
+.txtl{text-align: left;}
+.txtr{text-align: right;}
+.fcy{color:rgb(122, 200, 111);} /*lv色*/
+.fcc{color:#afb9c4;} /*灰色*/
+.fch{
+    color:#0a1c48;
+        width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /*font-weight: 600;*/
+} /*黑色*/
+.fzm{font-size:12px;}
+.fzmm{font-size:14px;}
+.fzmmm{font-size:13px;}
+.fw{font-weight: bold;}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.footer{width:100%;height:55px;background:#fff;position:fixed;bottom:0px;z-index:999999999;}
+.footer_op{width:20%;height:55px;float:left;}
+.f_op_t{width:100%;height:30px;text-align:center;}
+.fticon{width:25px;height: 25px;margin-top:5px;}
+.f_op_b{width:100%;height:20px;line-height:20px;text-align: center;}
+.nfticon{font-size: 24px;}
+.alltn{width:100%;height:40px;line-height:40px;text-align:center;border-radius:5px;background:#FCD535;}
+.allbtn{width:100%;height:50px;line-height:50px;text-align:center;background:#ccc;border-radius:5px;background: linear-gradient(to left,#eeb80d,#ffe35b);margin-top:20px;}

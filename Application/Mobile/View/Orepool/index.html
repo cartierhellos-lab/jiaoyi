@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base2.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<link rel="stylesheet" href="/Public/Static/Icoinfont/iconfont.css">
+	<script src="/Public/Static/Icoinfont/iconfont.js"></script>
+	<title>{$webname}</title>
+	<style>
+	::-webkit-input-placeholder {color: #b5b5b5;font-size: 12px;}
+	::-moz-placeholder {color: #b5b5b5;font-size: 12px;}
+	input:focus{background:#ebecf0;outline: 1px solid #ebecf0;}
+	a:hover,a:link,a:visited,a:active{color:#707A8A;text-decoration:none;}
+	.no_header{position: fixed;z-index: 9999;background:#fff;padding:0px 10px;top:0px;}
+	.txtl{line-height:50px;width:10%;}
+	.oreimgbox{width:100%;height:150px;margin-top:50px;}
+	.oplist{width:100%;height:50px;background:#000;padding:0px 15px;}
+	.listbox{height:50px;line-height:50px;float:left;}
+	.emptybox{width:30px;height:50px;float:left;}
+	.hsborder{border-bottom:0px solid #7ac86f;}
+	.btmbox{width:100%;height:60px;background:#f5f5f5;}
+	.orebox{width:100%;margin:0px auto;background:#fff;margin-bottom:20px;box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);padding: 10px;}
+	.progress-bar{color: #000;background-color: #7ac86f;}
+	.progress{height:0.9rem;background-color: #f5f5f5;border-radius: .5rem;}
+	.obbox{width:33.33%;height:80px;float:left;}
+	.obbox_h{width:100%;height:40px;line-height:40px;}
+	.css-19n43jp {
+
+}
+.css-uliqdc {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.css-1dod2ge {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.css-4cffwv {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.css-bcy5ny {
+    box-sizing: border-box;
+    margin: 10px 0px 0px 12px;
+    min-width: 0px;
+    display: flex;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(240, 185, 11);
+    cursor: pointer;
+}
+.css-wpywwi {
+    box-sizing: border-box;
+    margin: 10px 0px 0px 12px;
+    min-width: 0px;
+    display: flex;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(112, 122, 138);
+    cursor: pointer;
+}
+.css-1v1xqhl {
+    box-sizing: border-box;
+    margin: 10px 0px 0px;
+    min-width: 0px;
+    display: flex;
+    position: relative;
+}
+.css-1spbzaa {
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    min-width: 0px;
+    display: flex;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(112, 122, 138);
+    margin-left: 12px;
+    margin-top: unset;
+    cursor: pointer;
+    /* box-sizing: border-box; */
+    /* margin: 0px 12px 4px 0px; */
+    /* min-width: 0px; */
+    /* display: flex; */
+    /* font-weight: 500; */
+    color: rgb(255 255 255);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 0 0 auto;
+    background-color: rgb(252, 213, 53);
+    /* height: 36px; */
+    padding: 0px 7px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-33kccr {
+    box-sizing: border-box;
+    margin: 0px;
+    display: inline-block;
+    height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 99999px;
+    position: absolute;
+    right: -20px;
+    top: -10px;
+    background-color: rgb(246, 70, 93);
+}
+.css-1xvu9n {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.css-h405fe {
+    box-sizing: border-box;
+    margin: 24px 0px 0px;
+    min-width: 0px;
+    display: flex;
+    height: 140px;
+    width: calc(100vw - 32px);
+    background-image: url("/Upload/public/{$webkj}");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    padding-right: unset;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-e0scsd {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.css-2sjj19 * {
+    -webkit-tap-highlight-color: transparent;
+}
+.css-1xoc2p2 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.css-hw82cs {
+    box-sizing: border-box;
+    margin: 12px 0px 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.css-160xsrp {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    align-items: flex-start;
+}
+.css-1mfpw7s {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.css-1dp2vxs {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(20, 21, 26, 0.1) 0px 0px 1px, rgba(71, 77, 87, 0.08) 0px 7px 14px, rgba(20, 21, 26, 0.08) 0px 3px 6px;
+    border-radius: 16px;
+    color: rgb(30, 35, 41);
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+}
+.css-1vcifjl {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+.css-14v7uzx {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    position: relative;
+    left: -7px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.css-amdmnw {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(20, 21, 26, 0.1) 0px 0px 1px, rgba(71, 77, 87, 0.08) 0px 7px 14px, rgba(20, 21, 26, 0.08) 0px 3px 6px;
+    border-radius: 8.5px;
+    color: rgb(30, 35, 41);
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+}
+.css-16atiev {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+}
+.css-2equ0e {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: rgb(252, 213, 53);
+    font-size: 24px;
+    line-height: 32px;
+}
+.css-17dtk0b {
+    margin: 12px 0px 0px;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    padding: 6px 12px;
+    min-width: 52px;
+    word-break: keep-all;
+    border-radius: 4px;
+    min-height: 24px;
+    border: none;
+    background-image: none;
+    background-color: rgb(252, 213, 53);
+    height: 32px;
+    color: rgb(30, 35, 41);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+	</style>
+  </head>
+  <body>
+	<div class="container-fluid " style="padding:0px;width:100vw;">
+		<div class="no_header">
+			<div class="fl allhg txtl">
+				<i class="bi bi-arrow-left fcc fw" onclick="goback()" style="font-size: 24px;"></i>
+			</div>
+
+			<div class="fl allhg" id="centerbox" style="width:80%;text-align:center;line-height:50px;">
+				<span class="fcc fzmmm">{:L('矿机市场')}</span>
+			</div>
+    
+  <!--  <a href="{:U('Orepool/profitlist')}">-->
+		<!--	<div class="fr allhg txtr" style="line-height:50px;width:10%;">-->
+		<!--	    <i class="bi bi-funnel fcy" style="font-size:20px;"></i>-->
+		<!--	</div>-->
+		<!--	</a>-->
+		</div>
+
+		<div class="oreimgbox">
+		    <div class="css-19n43jp">
+		        <div class="css-uliqdc">
+		            <div class="css-1dod2ge">
+		                <div class="css-4cffwv"><div class="css-bcy5ny">{:L('矿机市场')}</div>
+		                <!--<div class="css-wpywwi">{:L('收益类型')}</div>-->
+		                <div class="css-1v1xqhl">
+		                    <a href="{:U('Orepool/profitlist')}">
+		                    <div class="css-1spbzaa">{:L('矿机')}</div>
+		                    <div class="css-33kccr">New</div></a></div></div></div></div></div>
+		    
+			<!--<img src="/Upload/public/{$webkj}" class="d-block w-100" style="height:150px;" />-->
+			
+			<div class="css-1xvu9n">
+			    <div class="css-h405fe">
+			    <div class="css-e0scsd">
+			        <div data-bn-type="text" class="css-1xoc2p2">Flow Cell Recommendations</div>
+			        <div class="css-hw82cs">
+			            <div class="css-160xsrp">
+			            <div class="css-1mfpw7s">
+			                <div class="css-1dp2vxs">
+			                    <img class="css-1vcifjl" src="/kw/38ece034-cbaa-44eb-89ce-42013145f9f7.png"></div></div>
+			                    <div class="css-14v7uzx">
+			                        <div class="css-amdmnw">
+			                            <img class="css-16atiev" src="/kw/2b5c7d80-7bcd-4cfb-8bd9-d1760a752afc.png"></div></div></div>
+			                            <div data-bn-type="text" class="css-2equ0e">GMT/USDT</div></div>
+			                            <a href="{:U('Orepool/kjinfo?oid=27')}">
+			                            <button data-bn-type="button" class=" css-17dtk0b">{:L('立即购买')}</button></div></div></div></a>
+			
+		</div>
+
+	
+<style>
+    .css-1g5eyyn {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*padding-left: 16px;*/
+    /*padding-right: 16px;*/
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 53px;
+    padding-bottom: 36px;
+}
+.css-4cffwv {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.css-1g5eyyn .inner-container {
+    width: 100%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.css-n98yf2 {
+    box-sizing: border-box;
+    margin: 0px 0px 10px;
+    min-width: 0px;
+    display: flex;
+    overflow-x: auto;
+}
+.css-1duvvea {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+}
+.css-1bzb8nq {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: none;
+}
+.css-grgdi0 {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.css-z2wfdb {
+    padding-left: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+}
+.css-1bzb8nq {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: none;
+}
+.css-ov54vn {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    cursor: pointer;
+    min-width: auto;
+}
+.css-ik6bvi {
+    box-sizing: border-box;
+    margin: 0px 12px 4px 0px;
+    min-width: 0px;
+    display: flex;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 0 0 auto;
+    background-color: rgb(252, 213, 53);
+    height: 36px;
+    padding: 8px 12px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-1oi4g8w {
+    box-sizing: border-box;
+    margin: 0px 12px 4px 0px;
+    min-width: 0px;
+    display: flex;
+    font-weight: 400;
+    color: rgb(30, 35, 41);
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 0 0 auto;
+    background-color: rgb(234, 236, 239);
+    height: 36px;
+    padding: 8px 12px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-1jobjhd {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.css-vurnku {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+}
+.css-1jds4a {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    position: relative;
+    bottom: -40px;
+    left: 8px;
+    width: 18%;
+}
+.css-mpy249 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    inset: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    z-index: 900;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    height: unset;
+}
+.css-v23n6v {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.css-2bc2yz {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    background-color: #F0B90B;
+    height: 100%;
+    width: 3px;
+    -webkit-animation: animation-hqgv56 1.2s infinite ease-in-out;
+    animation: animation-hqgv56 1.2s infinite ease-in-out;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+.css-i6pav4 {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    background-color: #F0B90B;
+    height: 100%;
+    width: 3px;
+    -webkit-animation: animation-hqgv56 1.2s infinite ease-in-out;
+    animation: animation-hqgv56 1.2s infinite ease-in-out;
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+.css-o1uf9l {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    background-color: #F0B90B;
+    height: 100%;
+    width: 3px;
+    -webkit-animation: animation-hqgv56 1.2s infinite ease-in-out;
+    animation: animation-hqgv56 1.2s infinite ease-in-out;
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+.css-14jhrrk {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    background-color: #F0B90B;
+    height: 100%;
+    width: 3px;
+    -webkit-animation: animation-hqgv56 1.2s infinite ease-in-out;
+    animation: animation-hqgv56 1.2s infinite ease-in-out;
+    -webkit-animation-delay: -0s;
+    animation-delay: -0s;
+}
+.css-kv8f1w {
+    box-sizing: border-box;
+    margin: 0px 0px 0px;
+    min-width: 0px;
+    display: flex;
+}
+.rc-table {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    transition: opacity 0.3s ease 0s;
+    position: relative;
+    line-height: 1.5;
+    overflow: hidden;
+}
+.rc-table .rc-table-content {
+    position: relative;
+}
+.rc-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+.css-kv8f1w thead {
+    border-collapse: separate;
+    border-spacing: 0px;
+    background-color: rgb(250, 250, 250);
+}
+.css-kv8f1w tr {
+    overflow: hidden;
+}
+
+.rc-table tr {
+    transition: all 0.3s ease 0s;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.css-kv8f1w th:nth-of-type(1) {
+    border-radius: 10px 0px 0px;
+}
+
+
+.css-kv8f1w th {
+    background-color: transparent;
+    color: rgb(146, 154, 165);
+    font-size: 14px;
+    padding: 0px 4px;
+}
+
+.rc-table th, .rc-table td {
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+.rc-table th {
+    background: rgb(249, 249, 250);
+    color: rgb(132, 142, 156);
+    font-size: 12px;
+    font-weight: normal;
+    transition: background 0.3s ease 0s;
+}
+
+.css-kv8f1w th {
+    background-color: transparent;
+    color: rgb(146, 154, 165);
+    font-size: 14px;
+    padding: 0px 4px;
+}
+.css-kv8f1w th:nth-last-of-type(1) {
+    border-radius: 0px 10px 0px 0px;
+}
+
+.css-kv8f1w th {
+    background-color: transparent;
+    color: rgb(146, 154, 165);
+    font-size: 14px;
+    padding: 0px 4px;
+}
+
+.rc-table th, .rc-table td {
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+.rc-table th {
+    background: rgb(249, 249, 250);
+    color: rgb(132, 142, 156);
+    font-size: 12px;
+    font-weight: normal;
+    transition: background 0.3s ease 0s;
+}
+.css-10nf7hq {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.css-1g4zjtl {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    cursor: pointer;
+}
+.css-1iztezc {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: currentcolor;
+    font-size: 24px;
+    fill: currentcolor;
+    width: 1em;
+    height: 1em;
+}
+.css-1g4zjtl {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    cursor: pointer;
+}
+.css-1iztezc {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: currentcolor;
+    font-size: 24px;
+    fill: currentcolor;
+    width: 1em;
+    height: 1em;
+}
+.css-160589t {
+    box-sizing: border-box;
+    margin: 0px 0px 12px;
+    min-width: 0px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 6px;
+    border-radius: 4px;
+    border: 1px solid rgb(234, 236, 239);
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: unset;
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+}
+.css-h6e3or {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    align-items: flex-end;
+}
+.css-1sstzk2 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 0px 12px;
+    min-width: 0px;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 5%) 0px 1px 6px;
+    border-radius: 4px;
+    border: 1px solid rgb(234, 236, 239);
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: unset;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+}
+.css-1g0wj7e {
+    box-sizing: border-box;
+    margin: 8px 0px 16px;
+    min-width: 0px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-1ejsc4x {
+    box-sizing: border-box;
+    margin: 0px 6px 0px 0px;
+    min-width: 0px;
+    flex: 0 0 auto;
+    color: rgb(30, 35, 41);
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+}
+.css-1lveyxg {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.css-1meps6n {
+    box-sizing: border-box;
+    margin: 0px 0px 16px;
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.css-129e5sc {
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: unset;
+    margin-bottom: -15px;
+    flex: 0 0 100%;
+    font-size: 14px;
+}
+.css-qttg76 {
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(112, 122, 138);
+    margin-bottom: 2px !important;
+}
+.css-1v55uij {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(3, 166, 109);
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.css-19jpa33 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.css-190uhut {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.css-uliqdc {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.css-t482c4 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-vurnku {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+}
+.css-5z8gm {
+    box-sizing: border-box;
+    margin: 2px 0px 0px;
+    min-width: 0px;
+    display: flex;
+}
+.css-rjhx9l {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(201, 148, 0);
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px dashed rgb(112, 122, 138);
+    cursor: pointer;
+    font-weight: 500;
+}
+.css-1ouoyde {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 2px;
+    min-width: 0px;
+    height: 30px;
+}
+.css-1tzctrg {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.css-1xydfx1 {
+    box-sizing: border-box;
+    margin: 0px 90px 0px 0px;
+    min-width: 0px;
+    display: none;
+}
+.css-10nf7hq {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.css-rjhx9l {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(201, 148, 0);
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px dashed rgb(112, 122, 138);
+    cursor: pointer;
+    font-weight: 500;
+}
+.css-hrnk9s {
+    box-sizing: border-box;
+    margin: 0px 7px 0px 0px;
+    min-width: 0px;
+    line-height: 16px;
+    font-size: 12px;
+    color: rgb(112, 122, 138);
+}
+.css-112qxo0 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 17px;
+}
+.css-1a0gm5j {
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: unset;
+    flex: 0 0 100%;
+    font-size: 14px;
+}
+.css-1ctor8a {
+    box-sizing: border-box;
+    margin: 0px 0px 6px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(112, 122, 138);
+}
+.css-1v55uij {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(3, 166, 109);
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.css-1vjk8m4 {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    color: rgb(30, 35, 41);
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 400;
+}
+.css-1inuhtl {
+    box-sizing: border-box;
+    margin: 0px 0px -25px;
+    min-width: 0px;
+    display: flex;
+    /* box-shadow: rgb(0 0 0 / 5%) 0px 1px 6px; */
+    border-radius: 4px;
+    /* border: 1px solid rgb(234, 236, 239); */
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: unset;
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+}
+.css-3hh3ut {
+    margin: 0px 0px 12px;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    padding: 6px 12px;
+    line-height: 20px;
+    word-break: keep-all;
+    color: rgb(24, 26, 32);
+    border-radius: 4px;
+    min-height: 24px;
+    border: none;
+    background-image: none;
+    background-color: rgb(252, 213, 53);
+    min-width: 90px;
+    width: 100%;
+}
+.css-1cwf7xu {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+.css-1dedyy3 {
+    box-sizing: border-box;
+    min-width: 0px;
+    cursor: pointer;
+    appearance: none;
+    margin: 0px;
+    padding: 0px;
+    width: 27px;
+    height: 16px;
+    background-color: rgb(234, 236, 239);
+    border: none;
+    border-radius: 9999px;
+}
+.css-dqect2 {
+    box-sizing: border-box;
+    margin: 0px 6px 0px 0px;
+    min-width: 0px;
+    display: inline-block;
+    position: relative;
+    color: rgb(112, 122, 138);
+    font-size: 12px;
+}
+.css-15dgv6i {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    box-sizing: content-box;
+    position: absolute;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    word-break: normal;
+    z-index: 1400;
+    max-width: 296px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background-color: #5E6673;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-filter: drop-shadow(0px 3px 6px rgba(20,21,26,0.08)) drop-shadow(0px 7px 14px rgba(71,77,87,0.08)) drop-shadow(0px 0px 1px rgba(20,21,26,0.1));
+    filter: drop-shadow(0px 3px 6px rgba(20,21,26,0.08)) drop-shadow(0px 7px 14px rgba(71,77,87,0.08)) drop-shadow(0px 0px 1px rgba(20,21,26,0.1));
+    display: block;
+    max-width: 70vw;
+    box-shadow: 0px 1px 2px rgba(20,21,26,0.04),0px 3px 6px rgba(71,77,87,0.04),0px 0px 1px rgba(20,21,26,0.1);
+    white-space: normal;
+}
+.css-1mk39vx {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    border-bottom: 1px dotted;
+    padding: 2px 0px;
+    display: inline-block;
+}
+.css-3ckhsj {
+    box-sizing: border-box;
+    margin: 0px 2px;
+    min-width: 0px;
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    box-shadow: rgba(20, 21, 26, 0.04) 0px 1px 2px, rgba(71, 77, 87, 0.04) 0px 3px 6px, rgba(20, 21, 26, 0.1) 0px 0px 1px;
+    background-color: rgb(255, 255, 255);
+    transition-property: transform, border-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jiagekjs{
+        font-size: 12px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    color: #dc3545;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 1px solid transparent;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+</style>
+<!--新增矿机-->
+	<!--<div class="oplist">-->
+		<!--	<div class="listbox hsborder" id="zlbtn">-->
+		<!--		<span class="fzmm fcc" id="zlbtn_span" style="color:#fff;">{:L('总览')}</span>-->
+		<!--	</div>-->
+		<!--	<div class="emptybox"></div>-->
+		<!--	<div class="listbox" id="dzbtn">-->
+		<!--		<span class="fzmm fcc" id="dzbtn_span">{:L('独资')}</span>-->
+		<!--	</div>-->
+		<!--	<div class="emptybox"></div>-->
+		<!--	<div class="listbox" id="gxbtn">-->
+		<!--		<span class="fzmm fcc" id="gxbtn_span">{:L('共享')}</span>-->
+		<!--	</div>-->
+		<!--	<div class="emptybox"></div>-->
+		<!--	<div  class="listbox" id="myorebtn">-->
+		<!--		<span class="fzmm fcc"  id="myorebtn_span">{:L('我的矿机')}</span>-->
+		<!--	</div>-->
+		<!--</div>-->
+		
+<div class="css-1g5eyyn">
+    <div class="inner-container css-4cffwv">
+<div class="css-n98yf2">
+    <div class="css-grgdi0">
+ <div class="css-z2wfdb">
+     <div id="zlbtn" class="css-ov54vn">
+ <div class="css-ik6bvi" id="zlbtn_span" >{:L('总览')}</div></div>
+ 
+ <div  id="dzbtn" class="css-ov54vn">
+     <div class="css-1oi4g8w" id="dzbtn_span" >{:L('独资')}</div></div>
+     
+     <div  id="gxbtn" class="css-ov54vn">
+<div class="css-1oi4g8w" id="gxbtn_span" >{:L('共享')}</div></div>
+
+     <div id="myorebtn" class="css-ov54vn">
+<div class="css-1oi4g8w" id="myorebtn_span" >{:L('我的矿机')}</div></div>
+</div>
+<!--<div class="css-1bzb8nq"></div>-->
+<!--<div class="css-1bzb8nq"></div>-->
+<!--<div class="css-1bzb8nq"></div>-->
+<!--<div class="css-1bzb8nq"></div>-->
+<!--<div class="css-1bzb8nq"></div>-->
+<!--<div class="css-1bzb8nq"></div></div>-->
+<!--</div>-->
+<!--<div class="css-1duvvea">-->
+<!--    <div class="css-1jobjhd">-->
+<!-- <div class="css-vurnku">-->
+<!--     <div class="css-1jds4a"></div></div>-->
+<!--     <div class="css-mpy249">-->
+<!-- <div class="css-v23n6v">-->
+<!--     <div class="css-2bc2yz"></div>-->
+<!--     <div class="css-i6pav4"></div>-->
+<!--     <div class="css-o1uf9l"></div>-->
+<!--     <div class="css-14jhrrk"></div></div></div>-->
+<!--     <div class="css-kv8f1w">-->
+<!--<div class="rc-table" style="width: 100%;">-->
+<!--    <div class="rc-table-container">-->
+<!--<div class="rc-table-content">-->
+<!--    <table style="table-layout: auto;">-->
+<!-- <colgroup>-->
+<!-- <col style="width: 50%;">-->
+<!-- <col style="width: 30%;">-->
+<!-- <col style="width: 20%;">-->
+<!-- </colgroup>-->
+<!-- <thead class="rc-table-thead">-->
+<!--     <tr>-->
+<!-- <th class="rc-table-cell">-->
+<!--     <div class="css-4cffwv">{:L('产出币种')}</div></th>-->
+<!--     <th class="rc-table-cell">-->
+<!-- <div class="css-10nf7hq">{:L('矿机单价')}<div class="css-1g4zjtl">-->
+<!--     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="css-1iztezc">-->
+<!--  <path opacity="0.5" d="M9 10.153V8.5L12.25 5l3.25 3.501v1.652H9z" fill="#848E9C"></path>-->
+<!--  <path d="M15.5 13.257v1.652l-3.25 3.5L9 14.91v-1.652h6.5z" fill="url(#sorting-down-color-s24_svg__paint0_linear)"></path>-->
+<!--  <defs>-->
+<!--      <linearGradient id="sorting-down-color-s24_svg__paint0_linear" x1="9" y1="18.41" x2="15.5" y2="18.41" gradientUnits="userSpaceOnUse">-->
+<!--  <stop stop-color="#EFB80B"></stop>-->
+<!--  <stop offset="1" stop-color="#FBDA3C"></stop></linearGradient></defs></svg></div></div></th>-->
+<!--  <th class="rc-table-cell">-->
+<!--      <div class="css-10nf7hq">{:L('天')}<div class="css-1g4zjtl">-->
+<!--  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1iztezc">-->
+<!--   <path d="M9 10.368v-1.4L11.968 6l2.968 2.968v1.4H9zM14.936 13v1.4l-2.968 2.968L9 14.4V13h5.936z" fill="#C1C6CD"></path></svg></div></div></th></tr></thead>-->
+   
+   
+   
+   
+   
+   
+   <!--start -d kuangji -->
+ 
+<!--全部矿机-->
+		<!--<div id="zlbox" style="width:100%;height:500px;background:#f5f5f5;padding:10px 0px;">-->
+		<!--	<foreach name="alist" item="av">-->
+		<!--	<div class="orebox">-->
+		<!--		<div style="width:100%;height:120px;">-->
+		<!--			<div style="width:30%;height:120px;line-height: 120px;float:left;text-align: center;">-->
+		<!--				<img src="/Upload/public/{$av.imgs}" style="width:100%;"/>-->
+		<!--			</div>-->
+		<!--			<div style="width:70%;height:120px;float:left;padding:5px;">-->
+		<!--				<p class="fzmmm fcc fw" style="margin-bottom:2px;">{$av.title}</p>-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:2px;">{:L('上市时间')}：<?php echo date("Y-m-d",strtotime($av['addtime']));?></p>-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:2px;">{:L('产出币种')}：<?php echo strtoupper($av['outcoin']);?></p>-->
+		<!--				<a href="{:U('Orepool/kjinfo')}?oid={$av.id}">-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;">-->
+		<!--					<span style="background: linear-gradient(to left,#75cf2b,#ccecb4);padding: 10px;border-radius: 5px;">{:L('立即购买')}</span>-->
+		<!--				</p>-->
+		<!--				</a>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div style="width:100%;">-->
+		<!--			<div class="progress">-->
+		<!--			  <div class="progress-bar" role="progressbar" style="width:<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%;" aria-valuenow="<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>" aria-valuemin="0" aria-valuemax="100"><?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div style="width:100%;height:80px;margin-top:15px;padding:0px 15px;">-->
+		<!--			<div class="obbox" style="width:40%;">-->
+		<!--				<div class="obbox_h">-->
+		<!--					<span class="fzmm fcc">{:L('矿机单价')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h">-->
+		<!--					<span class="fzmm fcc">{$av.pricenum} <?php echo strtoupper($av['pricecoin']);?></span>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--			<div class="obbox" style="width:30%;">-->
+		<!--				<div class="obbox_h" style="text-align:center;">-->
+		<!--					<span class="fzmm fcc">{:L('矿机产权')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h" style="text-align:center;">-->
+		<!--					<span class="fzmm fcc">{$av.cycle} {:L('天')}</span>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--			<div class="obbox" style="width:30%;">-->
+		<!--				<div class="obbox_h" style="text-align:right;">-->
+		<!--					<span class="fzmm fcc">{:L('矿机类型')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h" style="text-align:right;">-->
+		<!--				    <if condition="$av.type eq 1">-->
+		<!--				    <span class="fzmmm fcy" style="font-weight:bold;">{:L('独资机型')}</span>-->
+		<!--				    <elseif condition="$av.type eq 2" />-->
+		<!--				    <span class="fzmmm fcy" style="font-weight:bold;">{:L('共享机型')}</span>-->
+		<!--				    </if>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+  <!--  </foreach>-->
+		<!--	<div class="btmbox"></div>-->
+		<!--</div>-->
+  <div class="css-160589t"  id="zlbox" >
+      <foreach name="alist" item="av">
+   <div class="css-1sstzk2">
+    <div class="css-1g0wj7e">
+     <div class="css-1ejsc4x">
+      <img class="css-1lveyxg" src="/kw/<?php echo strtoupper($av['outcoin']);?>.png" />
+     </div><?php echo strtoupper($av['outcoin']);?>
+    </div>
+    <div class="css-1meps6n">
+     <div class="css-129e5sc">
+      <div class="css-qttg76">
+       {:L('24h涨跌')}
+      </div>
+      <div class="css-1v55uij">
+       <div class="css-19jpa33">
+        <div class="css-190uhut">
+         <div class="css-uliqdc">
+          <div class="css-t482c4">
+           <div data-bn-type="text" class="css-vurnku">
+          <div role="progressbar" style="width:<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%;" aria-valuenow="<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>" aria-valuemin="0" aria-valuemax="100"><?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%</div></div>
+           </div>
+          </div>
+          <div class="css-5z8gm">
+           <div class="css-rjhx9l">
+           {:L('剩余份额')}
+           </div>
+          </div>
+         </div>
+         <div class="css-1ouoyde">
+          <div data-highcharts-chart="5">
+           <div id="highcharts-074xi08-25" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 96px; height: 47px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="96" height="47" viewbox="0 0 96 47">
+             <desc>
+              Created with Highcharts 6.2.0
+             </desc>
+             <defs>
+              <clippath id="highcharts-074xi08-26">
+               <rect x="0" y="0" width="96" height="27" fill="none"></rect>
+              </clippath>
+              <lineargradient x1="0" x2="0" y1="0" y2="1" id="highcharts-074xi08-36">
+               <stop offset="0" stop-color="rgb(240,185,10)" stop-opacity="0.5"></stop>
+               <stop offset="1" stop-color="rgb(240,185,10)" stop-opacity="0.00005"></stop>
+              </lineargradient>
+             </defs>
+             <rect fill="transparent" class="highcharts-background" x="0" y="0" width="96" height="47" rx="0" ry="0"></rect>
+             <rect fill="none" class="highcharts-plot-background" x="0" y="0" width="96" height="27"></rect>
+             <g class="highcharts-grid highcharts-xaxis-grid " data-z-index="1">
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 6.5 0 L 6.5 27" opacity="1"></path>
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 33.5 0 L 33.5 27" opacity="1"></path>
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 61.5 0 L 61.5 27" opacity="1"></path>
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 88.5 0 L 88.5 27" opacity="1"></path>
+             </g>
+             <g class="highcharts-grid highcharts-yaxis-grid " data-z-index="1">
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 0 27.5 L 96 27.5" opacity="1"></path>
+              <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 0 0.5 L 96 0.5" opacity="1"></path>
+             </g>
+             <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="0" y="0" width="96" height="27"></rect>
+             <g class="highcharts-axis highcharts-xaxis " data-z-index="2">
+              <path fill="none" class="highcharts-axis-line" stroke="transparent" stroke-width="1" data-z-index="7" d="M 0 27.5 L 96 27.5"></path>
+             </g>
+             <g class="highcharts-axis highcharts-yaxis " data-z-index="2">
+              <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 0 0 L 0 27"></path>
+             </g>
+             <g class="highcharts-series-group" data-z-index="3">
+              <g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-areaspline-series " transform="translate(0,0) scale(1 1)" clip-path="url(#highcharts-074xi08-26)">
+               <path fill="url(#highcharts-074xi08-36)" d="M 6.8571428571429 4.5 C 6.8571428571429 4.5 15.085714285714563 4.5 20.571428571429 4.5 C 26.057142857143003 4.5 28.8 4.5 34.285714285714 4.5 C 39.7714285714284 4.5 42.5142857142856 4.5 48 4.5 C 53.4857142857144 4.5 56.228571428571605 4.5 61.714285714286 4.5 C 67.2 4.5 69.94285714285701 4.5 75.428571428571 4.5 C 80.9142857142854 4.5 89.142857142857 4.5 89.142857142857 4.5 L 89.142857142857 27 C 89.142857142857 27 80.9142857142854 27 75.428571428571 27 C 69.94285714285701 27 67.2 27 61.714285714286 27 C 56.228571428571605 27 53.4857142857144 27 48 27 C 42.5142857142856 27 39.7714285714284 27 34.285714285714 27 C 28.8 27 26.057142857143003 27 20.571428571429 27 C 15.085714285714563 27 6.8571428571429 27 6.8571428571429 27" class="highcharts-area" data-z-index="0"></path>
+               <path fill="none" d="M 6.8571428571429 4.5 C 6.8571428571429 4.5 15.085714285714563 4.5 20.571428571429 4.5 C 26.057142857143003 4.5 28.8 4.5 34.285714285714 4.5 C 39.7714285714284 4.5 42.5142857142856 4.5 48 4.5 C 53.4857142857144 4.5 56.228571428571605 4.5 61.714285714286 4.5 C 67.2 4.5 69.94285714285701 4.5 75.428571428571 4.5 C 80.9142857142854 4.5 89.142857142857 4.5 89.142857142857 4.5" class="highcharts-graph" data-z-index="1" stroke="#F0B90A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+               <path fill="none" d="M -3.1428571428570997 4.5 L 6.8571428571429 4.5 C 6.8571428571429 4.5 15.085714285714563 4.5 20.571428571429 4.5 C 26.057142857143003 4.5 28.8 4.5 34.285714285714 4.5 C 39.7714285714284 4.5 42.5142857142856 4.5 48 4.5 C 53.4857142857144 4.5 56.228571428571605 4.5 61.714285714286 4.5 C 67.2 4.5 69.94285714285701 4.5 75.428571428571 4.5 C 80.9142857142854 4.5 89.142857142857 4.5 89.142857142857 4.5 L 99.142857142857 4.5" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22" visibility="visible" data-z-index="2" class="highcharts-tracker-line"></path>
+              </g>
+              <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-areaspline-series highcharts-tracker " transform="translate(0,0) scale(1 1)"></g>
+             </g>
+             <text x="48" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text>
+             <text x="48" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text>
+             <g class="highcharts-axis-labels highcharts-xaxis-labels " data-z-index="7"></g>
+             <g class="highcharts-axis-labels highcharts-yaxis-labels " data-z-index="7"></g>
+            </svg>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="css-1tzctrg">
+         <div class="css-1xydfx1">
+          <div class="css-rjhx9l">
+        <!--   特別優惠-->
+          </div>
+         </div>
+         <div class="css-10nf7hq">
+          <div data-bn-type="text" class="css-hrnk9s">
+             {:L('选择份额')}
+          </div>
+          <div points="bottom" class="css-112qxo0">
+           <div class="bn-tooltip-box css-15dgv6i" style="position: absolute; left: -81px; top: -146px; transition: opacity 120ms ease-in-out 0s, transform 120ms ease-in-out 0s; opacity: 0; transform: translate3d(0px, -6px, 0px); visibility: hidden;" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="top">
+            <div class="css-vurnku">
+             <div data-bn-type="text" class="css-aewju">
+              儲蓄年利率等級
+             </div>
+             <div data-bn-type="text" class="css-ktxhrn">
+              提供的利率取決於各個檔位。
+             </div>
+             <div data-bn-type="text" class="css-vurnku">
+              0-0.005 BTC: 10.00%
+              <br />0.005-0.01 BTC: 5.00%
+              <br />&gt;0.01 BTC: 0.10%
+             </div>
+            </div>
+            <div class="bn-tooltip-arrow css-1u9esp9" data-popper-arrow="true" style="position: absolute; left: 87px;"></div>
+            <i class="gap-fill"></i>
+           </div>
+           <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" class="css-17h407y">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm0-2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm.997 9.004h-2.009v6h2.009v-6zm-2.009-4h2.009v2.009h-2.009v-2.01z" fill="currentColor"></path>
+           </svg>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="jiagekjs">
+        {$av.pricenum} <?php echo strtoupper($av['pricecoin']);?>
+        </div>
+      </div>
+     </div>
+     <div class="css-1a0gm5j">
+      <div class="css-1ctor8a">
+       {:L('矿机产权')}（{:L('天')}）
+      </div>
+      <div class="css-1v55uij">
+       <div class="css-1vjk8m4">
+      {$av.cycle} {:L('天')}
+       </div>
+      </div>
+           <div class="css-1inuhtl">
+        <a href="{:U('Orepool/kjinfo')}?oid={$av.id}" class="css-n31muv">
+    <button data-bn-type="button" class="savings-subscribe-Flexible css-3hh3ut" id="savings-subscribe-flexible-BTC001">
+        {:L('立即购买')}
+    </button></a>
+     </div>
+    </div>
+   </div>
+   
+    </foreach>
+   
+		<div class="btmbox"></div>
+		</div>
+   
+<!--   <tbody id="zlbox" class="rc-table-tbody">-->
+<!--       <foreach name="alist" item="av">-->
+<!--  <tr data-row-key="829" class="rc-table-row rc-table-row-level-0">-->
+<!--      <td class="rc-table-cell">-->
+<!--<div class="css-1l4e3p7">-->
+<!--    <div class="css-4cffwv">-->
+<!--<a href="{:U('Orepool/kjinfo')}?oid={$av.id}" class="css-n31muv">-->
+<!--    <uni-view data-v-f5c6c904="" class="list" style="display: -webkit-flex;">-->
+<!--        <uni-view data-v-f5c6c904="" class="css_eth">-->
+<!--            <img src="/kw/<?php echo strtoupper($av['outcoin']);?>.png" style="height: 20px;">-->
+<!--        </uni-view>-->
+<!--        <uni-view data-v-f5c6c904="" class="name">{$av.title}</uni-view>-->
+<!--        </uni-view>-->
+<!--    <td class="rc-table-cell">-->
+<!--<div class="css-10nf7hq">-->
+<!-- <div class="css-4mojgi">{$av.pricenum}<?php echo strtoupper($av['pricecoin']);?></div></div></td>-->
+<!-- <td class="rc-table-cell">-->
+<!--<div class="css-1rw0hqy">{$av.cycle} {:L('天')}</div></td></tr>-->
+<!-- </foreach>-->
+<!--</div>-->
+<!--<div class="css-1bzb8nq">-->
+    
+<!--</div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--全部矿机-->
+		<!--<div id="zlbox" style="width:100%;height:500px;background:#f5f5f5;padding:10px 0px;">-->
+		<!--	<foreach name="alist" item="av">-->
+		<!--	<div class="orebox">-->
+		<!--		<div style="width:100%;height:120px;">-->
+		<!--			<div style="width:30%;height:120px;line-height: 120px;float:left;text-align: center;">-->
+		<!--				<img src="/Upload/public/{$av.imgs}" style="width:100%;"/>-->
+		<!--			</div>-->
+		<!--			<div style="width:70%;height:120px;float:left;padding:5px;">-->
+		<!--				<p class="fzmmm fcc fw" style="margin-bottom:2px;">{$av.title}</p>-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:2px;">{:L('上市时间')}：<?php echo date("Y-m-d",strtotime($av['addtime']));?></p>-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:2px;">{:L('产出币种')}：<?php echo strtoupper($av['outcoin']);?></p>-->
+		<!--				<a href="{:U('Orepool/kjinfo')}?oid={$av.id}">-->
+		<!--				<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;">-->
+		<!--					<span style="background: linear-gradient(to left,#75cf2b,#ccecb4);padding: 10px;border-radius: 5px;">{:L('立即购买')}</span>-->
+		<!--				</p>-->
+		<!--				</a>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div style="width:100%;">-->
+		<!--			<div class="progress">-->
+		<!--			  <div class="progress-bar" role="progressbar" style="width:<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%;" aria-valuenow="<?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>" aria-valuemin="0" aria-valuemax="100"><?php echo ($av['ycnum'] + $av['sellnum']) / $av['allnum'] * 100;?>%</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div style="width:100%;height:80px;margin-top:15px;padding:0px 15px;">-->
+		<!--			<div class="obbox" style="width:40%;">-->
+		<!--				<div class="obbox_h">-->
+		<!--					<span class="fzmm fcc">{:L('矿机单价')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h">-->
+		<!--					<span class="fzmm fcc">{$av.pricenum} <?php echo strtoupper($av['pricecoin']);?></span>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--			<div class="obbox" style="width:30%;">-->
+		<!--				<div class="obbox_h" style="text-align:center;">-->
+		<!--					<span class="fzmm fcc">{:L('矿机产权')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h" style="text-align:center;">-->
+		<!--					<span class="fzmm fcc">{$av.cycle} {:L('天')}</span>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--			<div class="obbox" style="width:30%;">-->
+		<!--				<div class="obbox_h" style="text-align:right;">-->
+		<!--					<span class="fzmm fcc">{:L('矿机类型')}</span>-->
+		<!--				</div>-->
+		<!--				<div class="obbox_h" style="text-align:right;">-->
+		<!--				    <if condition="$av.type eq 1">-->
+		<!--				    <span class="fzmmm fcy" style="font-weight:bold;">{:L('独资机型')}</span>-->
+		<!--				    <elseif condition="$av.type eq 2" />-->
+		<!--				    <span class="fzmmm fcy" style="font-weight:bold;">{:L('共享机型')}</span>-->
+		<!--				    </if>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+  <!--  </foreach>-->
+		<!--	<div class="btmbox"></div>-->
+		<!--</div>-->
+
+
+<!--独资矿机-->
+		<div id="dzbox" style="width:100%;padding:10px 0px;display:none;">
+			
+			<foreach name="blist" item="bv">
+			<div class="orebox">
+				<div style="width:100%;height:120px;">
+					<div style="width:30%;height:120px;line-height: 120px;float:left;text-align: center;">
+						<img src="/Upload/public/{$bv.imgs}" style="width:100%;"/>
+					</div>
+
+					<div style="width:70%;height:120px;float:left;padding:5px;">
+						<p class="fzmmm fcc fw" style="margin-bottom:2px;">{$bv.title}</p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('上市时间')}：<?php echo date("Y-m-d",strtotime($bv['addtime']));?></p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('产出币种')}：<?php echo strtoupper($bv['outcoin']);?></p>
+						<a href="{:U('Orepool/kjinfo')}?oid={$bv.id}">
+						<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;" onclick="buykuangji({$bv.id})">
+							<span style="background: linear-gradient(to left,#75cf2b,#ccecb4);padding: 10px;border-radius: 5px;">{:L('立即购买')}</span>
+						</p>
+						</a>
+					</div>
+
+				</div>
+				
+				<div style="width:100%;">
+					<div class="progress">
+					  <div class="progress-bar" role="progressbar" style="width:<?php echo $bv['ycnum'] / $bv['allnum'] * 100;?>%;" aria-valuenow="<?php echo $bv['ycnum'] / $bv['allnum'] * 100;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $bv['ycnum'] / $bv['allnum'] * 100;?>%</div>
+					</div>
+				</div>
+
+				<div style="width:100%;height:80px;margin-top:15px;padding:0px 15px;">
+					<div class="obbox" style="width:40%;">
+						<div class="obbox_h">
+							<span class="fzmm fcc">{:L('矿机单价')}</span>
+						</div>
+						<div class="obbox_h">
+							<span class="fzmm fcc">{$bv.pricenum} <?php echo strtoupper($bv['pricecoin']);?></span>
+						</div>
+					</div>
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h" style="text-align:center;">
+							<span class="fzmm fcc">{:L('矿机产权')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:center;">
+							<span class="fzmm fcc">{$bv.cycle} {:L('天')}</span>
+						</div>
+					</div>
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{:L('矿机类型')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:right;">
+							<if condition="$bv.type eq 1">
+						    <span class="fzmmm fcy" style="font-weight:bold;">{:L('独资机型')}</span>
+						    <elseif condition="$bv.type eq 2" />
+						    <span class="fzmmm fcy" style="font-weight:bold;">{:L('共享机型')}</span>
+						    </if>
+						</div>
+					</div>
+				</div>
+			</div>
+			</foreach>
+			
+			<div class="btmbox"></div>
+		</div>
+
+<!--共享矿机-->
+		<div id="gxbox" style="width:100%;height:500px;padding:10px 0px;display:none;">
+			
+			<foreach name="clist" item="cv">
+			<div class="orebox">
+				<div style="width:100%;height:120px;">
+					<div style="width:30%;height:120px;line-height: 120px;float:left;text-align: center;">
+						<img src="/Upload/public/{$cv.imgs}" style="width:100%;"/>
+					</div>
+					<div style="width:70%;height:120px;float:left;padding:5px;">
+						<p class="fzmmm fcc fw" style="margin-bottom:2px;">{$cv.title}</p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('上市时间')}：<?php echo date("Y-m-d",strtotime($cv['addtime']));?></p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('产出币种')}：<?php echo strtoupper($cv['outcoin']);?></p>
+						<a href="{:U('Orepool/kjinfo')}?oid={$cv.id}">
+						<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;" onclick="buykuangji({$cv.id})">
+							<span style="background: linear-gradient(to left,#75cf2b,#ccecb4);padding: 10px;border-radius: 5px;">{:L('立即购买')}</span>
+						</p>
+						</a>
+					</div>
+				</div>
+				<div style="width:100%;">
+					<div class="progress">
+					  <div class="progress-bar" role="progressbar" style="width:<?php echo $cv['ycnum'] / $cv['allnum'] * 100;?>%;" aria-valuenow="<?php echo $cv['ycnum'] / $cv['allnum'] * 100;?>" aria-valuemin="0" aria-valuemax="100"><?php echo $cv['ycnum'] / $cv['allnum'] * 100;?>%</div>
+					</div>
+				</div>
+				<div style="width:100%;height:80px;margin-top:15px;padding:0px 15px;">
+					<div class="obbox" style="width:40%;">
+						<div class="obbox_h">
+							<span class="fzmm fcc">{:L('矿机单价')}</span>
+						</div>
+						<div class="obbox_h">
+							<span class="fzmm fcc">{$bv.pricenum} <?php echo strtoupper($bv['pricecoin']);?></span>
+						</div>
+					</div>
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h" style="text-align:center;">
+							<span class="fzmm fcc">{:L('矿机产权')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:center;">
+							<span class="fzmm fcc">{$bv.cycle} {:L('天')}</span>
+						</div>
+					</div>
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{:L('矿机类型')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:right;">
+							<if condition="$cv.type eq 1">
+						    <span class="fzmmm fcy" style="font-weight:bold;">{:L('独资机型')}</span>
+						    <elseif condition="$cv.type eq 2" />
+						    <span class="fzmmm fcy" style="font-weight:bold;">{:L('共享机型')}</span>
+						    </if>
+						</div>
+					</div>
+				</div>
+			</div>
+			</foreach>
+			
+			<div class="btmbox"></div>
+		</div>
+
+<!--我的矿机-->
+		<div id="myorebox" style="width:100%;height:500px;padding:10px 0px;display:none;">
+			<empty name="mylist">
+			<div class="orebox">
+			    <div style="width:100%;height:120px;line-height:120px;text-align:center;">
+			<span class="fzmm fcc">{:L('暂时没有矿机')}</span>
+			    </div>
+			</div>
+			<else />
+			<foreach name="mylist" item="myvo">
+			<a href="{:U('Orepool/profitline')}?id={$myvo.id}">
+			<div class="orebox">
+				<div style="width:100%;height:120px;">
+					<div style="width:30%;height:120px;line-height: 120px;float:left;text-align: center;">
+						<img src="/Upload/public/{$myvo.imgs}" style="width:100%;"/>
+					</div>
+					<div style="width:70%;height:120px;float:left;padding:5px;">
+						<p class="fzmmm fcc fw" style="margin-bottom:2px;">{$myvo.kjtitle}</p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('购买时间')}：<?php echo date("Y-m-d",strtotime($myvo['addtime']));?></p>
+						<p class="fzmm fcc" style="margin-bottom:2px;">{:L('到期时间')}：<?php echo date("Y-m-d",strtotime($myvo['endtime']));?></p>
+						<if condition="$myvo.status eq 1">
+						<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;margin-top: 5px;">
+							<span style="background:#0ecb81;padding:5px 10px;border-radius: 5px;color:#fff;">{:L('正常')}</span>
+						</p>
+						<elseif condition="$myvo.status eq 2" />
+						<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;margin-top: 5px;">
+							<span style="background:#f5465c;padding:5px 10px;border-radius: 5px;color:#fff;">{:L('停止')}</span>
+						</p>
+						<elseif condition="$myvo.status eq 3" />
+						<p class="fzmm fcc" style="margin-bottom:0px;text-align:right;margin-top: 5px;">
+							<span style="background:#f5465c;padding:5px 10px;border-radius: 5px;color:#fff;">{:L('过期')}</span>
+						</p>
+						</if>
+					</div>
+				</div>
+
+				<div style="width:100%;height:80px;margin-top:15px;padding:0px 15px;">
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h">
+							<span class="fzmm fcc">{:L('产出币种')}</span>
+						</div>
+						<div class="obbox_h">
+							<span class="fzmm fcc"><?php echo strtoupper($myvo['outcoin']);?></span>
+						</div>
+					</div>
+					<div class="obbox" style="width:30%;">
+						<div class="obbox_h" style="text-align:center;">
+							<span class="fzmm fcc">{:L('收益类型')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:center;">
+						    <if condition="$myvo.outtype eq 1">
+							<span class="fzmm fcc">{:L('按产值')}</span>
+							<elseif condition="$myvo.outtype eq 2" />
+							<span class="fzmm fcc">{:L('恒定币量')}</span>
+							</if>
+						</div>
+					</div>
+					<if condition="$myvo.outtype eq 1">
+					 <div class="obbox" style="width:40%;">
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{:L('日产值')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{$myvo.outusdt} USDT</span>
+						</div>
+					</div>   
+					<elseif condition="$myvo.outtype eq 2" />
+					<div class="obbox" style="width:40%;">
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{:L('日产币量')}</span>
+						</div>
+						<div class="obbox_h" style="text-align:right;">
+							<span class="fzmm fcc">{$myvo.outnum} <?php echo strtoupper($myvo['outcoin']);?></span>
+						</div>
+					</div>
+					</if>
+				</div>
+
+			</div>
+			</a>
+			</foreach>
+			</empty>
+			
+			<div class="btmbox"></div>
+		</div>
+	</div>	
+
+
+
+	
+	<!--底部-->
+	<div class="footer">
+		<a href="{:U('Index/index')}">
+		<div class="footer_op">
+			<div class="f_op_t">
+			<img src="/wap/static/img/bot_bar_1_new.png" style="height: 25px;margin: 0.51667rem 0 0;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('首页')}</span>	
+			</div>
+		</div>
+		</a>
+		<a href="{:U('Trade/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_2_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('行情')}</span>	
+			</div>
+		</div>
+		</a>
+		<a href="{:U('Trade/trans')}?sytx=BTC/USDT">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_7_new_on.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('交易')}</span>	
+			</div>
+		</div>
+		</a>
+		<a href="{:U('Contract/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_3_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('合约')}</span>	
+			</div>
+		</div>
+		</a>
+<a href="{:U('User/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_6_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('钱包')}</span>	
+			</div>
+		</div>
+		</a>
+	</div>
+
+
+</body>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+
+<script type="text/javascript">
+	$("#zlbtn").click(function(){
+		$("#zlbtn").addClass("hsborder");
+		$("#zlbtn_span").css("color","#fff");
+		$("#zlbox").show();
+		$("#dzbtn").removeClass("hsborder");
+		$("#dzbtn_span").css("color","#707A8A","background-color","rgb(252, 213, 53)");
+		$("#dzbox").hide();
+		$("#gxbtn").removeClass("hsborder");
+		$("#gxbtn_span").css("color","#707A8A");
+		$("#gxbox").hide();
+		$("#myorebtn").removeClass("hsborder");
+		$("#myorebtn_span").css("color","#707A8A");
+		$("#myorebox").hide();
+	});
+	$("#dzbtn").click(function(){
+		$("#dzbtn").addClass("hsborder");
+		$("#dzbtn_span").css("color","#fff");
+		$("#zlbox").hide();
+		$("#zlbtn").removeClass("hsborder");
+		$("#zlbtn_span").css("color","#707A8A");
+		$("#dzbox").show();
+		$("#gxbtn").removeClass("hsborder");
+		$("#gxbtn_span").css("color","#707A8A");
+		$("#gxbox").hide();
+		$("#myorebtn").removeClass("hsborder");
+		$("#myorebtn_span").css("color","#707A8A");
+		$("#myorebox").hide();
+	});
+	$("#gxbtn").click(function(){
+		$("#dzbtn").removeClass("hsborder");
+		$("#dzbtn_span").css("color","#707A8A");
+		$("#zlbox").hide();
+		$("#zlbtn").removeClass("hsborder");
+		$("#zlbtn_span").css("color","#707A8A");
+		$("#dzbox").hide();
+		$("#gxbtn").addClass("hsborder");
+		$("#gxbtn_span").css("color","#fff");
+		$("#gxbox").show();
+		$("#myorebtn").removeClass("hsborder");
+		$("#myorebtn_span").css("color","#707A8A");
+		$("#myorebox").hide();
+	});
+	$("#myorebtn").click(function(){
+		$("#dzbtn").removeClass("hsborder");
+		$("#dzbtn_span").css("color","#707A8A");
+		$("#zlbox").hide();
+		$("#zlbtn").removeClass("hsborder");
+		$("#zlbtn_span").css("color","#707A8A");
+		$("#dzbox").hide();
+		$("#gxbtn").removeClass("hsborder");
+		$("#gxbtn_span").css("color","#707A8A");
+		$("#gxbox").hide();
+		$("#myorebtn").addClass("hsborder");
+		$("#myorebtn_span").css("color","#fff");
+		$("#myorebox").show();
+	});
+</script>
+
+<script type="text/javascript">
+    function goback(){
+window.history.go(-1);
+    }
+</script>
+</html>
+
+
+

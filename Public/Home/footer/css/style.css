@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei";
+	color: #666;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+
+.w1210 {
+	width: 1210px;
+	margin: 0 auto;
+}
+
+.register {
+    padding: 50px 0 45px;
+    height: 242px;
+    overflow: hidden;
+    position: relative;
+    background-color: #1a8f5c;
+    background-size: 500px 242px;
+    /* background-position: 100%; */
+    /* background-repeat: no-repeat; */
+    background-image: url(https://spot-web.poloniex.com/assets/img/bg-right.1f97b611.png);
+}
+
+.register .title {
+	padding-bottom: 5px;
+	font-size: 26px;
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+}
+
+.register .desc {
+	padding-bottom: 20px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+
+.register .btn {
+	display: block;
+	width: 128px;
+	height: 36px;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 36px;
+	color: #fff;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 0;
+	transition: all .2s;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.register .btn:hover {
+	background: rgba(255, 255, 255, .1);
+}
+
+
+/*尾部*/
+
+.site-footer {
+	font-size: 14px;
+	line-height: 1.8;
+	background: #373d41;
+}
+
+.site-footer a:hover {
+	color: #ff7300 !important;
+}
+
+.site-footer .footer-article {
+	padding: 30px 0 20px;
+	overflow: hidden;
+	border-bottom: 1px solid #4b5054;
+}
+
+.site-footer .col-article {
+	float: left;
+	width: 233px;
+	margin-right: 40px;
+}
+
+.site-footer .col-article dt {
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #d7d8d9;
+}
+
+.site-footer .col-article dd {
+	width: 232px;
+	margin: 0;
+	overflow: hidden;
+	border-right: 1px solid #4b5054;
+}
+
+.site-footer .col-article dd a {
+	float: left;
+	width: 116px;
+	margin: 0 0 6px;
+	font-size: 12px;
+	color: #9b9ea0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.site-footer .col-article.col-article-spe {
+	width: 195px;
+}
+
+.site-footer .col-article.col-article-spe dd {
+	width: auto;
+	border: 0;
+}
+
+.site-footer .col-article.col-article-spe dd p {
+	height: 36px;
+	padding-top: 6px;
+	font: 20px/36px Arial;
+	color: #9b9ea0;
+}
+
+.site-footer .col-article.col-article-spe dd i {
+	float: left;
+	margin-right: 10px;
+	font-size: 32px;
+}
+
+.site-footer .col-article.col-article-spe dd i.orange {
+	color: #ff7300;
+}
+
+.site-footer .col-article.col-article-spe dd i.blue {
+	color: #2da6f6;
+}
+
+.site-footer .col-code {
+	float: left;
+	width: 120px;
+	text-align: center;
+	color: #9b9ea0;
+}
+
+.site-footer .col-code img {
+	width: 120px;
+	height: 120px;
+	margin-bottom: 5px;
+}
+
+.footer-links {
+	position: relative;
+	z-index: 1;
+	width: 1140px;
+	padding: 10px 0 10px 60px;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 24px;
+	border-bottom: 1px solid #4b5054;
+}
+
+.footer-links span {
+	position: absolute;
+	left: 0;
+}
+
+.footer-links a {
+	padding: 0 5px;
+	margin: 0 10px;
+	color: #73777a;
+}
+
+.footer-info .info-text {
+	padding-bottom: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.footer-info .info-text .nav-bottom {
+	padding: 20px 0 5px;
+	font-size: 14px;
+	color: #ccc;
+	text-align: center;
+}
+
+.footer-info .info-text .nav-bottom a {
+	padding: 0 8px;
+	color: #9b9ea0;
+}
+
+.footer-info .info-text .copyright {
+	padding-top: 5px;
+}
+
+.footer-info .info-text em {
+	padding: 0 8px;
+}

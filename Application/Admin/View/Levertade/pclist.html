@@ -1,0 +1,146 @@
+<include file="Public:header"/>
+<div id="main-content">
+	<div id="top-alert" class="fixed alert alert-error" style="display: none;">
+		<button class="close fixed" style="margin-top: 4px;">&times;</button>
+		<div class="alert-content">警告内容</div>
+	</div>
+	<div id="main" class="main">
+		<div class="main-title-h">
+			<span class="h1-title">永续合约平仓订单</span>
+			<a class="btn btn-warning" onClick="location.href='{:U('Levertade/pclist')}'">初始化搜索</a>
+		</div>
+		<div class="cf">
+			<div class="search-form fr cf" style="43px;float: none !important;">
+				<div class="sleft">
+					<form name="formSearch" id="formSearch" method="get" name="form1">
+						<select style="width: 120px; float: left; margin-right: 10px;" name="direction" class="form-control">
+							<option value=""
+							<empty name="Think.get.direction">selected</empty>
+							>全部类型</option>
+							<option value="1"
+							<eq name="Think.get.direction" value="1">selected</eq>
+							>做多</option>
+							<option value="2"
+							<eq name="Think.get.direction" value="2">selected</eq>
+							>做空</option>
+						</select>
+						
+						<select style="width: 120px; float: left; margin-right: 10px;" name="yk_status" class="form-control">
+							<option value=""
+							<empty name="Think.get.yk_status">selected</empty>
+							>盈亏状态</option>
+							<option value="1"
+							<eq name="Think.get.yk_status" value="1">selected</eq>
+							>盈利</option>
+							<option value="2"
+							<eq name="Think.get.yk_status" value="2">selected</eq>
+							>亏损</option>
+						</select>
+
+
+						<input type="text" name="username" class="search-input form-control" value="" placeholder="请输入用户名" />
+						<a class="sch-btn" href="javascript:;" id="search"> <i class="btn-search"></i> </a>
+					</form>
+					<script>
+						//搜索功能
+						$(function () {
+							$('#search').click(function () {
+								$('#formSearch').submit();
+							});
+						});
+						//回车搜索
+						$(".search-input").keyup(function (e) {
+							if (e.keyCode === 13) {
+								$("#search").click();
+								return false;
+							}
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="data-table table-striped">
+			<table class="">
+				<thead>
+				<tr>
+					<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+					<th class="">ID</th>
+					<th class="">会员账号</th>
+					<th class="">交易对</th>
+					<th class="">方向</th>
+					<th class="">状态</th>
+					<th class="">开仓单价</th>
+					<th class="">平仓单价</th>
+					<th class="">止盈/止损单价</th>
+					<th class="">合约手数</th>
+					<th class="">杠杆倍数</th>
+					<th class="">建仓时间</th>
+					<th class="">平仓时间</th>
+					<th class="">手续费</th>
+					<th class="">盈亏</th>
+				</tr>
+				</thead>
+				<tbody>
+                    <notempty name="list">
+                    <volist name="list" id="vo">
+					<tr>
+						<td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}"/></td>
+						<td>{$vo.id}</td>
+						<td>{$vo.username}</td>
+						<td>{$vo.symbol}</td>
+						<td>
+						    <if condition="$vo.direction eq 1">
+						        <span style="color:#0ecb81;">做多</span>
+						    <elseif condition="$vo.direction eq 2" />
+						        <span style="color:#f5465c;">做空</span>
+						    </if>
+						</td>
+						<td>
+						    <if condition="$vo.status eq 2">
+						        <span style="color:#707A8A;">待结算</span>
+						    <elseif condition="$vo.status eq 3" />
+						        <span style="color:#0ecb81;">已完成</span>
+						    <elseif condition="$vo.status eq 4" />
+						        <span style="color:#f5465c;">爆仓</span>
+						    </if>
+						</td>
+						<td>{$vo.price}</td>
+						<td>{$vo.pc_price}</td>
+						<td>{$vo.zyprice}/{$vo.zsprice}</td>
+						<td>{$vo.num}</td>
+						<td>{$vo.ggan}</td>
+						<td>{$vo.addtime}</td>
+						<td>{$vo.endtime}</td>
+						<td>{$vo.fee}</td>
+						<td>
+						    <if condition="$vo.yk_status eq 1">
+						    <span style="color:#0ecb81;">+{$vo.ylmoney}</span>
+						    <elseif condition="$vo.yk_status eq 2" />
+						    <span style="color:#f5465c;">-{$vo.ylmoney}</span>
+						    </if>
+						 </td>
+					</tr>
+					</volist>
+                    <else/>
+					<td colspan="12" class="text-center empty-info">
+					    <i class="glyphicon glyphicon-exclamation-sign"></i>暂无数据
+					</td>
+					</notempty>
+				</tbody>
+			</table>
+			<div class="page">
+				<div>{$page}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<include file="Public:footer"/>
+
+<block name="script">
+	<script type="text/javascript" charset="utf-8">
+		//导航高亮
+		highlight_subnav("{:U('Levertade/pclist')}");
+	</script>
+</block>

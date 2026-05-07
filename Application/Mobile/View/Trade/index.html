@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/base2.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Static/css/nologed.css" />
+	<link rel="stylesheet" href="/Public/Static/Icoinfont/iconfont.css">
+	<script src="/Public/Static/Icoinfont/iconfont.js"></script>
+	<title>{$webname}</title>
+	<style>
+	::-webkit-input-placeholder {color: #b5b5b5;font-size: 12px;}
+	::-moz-placeholder {color: #b5b5b5;font-size: 12px;}
+	input:focus{background:#ebecf0;outline: 1px solid #ebecf0;}
+	a:hover,a:link,a:visited,a:active{color:#707A8A;text-decoration:none;}
+	.no_header{position: fixed;z-index: 9999;padding:0px 10px;top:0px;background: #03ad93;}
+	.txtl{line-height:50px;width:10%;}
+	.findbox{width:90%;height:40px;margin:0px auto;background:#ebecf0;border-radius:20px;}
+	.findbox_l{width:15%;height:40px;line-height:40px;float:left;text-align: center;}
+	.findbox_r{width:80%;height:40px;line-height:40px;float:right;}
+	.symbol_t{height:30px;border:none;background: #ebecf0;}
+	.titlebox{width:100%;height:40px;position: fixed;z-index: 9999;top:50px;background: #f5f5f5}
+	.txt_style{display:inline-block;height:40px;line-height:40px;border-bottom:3px solid #7ac86f;color:#707A8A;font-size: 18px;font-weight: bold;}
+	.symboltitle{
+    margin: -2rem 0 0;
+    width: 100%;
+    height: 50px;
+    /* background: #fff; */
+    /* border-top-right-radius: 20px; */
+    /* border-top-left-radius: 20px; */
+    position: fixed;
+    z-index: 9999;
+    /* top: 92px; */
+    padding: 0px 10px;
+	}
+	.listbox{width:100%;background: #fff;margin-top:110px;z-index: -9999;padding: 0px 10px;min-height:100vh;}
+	.stitle_l{width:30%;height:50px;line-height:60px;float:left;text-align: left;}
+	.stitle_c{width:40%;height:50px;line-height:60px;float:left;text-align: center;}
+	.stitle_r{width:30%;height:50px;line-height:60px;float:left;text-align: right;}
+	.emptybox{width:100%;height:40px;background:#fff;height:15px;}
+    .bgfcc{background:#c5cfd5;}
+	.bgreen{background:#03ad93;}
+    .bred{background:#be4237;}
+    .green{color:#03ad93;
+        font-weight: 600;
+    line-height: 25px;
+    font-size: 14px;
+    }
+    .red{color:#be4237;
+                font-weight: 600;
+    line-height: 25px;
+    font-size: 14px;
+    }
+    .list_open{width:40%;height:50px;line-height:50px;float:left;text-align:center;}
+    .list_cname{width:30%;height:50px;line-height:50px;float:left;}
+    .list_change{width:30%;height:50px;line-height:50px;float:left;text-align:right;}
+    .fcc{
+        color: #fff;
+    }
+    .fcc {
+    color: #1f3f59;
+}
+.css-1rc537s {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    /*margin-top: 24px;*/
+}
+.css-z2wfdb {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+}
+.css-ov54vn {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    cursor: pointer;
+    min-width: auto;
+}
+
+.css-19kh8e3 {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.css-1wt1hhv {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    color: #B7BDC6;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    fill: #1E2329;
+    fill: #B7BDC6;
+    width: 1em;
+    height: 1em;
+    margin-right: 8px;
+}
+.css-ov54vn {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    cursor: pointer;
+    min-width: auto;
+}
+.css-17x51vv {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #707A8A;
+    border-radius: 4px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-right: 8px !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.css-81xrsn {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.css-vurnku {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+}
+
+.css-17x51vv.active {
+    background-color: #FEF6D8;
+    color: #C99400;
+    height: 35px;
+}
+
+
+.css-vurnku {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+}
+
+	</style>
+  </head>
+  <body>
+	<div class="container-fluid " style="padding:0px;width:100vw;    margin-top: -65px;">
+		<!--<div class="no_header">-->
+		    
+		<!--	<div class="fl allhg txtl">-->
+		<!--		<i class="bi bi-arrow-left fcc fw" onclick="goback()" style="font-size: 24px;color:#fff"></i>-->
+		<!--	</div>-->
+
+		<!--	<div class="fl allhg" id="centerbox" style="width:80%;text-align:center;line-height:50px;">-->
+		<!--		<span class="fcc fzmmm" style="color:#fff">{:L('币币交易市场')}</span>-->
+		<!--	</div>-->
+
+		<!--	<div class="fr allhg txtr" style="line-height:50px;width:10%;">-->
+		<!--	</div>-->
+		<!--</div>-->
+		
+		<div class="symboltitle">
+  <!--<div class="css-1rc537s">-->
+   <!--<div class="css-z2wfdb">-->
+    <!--<div id="tab-favorite" class="css-ov54vn">-->
+    <!-- <div class=" css-17x51vv" id="ysgangan" >-->
+    <!--  <div id="market_sector_Favorite" style="direction:ltr" class="css-19kh8e3">-->
+    <!--   <a prefetch="true" style="position:absolute;top:0;bottom:0;left:0;right:0;margin:auto" onclick="gangans()"></a>-->
+    <!--   <div class="css-81xrsn">-->
+    <!--    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" class="css-1wt1hhv">-->
+    <!--     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.173 3.007L12.768 3l2.41 5.11 5.326.831.496 1.495-3.89 4.013.895 5.636-1.298.915-4.735-2.648L7.236 21l-1.296-.923.946-5.632L3 10.436l.496-1.495 5.322-.83 2.355-5.104z" fill="currentColor"></path>-->
+    <!--    </svg>-->
+    <!--    <div data-bn-type="text" class="css-vurnku">-->
+    <!--     {:L('杠杆')}-->
+    <!--    </div>-->
+    <!--   </div>-->
+    <!--  </div>-->
+    <!-- </div>-->
+    <!--</div>-->
+    <!--<div class="css-ov54vn">-->
+    <!-- <div class="active css-17x51vv" id="ysheyue">-->
+    <!--  <div id="market_sector_Zone" style="direction:ltr" class="css-19kh8e3">-->
+    <!--   <a prefetch="true" style="position:absolute;top:0;bottom:0;left:0;right:0;margin:auto" onclick="heyue()" ></a>-->
+    <!--   <div class="css-81xrsn">-->
+    <!--    <div data-bn-type="text" class="css-vurnku">-->
+    <!--     {:L('合约')}-->
+    <!--    </div>-->
+    <!--   </div>-->
+    <!--  </div>-->
+    <!-- </div>-->
+    <!--</div>-->
+    <!--<div id="tab-spot" class="css-ov54vn">-->
+    <!-- <div class="css-17x51vv" id="miaohy">-->
+    <!--  <div id="market_sector_Spot" style="direction:ltr" class="css-19kh8e3">-->
+    <!--   <a prefetch="true" style="position:absolute;top:0;bottom:0;left:0;right:0;margin:auto" onclick="miaohys()"></a>-->
+    <!--   <div class="css-81xrsn">-->
+    <!--    <div data-bn-type="text" class="css-vurnku">-->
+    <!--    {:L('快速合约')}-->
+    <!--    </div>-->
+    <!--   </div>-->
+    <!--  </div>-->
+    <!-- </div>-->
+    <!--</div>-->
+   <!--</div>-->
+   <div style=" margin: -1.33333rem 0 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    z-index: -9999;">
+      	<div class="stitle_l">
+				<span class="fcc fzmmm">{:L('交易对')}</span>
+			</div>
+			<div class="stitle_c">
+				<span class="fcc fzmmm">{:L('最新价格')}</span>
+			</div>
+			<div class="stitle_r">
+				<span class="fcc fzmmm">{:L('24h涨跌')}</span>
+			</div>
+			</div>
+   <div class="css-eg65yg"></div>
+   <div class="css-wkg4e3"></div>
+   <div class="css-eg65yg"></div>
+
+  </div>
+	
+		</div>
+		
+		<div class="listbox" id="heyues" style="display:block" >
+            <div style="width:100%;" id="tradebox">
+                <foreach name="market" item="vo">
+                    <a href="/Trade/trans.html?sytx=<?php echo strtoupper($vo['coinname']);?>/USDT">
+		            <div style="width:100%;height:50px;">
+                        <div class="list_cname">
+                            <span  class="fzmmm fcc cn_{$vo.coinname}"><?php echo strtoupper($vo['coinname']);?>/USDT</span>
+                        </div>
+                        <div class="list_open cpr_{$vo.coinname}">
+                            <span  class='fzmmm fcc'>--.--</span></div>
+                        <div class="list_change cch_{$vo.coinname}">
+                            <span  class='fzmm bgfcc' style='color:#fff;border-radius: 2px;width:70px;height:35px;line-height:35px;text-align:center;display:inline-block;'>0%</span>
+                        </div>
+                    </div>
+                    </a>
+                </foreach>
+            </div>
+			<div style="width:100%;height:60px;"></div>
+		</div>
+	</div>
+	
+	<!--杆杆-->
+	<div class="listbox" id="gangans" style="display:none" >
+            <div style="width:100%;" id="tradebox">
+                <foreach name="market" item="vo">
+           
+                    <a href="/Levertade/index.html?symbol=<?php echo strtoupper($vo['coinname']);?>&type=buy">
+		            <div style="width:100%;height:50px;">
+                        <div class="list_cname">
+                            <span  class="fzmmm fcc cn_{$vo.coinname}"><?php echo strtoupper($vo['coinname']);?>/USDT</span>
+                        </div>
+                        <div class="list_open cpr_{$vo.coinname}">
+                            <span  class='fzmmm fcc'>--.--</span></div>
+                        <div class="list_change cch_{$vo.coinname}">
+                            <span  class='fzmm bgfcc' style='color:#fff;border-radius: 2px;width:70px;height:35px;line-height:35px;text-align:center;display:inline-block;'>0%</span>
+                        </div>
+                    </div>
+                    </a>
+                </foreach>
+            </div>
+			<div style="width:100%;height:60px;"></div>
+		</div>
+	</div>
+	
+
+	
+		<!--秒合约-->
+	<div class="listbox" id="miaohys" style="display:none" >
+            <div style="width:100%;" id="tradebox">
+                <foreach name="market" item="vo">
+      
+                    <a href="/Contract/index.html?coin=<?php echo strtoupper($vo['coinname']);?>">
+		            <div style="width:100%;height:50px;">
+                        <div class="list_cname">
+                            <span  class="fzmmm fcc cn_{$vo.coinname}"><?php echo strtoupper($vo['coinname']);?>/USDT</span>
+                        </div>
+                        <div class="list_open cpr_{$vo.coinname}">
+                            <span  class='fzmmm fcc'>--.--</span></div>
+                        <div class="list_change cch_{$vo.coinname}">
+                            <span  class='fzmm bgfcc' style='color:#fff;border-radius: 2px;width:70px;height:35px;line-height:35px;text-align:center;display:inline-block;'>0%</span>
+                        </div>
+                    </div>
+                    </a>
+                </foreach>
+            </div>
+			<div style="width:100%;height:60px;"></div>
+		</div>
+	</div>
+	
+    
+	
+	<!--底部-->
+	<div class="footer">
+
+		<a href="{:U('Index/index')}">
+		<div class="footer_op">
+			<div class="f_op_t">
+			<img src="/wap/static/img/bot_bar_1_new.png" style="height: 25px;margin: 0.51667rem 0 0;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('首页')}</span>	
+			</div>
+		</div>
+		</a>
+
+		<a href="{:U('Trade/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_2_new_on.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcy">{:L('行情')}</span>	
+			</div>
+		</div>
+		</a>
+
+
+		<a href="{:U('Trade/trans')}?sytx=BTC/USDT">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_7_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('交易')}</span>	
+			</div>
+		</div>
+		</a>
+
+		<a href="{:U('Contract/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_3_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('合约')}</span>	
+			</div>
+		</div>
+		</a>
+
+        <a href="{:U('User/index')}">
+		<div class="footer_op">
+			<div class="f_op_t" style="line-height:35px;">
+			<img src="/wap/static/img/bot_bar_6_new.png" style="height: 25px;">
+			</div>
+			<div class="f_op_b">
+				<span class="fzm fcc">{:L('钱包')}</span>	
+			</div>
+		</div>
+		</a>
+
+
+	</div>
+
+
+</body>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Static/js/layer/layer.js" ></script>
+<script type="text/javascript">
+
+var heyuesdiv = document.getElementById('heyues')
+var gangansdiv = document.getElementById('gangans')
+var miaohydiv = document.getElementById('miaohys')
+
+var ysheyue = document.getElementById('ysheyue')
+var ysgangan = document.getElementById('ysgangan')
+var miaohy = document.getElementById('miaohy')
+
+function heyue(){
+    
+    heyuesdiv.style.display = "block"
+    gangansdiv.style.display = "none"
+    miaohydiv.style.display = "none"
+    
+    ysheyue.setAttribute('class', 'active css-17x51vv');
+    ysgangan.setAttribute('class', 'css-17x51vv');
+    miaohy.setAttribute('class', 'css-17x51vv');
+}
+
+function gangans(){
+    heyuesdiv.style.display = "none"
+    gangansdiv.style.display = "block"
+    miaohydiv.style.display = "none"
+    
+    ysgangan.setAttribute('class', 'active css-17x51vv');
+    ysheyue.setAttribute('class', 'css-17x51vv');
+    miaohy.setAttribute('class', 'css-17x51vv');
+}
+
+function miaohys(){
+    heyuesdiv.style.display = "none"
+    gangansdiv.style.display = "none"
+    miaohydiv.style.display = "block"
+    
+    ysgangan.setAttribute('class', 'css-17x51vv');
+    ysheyue.setAttribute('class', 'css-17x51vv');
+    miaohy.setAttribute('class', 'active css-17x51vv');
+}
+
+    function goback(){
+        window.history.go(-1);
+    }
+</script>
+<script type="text/javascript">
+    function obtain_btc(){
+        var coin = "btc";
+        var nameclass = ".cn_btc";
+        var priceclass = ".cpr_btc";
+        var changeclass = ".cch_btc";
+        $.post("{:U('Ajaxtrade/obtain_btc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_eth(){
+        var coin = "eth";
+        var nameclass = ".cn_eth";
+        var priceclass = ".cpr_eth";
+        var changeclass = ".cch_eth";
+        $.post("{:U('Ajaxtrade/obtain_eth')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+
+<script type="text/javascript">
+    function obtain_eos(){
+        var coin = "eos";
+        var nameclass = ".cn_eos";
+        var priceclass = ".cpr_eos";
+        var changeclass = ".cch_eos";
+        $.post("{:U('Ajaxtrade/obtain_eos')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+
+<script type="text/javascript">
+    function obtain_doge(){
+        var coin = "doge";
+        var nameclass = ".cn_doge";
+        var priceclass = ".cpr_doge";
+        var changeclass = ".cch_doge";
+        $.post("{:U('Ajaxtrade/obtain_doge')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_bch(){
+        var coin = "bch";
+        var nameclass = ".cn_bch";
+        var priceclass = ".cpr_bch";
+        var changeclass = ".cch_bch";
+        $.post("{:U('Ajaxtrade/obtain_bch')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_ltc(){
+        var coin = "ltc";
+        var nameclass = ".cn_ltc";
+        var priceclass = ".cpr_ltc";
+        var changeclass = ".cch_ltc";
+        $.post("{:U('Ajaxtrade/obtain_ltc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_iota(){
+        var coin = "iota";
+        var nameclass = ".cn_iota";
+        var priceclass = ".cpr_iota";
+        var changeclass = ".cch_iota";
+        $.post("{:U('Ajaxtrade/obtain_iota')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_fil(){
+        var coin = "fil";
+        var nameclass = ".cn_fil";
+        var priceclass = ".cpr_fil";
+        var changeclass = ".cch_fil";
+        $.post("{:U('Ajaxtrade/obtain_fil')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_flow(){
+        var coin = "flow";
+        var nameclass = ".cn_flow";
+        var priceclass = ".cpr_flow";
+        var changeclass = ".cch_flow";
+        $.post("{:U('Ajaxtrade/obtain_flow')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_jst(){
+        var coin = "jst";
+        var nameclass = ".cn_jst";
+        var priceclass = ".cpr_jst";
+        var changeclass = ".cch_jst";
+        $.post("{:U('Ajaxtrade/obtain_jst')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_itc(){
+        var coin = "itc";
+        var nameclass = ".cn_itc";
+        var priceclass = ".cpr_itc";
+        var changeclass = ".cch_itc";
+        $.post("{:U('Ajaxtrade/obtain_itc')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_ht(){
+        var coin = "ht";
+        var nameclass = ".cn_ht";
+        var priceclass = ".cpr_ht";
+        var changeclass = ".cch_ht";
+        $.post("{:U('Ajaxtrade/obtain_ht')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_trx(){
+        var coin = "trx";
+        var nameclass = ".cn_trx";
+        var priceclass = ".cpr_trx";
+        var changeclass = ".cch_trx";
+        $.post("{:U('Ajaxtrade/obtain_trx')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+    function obtain_xrp(){
+        var coin = "xrp";
+        var nameclass = ".cn_xrp";
+        var priceclass = ".cpr_xrp";
+        var changeclass = ".cch_xrp";
+        $.post("{:U('Ajaxtrade/obtain_xrp')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+
+<script type="text/javascript">
+    function obtain_sol(){
+        var coin = "sol";
+        var nameclass = ".cn_sol";
+        var priceclass = ".cpr_sol";
+        var changeclass = ".cch_sol";
+        $.post("{:U('Ajaxtrade/obtain_sol')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html(data.cname);
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+
+
+<script type="text/javascript">
+function obtain_bnb(){
+var coin = "bnb";
+var nameclass = ".cn_bnb";
+var priceclass = ".cpr_bnb";
+var changeclass = ".cch_bnb";
+$.post("{:U('Ajaxtrade/obtain_bnb')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_wbtc(){
+var coin = "wbtc";
+var nameclass = ".cn_wbtc";
+var priceclass = ".cpr_wbtc";
+var changeclass = ".cch_wbtc";
+$.post("{:U('Ajaxtrade/obtain_wbtc')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_dot(){
+var coin = "dot";
+var nameclass = ".cn_dot";
+var priceclass = ".cpr_dot";
+var changeclass = ".cch_dot";
+$.post("{:U('Ajaxtrade/obtain_dot')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_avax(){
+var coin = "avax";
+var nameclass = ".cn_avax";
+var priceclass = ".cpr_avax";
+var changeclass = ".cch_avax";
+$.post("{:U('Ajaxtrade/obtain_avax')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_uni(){
+var coin = "uni";
+var nameclass = ".cn_uni";
+var priceclass = ".cpr_uni";
+var changeclass = ".cch_uni";
+$.post("{:U('Ajaxtrade/obtain_uni')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_etc(){
+var coin = "etc";
+var nameclass = ".cn_etc";
+var priceclass = ".cpr_etc";
+var changeclass = ".cch_etc";
+$.post("{:U('Ajaxtrade/obtain_etc')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_near(){
+var coin = "near";
+var nameclass = ".cn_near";
+var priceclass = ".cpr_near";
+var changeclass = ".cch_near";
+$.post("{:U('Ajaxtrade/obtain_near')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_xmr(){
+var coin = "xmr";
+var nameclass = ".cn_xmr";
+var priceclass = ".cpr_xmr";
+var changeclass = ".cch_xmr";
+$.post("{:U('Ajaxtrade/obtain_xmr')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_ape(){
+var coin = "ape";
+var nameclass = ".cn_ape";
+var priceclass = ".cpr_ape";
+var changeclass = ".cch_ape";
+$.post("{:U('Ajaxtrade/obtain_ape')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+function obtain_aave(){
+var coin = "aave";
+var nameclass = ".cn_aave";
+var priceclass = ".cpr_aave";
+var changeclass = ".cch_aave";
+$.post("{:U('Ajaxtrade/obtain_aave')}",
+{'coin':coin},
+function(data){
+if(data.code == 1){
+$(nameclass).html(data.cname);
+$(priceclass).html(data.open);
+$(changeclass).html(data.change);
+}else{
+console.log(data.info);return false;
+}
+}
+);
+}
+</script>
+
+<script type="text/javascript">
+    function obtain_usdz(){
+        var coin = "usdz";
+        var nameclass = ".cn_usdz";
+        var priceclass = ".cpr_usdz";
+        var changeclass = ".cch_usdz";
+        $.post("{:U('Ajaxtrade/obtain_usdz')}",
+        {'coin':coin},
+        function(data){
+            if(data.code == 1){
+                $(nameclass).html("USDZ/USDT");
+                $(priceclass).html(data.open);
+                $(changeclass).html(data.change);
+            }else{
+                console.log(data.info);return false;
+            }
+        }
+        );
+    }
+</script>
+<script type="text/javascript">
+     $(function(){
+        //obtain_btc();
+        setInterval("obtain_btc()",2000); 
+        //obtain_eth();
+        setInterval("obtain_eth()",3000); 
+        obtain_eos();
+        setInterval("obtain_eos()",5000);
+        obtain_doge();
+        setInterval("obtain_doge()",7000);
+        obtain_bch();
+        setInterval("obtain_bch()",9000);
+        obtain_ltc();
+        setInterval("obtain_ltc()",11000);
+        
+        obtain_iota();
+        setInterval("obtain_iota()",13000);
+        
+        obtain_fil();
+        setInterval("obtain_fil()",15000);
+        
+        obtain_flow();
+        setInterval("obtain_flow()",17000);
+        
+        obtain_jst();
+        setInterval("obtain_jst()",19000);
+        
+        obtain_itc();
+        setInterval("obtain_itc()",21000);
+        
+        obtain_ht();
+        setInterval("obtain_ht()",23000);
+        
+         obtain_usdz();
+         setInterval("obtain_usdz()",25000);
+        //getallsymbol();
+        //setInterval("getallsymbol()",2000); 
+         obtain_xrp();
+         setInterval("obtain_xrp()",25000);
+         
+        //  --------
+         obtain_trx();
+         setInterval("obtain_trx()",25000);
+         
+         obtain_sol();
+         setInterval("obtain_sol()",2000);
+         
+          obtain_bnb();
+  setInterval("obtain_bnb()",2000); 
+  
+  obtain_wbtc();
+  setInterval("obtain_wbtc()",20000); 
+  
+  obtain_dot();
+  setInterval("obtain_dot()",2000); 
+  
+  obtain_avax();
+  setInterval("obtain_avax()",2000);
+  
+  obtain_uni();
+  setInterval("obtain_uni()",2000); 
+  
+  obtain_etc();
+  setInterval("obtain_etc()",2000); 
+  
+  obtain_near();
+  setInterval("obtain_near()",2000); 
+  
+  obtain_xmr();
+  setInterval("obtain_xmr()",2000); 
+  
+    obtain_ape();
+  setInterval("obtain_ape()",2000); 
+  
+   obtain_aave();
+  setInterval("obtain_aave()",2000); 
+         
+    });
+</script>
+</html>
+
+
+
